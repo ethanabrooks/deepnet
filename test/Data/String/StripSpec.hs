@@ -1,31 +1,23 @@
 module Data.String.StripSpec (main, spec) where
 
+import Model
+import TestUtil
+
 import Test.Hspec
 import Test.QuickCheck
-
 import Data.String.Strip
-import Model
-import Util
 
 -- `main` is here so that this module can be run from GHCi on its own.  It is
 -- not needed for automatic spec discovery.
 main :: IO ()
-main = hspec spec
+main = hspec
 
 spec :: Spec
 spec = do
-  describe "linear layer" $ do
-    it "does shit" $ do
-       1 `shouldBe` 1
-      {-where m1 = matrix-}
-              {-([[1, 2]-}
-              {-, [1, 1]] :: [[Double]])-}
-            {-m2 = matrix-}
-              {-([[0.5, 0.5]-}
-              {-, [0.5, 0.5]] :: [[Double]])-}
-            {-layer = sigmoid { input = Just m2 }-}
-  describe "strip" $ do
-    it "removes leading and trailing whitespace" $ do
-      strip "\t  foo bar\n" `shouldBe` "foo bar"
-    it "is idempotent" $ property $
-      \str -> strip str == strip (strip str)
+  describe "Matrix" $ do
+    it "implements equality" $ do
+      m `shouldBe` m
+    it "implements inequality" $ do
+      m1 `shouldNotBe` m2
+
+{-layer = sigmoid { input = Just m2 }-}

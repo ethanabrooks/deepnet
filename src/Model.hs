@@ -1,9 +1,9 @@
 module Model where
 import           Util
+
 import           Data.Array.Repa hiding (map, (++))
 import qualified Data.Array.Repa as Repa
 import           Data.Array.Repa.Algorithms.Matrix
-import           Data.Array.Repa.Algorithms.Randomish
 import           Data.List (foldl')
 import           Data.Maybe
 import           Control.Monad (join)

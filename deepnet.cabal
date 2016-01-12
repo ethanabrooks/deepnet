@@ -30,6 +30,8 @@ executable deepnet
   build-depends:       base
                      , deepnet
                      , repa
+                     , hspec
+                     , QuickCheck
   default-language:    Haskell2010
 
 test-suite deepnet-test
