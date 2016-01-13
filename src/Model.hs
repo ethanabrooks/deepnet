@@ -1,4 +1,10 @@
-module Model where
+module Model ( linearLayer
+             , linearLayerFromMatrix
+             , weights
+             , input
+             , backprop
+             , Network
+             , feedThru ) where
 import           Util
 
 import           Data.Array.Repa hiding (map, (++))
@@ -42,11 +48,13 @@ data Model =
               , costFunction :: Output -> Targets -> Error
               , learningRate :: Double }
 
+data Constructor = Constructor (Int -> Int -> Network) Int
+
 feedThru :: Network -> Input -> (Network, Error)
-feedThru = join feedThrough
+feedThru net = feedThrough net net
 
 backprop :: Network -> Double -> Error -> (Network, Error)
-backprop = join backpropogate
+backprop net = backpropogate net net
 
 train :: Input -> Targets -> Model -> Int -> Model
 train input targets model numEpochs =
@@ -72,8 +80,10 @@ getNet _ _ model                                  = network model
 addGradients :: Network -> Double -> Matrix -> Network
 addGradients network learningRate gradient =
   case network of
-    Layer weights _ _ _ -> network
-             { weights = weights + rmap (*learningRate) gradient }
+    Layer weights _ _ _ ->
+      network { weights = weights + rmap (*learningRate)
+              (trace "gradient" traceShowId
+              gradient) }
     _ -> error "can only addGradient to individual Layers with weights"
 
 sequence :: (Network -> Matrix -> (Network, Matrix)) ->
@@ -85,11 +95,11 @@ sequence function signal children network =
                        where (child', signal') = function child signal
 
 sequentialNet :: (Int -> Int -> Network) ->
-  [(Int -> Int -> Network, Int)] -> Int -> Int -> Network
+  [Constructor] -> Int -> Int -> Network
 sequentialNet headNet tailNets sizeIn sizeOut = Network
   { input = Nothing
   , children =
-      let build (built, sizeOut) (buildChild, sizeIn) =
+      let build (built, sizeOut) (Constructor buildChild sizeIn) =
             (buildChild sizeIn sizeOut:built, sizeIn)
           (tail, _) = foldl' build ([], sizeOut) $ reverse tailNets
           head = headNet sizeIn sizeOut
@@ -99,7 +109,8 @@ sequentialNet headNet tailNets sizeIn sizeOut = Network
       in  (net { input = Just input
                , children = reverse $ children net }, output)
   , backpropogate = \ network learningRate error ->
-      sequence (flip backprop learningRate) error (children network) network
+      sequence (\ error ->
+               backprop error learningRate) error (children network) network
   }
 
 linearLayer :: Int -> Int -> Network
@@ -109,7 +120,11 @@ linearLayer sizeIn sizeOut = Layer
   , feedThrough      = \ layer input ->
       (layer { input = Just input }, input * (weights layer))
   , backpropogate    = \ layer learningRate error ->
-      let gradient = (ifInitialized $ input layer) * transpose2S error
+      let gradient = (
+                     trace "input" traceShowId $
+                     ifInitialized $ input layer) * (
+                                                    trace "error" traceShowId $
+                                                    transpose2S error)
           network  = addGradients layer learningRate gradient
       in (network, error * (transpose2S $ weights layer))
   }
@@ -126,3 +141,15 @@ sigmoid = NoWeightsLayer
           , computeS $ error *^ (activation *^ (rmap ((-)1) activation)))
   }
 
+-- CODE FOR TESTS --
+
+linearLayerFromValues :: [[Double]] -> Network
+linearLayerFromValues values =
+    (linearLayer sizeIn sizeOut) { weights = matrix values }
+    where sizeIn  = length values
+          sizeOut = length $ values !! 0
+
+linearLayerFromMatrix :: Matrix -> Network
+linearLayerFromMatrix matrix =
+    (linearLayer sizeIn sizeOut) { weights = matrix }
+    where Z :. sizeIn :. sizeOut = extent matrix

@@ -41,6 +41,32 @@ ifInitialized m = case m of Just a  -> a
 randomArray :: Int -> Int -> Matrix
 randomArray h w = randomishDoubleArray (Z :. h :. w) 0 1 0
 
+-- CODE FOR TESTS --
+
+m1 :: Matrix
+m1 = matrix
+  ([[4,  2]
+  , [0, -2]] :: [[Double]])
+
+m1dotM :: Matrix
+m1dotM = matrix
+  ([[ 3,  2]
+  , [-1, -1]] :: [[Double]])
+
+m :: Matrix
+m = matrix
+  ([[0.5, 0.25]
+  , [0.5, 0.5 ]] :: [[Double]])
+
+m1dotM' :: Matrix
+m1dotM' = matrix
+  ([[ 2.5, 3]
+  , [-0.5,-1]] :: [[Double]])
+
+m1dotM1' :: Matrix
+m1dotM1' = matrix
+  ([[ 20, -4]
+  , [-4,   4]] :: [[Double]])
 
 {-sequentialNetWithTarget ::-}
   {-[Network] -> (Int -> Network) -> Targets -> Network-}
