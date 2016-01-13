@@ -4,7 +4,7 @@
 module Util where
 
 import           Data.AEq
-import           Data.Array.Repa hiding (map, (++))
+import           Data.Array.Repa hiding ((++), map, transpose)
 import qualified Data.Array.Repa as Repa
 import           Data.Array.Repa.Algorithms.Matrix
 import           Data.Array.Repa.Algorithms.Randomish
@@ -50,47 +50,46 @@ randomArray :: Int -> Int -> Matrix
 randomArray h w = randomishDoubleArray (Z :. h :. w) 0 1 0
 
 addOnes :: Matrix -> Matrix
-addOnes m = ones ++ m
+addOnes m = computeS $ append ones m
   where Z :. height :. _ = extent m
         ones = fromFunction (Z :. height :. 1) $ const 1
 
+transpose :: Matrix -> Matrix
+transpose = transpose2S
+
+
+
 -- CODE FOR TESTS --
+
+zeros :: Matrix
+zeros = rmap (const 0) m
+
+sAddOnes :: Matrix
+sAddOnes = matrix
+  ([[1, 4,  2]
+  , [1, 0, -2]] :: [[Double]])
+
+s = matrix
+  ([[4,  2]
+  , [0, -2]] :: [[Double]])
 
 m :: Matrix
 m = matrix
   ([[0.5, 0.25]
-  , [0.5, 0.5 ]] :: [[Double]])
+  , [0.5, 0   ]
+  , [0.2, 1   ]] :: [[Double]])
 
 m1 :: Matrix
 m1 = matrix
   ([[4,  2]
+  , [5,  0]
   , [0, -2]] :: [[Double]])
-
-m1dotM :: Matrix
-m1dotM = matrix
-  ([[ 3,  2]
-  , [-1, -1]] :: [[Double]])
-
-m1dotMT :: Matrix
-m1dotMT = matrix
-  ([[ 2.5, 3]
-  , [-0.5,-1]] :: [[Double]])
-
-m1dotM1T :: Matrix
-m1dotM1T = matrix
-  ([[ 20, -4]
-  , [-4,   4]] :: [[Double]])
-
-zeros :: Matrix
-zeros = rmap (const 0) m
 
 m2 :: Matrix
 m2 = rmap (const 0.1) m
 
 m3 :: Matrix
-m3 = matrix
-  ([[0.025, 0.01875]
-  , [0.025, 0.025  ]] :: [[Double]])
+m3 = computeS $ m2 *^ rmap (\ x -> x * (1 - x)) m1
 
 {-sequentialNetWithTarget ::-}
   {-[Network] -> (Int -> Network) -> Targets -> Network-}

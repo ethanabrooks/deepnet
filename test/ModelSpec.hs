@@ -16,34 +16,33 @@ main = hspec spec
 
 spec :: Spec
 spec = do
-  describe "Matrix" $ do
-    it "implements equality" $ do
-      m `shouldBe` m
-    it "implements inequality" $ do
-      m1 `shouldNotBe` m
-
   describe "Linear Layer" $ do
     let layer = linearLayerFromMatrix m
-    it "has the correct initial weight values" $ do
+    it "has correct initial weight values" $ do
       weights layer `shouldBe` m
 
     it "has no initial input" $ do
       input layer `shouldBe` Nothing
 
-    it "feeds forward" $ do
+    context "during the forward pass" $ do
       let (layer', output) = feedThru layer m1
-      input layer' `shouldBe` Just m1
-      output `shouldBe` m1dotM
+      it "updates input" $ do
+        input layer' `shouldBe` Just (addOnes m1)
+      it "computes output" $ do
+        output `shouldBe` (addOnes m1) * m
 
-    describe "backpropogates" $ do
-      let layer' = layer { input = Just m1 }
+    context "during backpropogation" $ do
+      let (layer', _) = feedThru layer m1
           (layer'', inputError) = backprop layer' 0 m1
-      it "processing errors" $ do
+      it "processes errors" $ do
         inputError `shouldBe` m1 * transpose m
-      it "updating weights" $ do
-        weights layer'' `shouldBe` m
-        let (layer'', inputError) = backprop layer' 1 m1
-        weights layer'' `shouldBe` (m1 * transpose m1 + m)
+      context "when learning rate is 0" $ do
+        it "updates weights" $ do
+          weights layer'' `shouldBe` m
+      context "when learning rate is 1" $ do
+        it "updates weights" $ do
+          let (layer'', inputError) = backprop layer' 1 m1
+          weights layer'' `shouldBe` (transpose (addOnes m1) * m1 + m)
 
   describe "Sigmoid" $ do
     let layer = sigmoid
@@ -54,20 +53,41 @@ spec = do
       input layer' `shouldBe` Just zeros
       output `shouldBe` rmap (const 0.5) zeros
     it "backpropogates" $ do
-      let layer' = layer { input = Just m }
+      let (layer', _) = feedThru layer m1
           (_, inputError) = backprop layer' 0 m2
       inputError `shouldAlmostEqual` m3
 
   describe "Sequential Network" $ do
-    let network = sequentialNetFromMatrices [m1, m2]
-        (network', output) = feedThru network m
-    it "has no initial input" $ do
-      input network `shouldBe` Nothing
-    it "has two children" $ do
-      (length $ children network) `shouldBe` 2
-    it "feeds forward" $ do
-      output `shouldBe` m * m1 * m2
-      input network' `shouldBe` Just m
-    it "backpropogates" $ do
-      let (network'', inputError) = backprop network' 0 m
-      inputError `shouldBe` m * transpose m2 * transpose m1
+    context "with one layer" $ do
+      let network = sequentialNetFromMatrices [m]
+          (network', output) = feedThru network m1
+      it "has no initial input" $ do
+        input network `shouldBe` Nothing
+      it "has one child" $ do
+        (length $ children network) `shouldBe` 1
+
+      context "during the forward pass" $ do
+        it "computes output" $ do
+          output `shouldBe` (addOnes m1) * m
+        it "updates input" $ do
+          input network' `shouldBe` Just m1
+      it "backpropogates" $ do
+        let (network'', inputError) = backprop network' 0 m1
+        inputError `shouldBe` m1 * transpose m
+
+    context "with two layers" $ do
+      let network = sequentialNetFromMatrices [m1, m2]
+          (network', output) = feedThru network m
+      it "has no initial input" $ do
+        input network `shouldBe` Nothing
+      it "has two children" $ do
+        (length $ children network) `shouldBe` 2
+
+      context "during the forward pass" $ do
+        it "computes output" $ do
+          output `shouldBe` addOnes ((addOnes m) * m1) * m2
+        it "updates input" $ do
+          input network' `shouldBe` Just m
+      it "backpropogates" $ do
+        let (network'', inputError) = backprop network' 0 m
+        inputError `shouldBe` m * transpose m2 * transpose m1

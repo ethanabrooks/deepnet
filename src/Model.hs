@@ -5,6 +5,8 @@
 - 3. refactor Network class
 - 4. add getters and setters to weight, input, etc.
 - 5. test train
+- 5. regularization
+- 7. parallelize
 -}
 
 module Model ( linearLayer
@@ -20,7 +22,7 @@ module Model ( linearLayer
              , feedThru ) where
 import           Util
 
-import           Data.Array.Repa hiding (map, (++))
+import           Data.Array.Repa hiding (map, (++), transpose, transpose2S)
 import qualified Data.Array.Repa as Repa
 import           Data.Array.Repa.Algorithms.Matrix
 import           Data.List (foldl')
@@ -94,11 +96,11 @@ instance Show Network where
 
 
 addGradients :: Network -> Double -> Matrix -> Network
-{-Network-}
 addGradients network learningRate gradient =
   case network of
-    Layer weights _ _ _ -> --weights + rmap (*learningRate) gradient
-      network { weights = weights + rmap (*learningRate) gradient }
+    Layer weights _ _ _ ->
+      network { weights =
+                weights + rmap (*learningRate) gradient }
     _ -> error "can only addGradient to individual Layers with weights"
 
 sequence :: (Network -> Matrix -> (Network, Matrix)) ->
@@ -131,13 +133,14 @@ sequentialNet headNet tailNets sizeIn sizeOut = Network
 linearLayer :: Int -> Int -> Network
 linearLayer sizeIn sizeOut = Layer
   { input            = Nothing
-  , weights          = randomArray sizeIn sizeOut
+  , weights          = randomArray (sizeIn + 1) sizeOut
   , feedThrough      = \ layer input ->
-      (layer { input = Just input }, input * (weights layer))
+      let input' = addOnes input
+      in  (layer { input = Just input' }, input' * (weights layer))
   , backpropogate    = \ layer learningRate error ->
-      let gradient = (ifInitialized $ input layer) * (transpose2S error)
+      let gradient = (transpose . ifInitialized $ input layer) * error
           network  = addGradients layer learningRate gradient
-      in (network, error * (transpose2S $ weights layer))
+      in (network, error * (transpose $ weights layer))
   }
 
 sigmoid :: Network
