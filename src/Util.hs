@@ -3,6 +3,7 @@
 
 module Util where
 
+import           Data.AEq
 import           Data.Array.Repa hiding (map, (++))
 import qualified Data.Array.Repa as Repa
 import           Data.Array.Repa.Algorithms.Matrix
@@ -12,6 +13,7 @@ import           Data.Maybe
 import           Control.Monad (join)
 import           Prelude hiding (sequence)
 import qualified Prelude
+import           Test.Hspec
 import Debug.Trace
 
 type Vector  = Array U DIM1 Double
@@ -25,6 +27,15 @@ instance Num Matrix where
       computeS $ fromFunction (Z :. 1 :. 1) . const $ fromInteger n
     negate = rmap negate
     signum = rmap signum
+
+shouldAlmostEqual :: Matrix -> Matrix -> Expectation
+shouldAlmostEqual m1 m2 = shouldSatisfy m1 $ (~==) m2
+
+instance AEq Matrix where
+    m1 ~== m2 = sumAllS (m1 - m2) ~== 0
+
+transpose :: Matrix -> Matrix
+transpose = transpose2S
 
 rmap :: (Double -> Double) -> Matrix -> Matrix
 rmap f = computeS . Repa.map f
@@ -43,6 +54,11 @@ randomArray h w = randomishDoubleArray (Z :. h :. w) 0 1 0
 
 -- CODE FOR TESTS --
 
+m :: Matrix
+m = matrix
+  ([[0.5, 0.25]
+  , [0.5, 0.5 ]] :: [[Double]])
+
 m1 :: Matrix
 m1 = matrix
   ([[4,  2]
@@ -53,20 +69,26 @@ m1dotM = matrix
   ([[ 3,  2]
   , [-1, -1]] :: [[Double]])
 
-m :: Matrix
-m = matrix
-  ([[0.5, 0.25]
-  , [0.5, 0.5 ]] :: [[Double]])
-
-m1dotM' :: Matrix
-m1dotM' = matrix
+m1dotMT :: Matrix
+m1dotMT = matrix
   ([[ 2.5, 3]
   , [-0.5,-1]] :: [[Double]])
 
-m1dotM1' :: Matrix
-m1dotM1' = matrix
+m1dotM1T :: Matrix
+m1dotM1T = matrix
   ([[ 20, -4]
   , [-4,   4]] :: [[Double]])
+
+zeros :: Matrix
+zeros = rmap (const 0) m
+
+m2 :: Matrix
+m2 = rmap (const 0.1) m
+
+m3 :: Matrix
+m3 = matrix
+  ([[0.025, 0.01875]
+  , [0.025, 0.025  ]] :: [[Double]])
 
 {-sequentialNetWithTarget ::-}
   {-[Network] -> (Int -> Network) -> Targets -> Network-}

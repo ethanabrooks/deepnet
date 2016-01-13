@@ -21,6 +21,8 @@ library
   build-depends:       base >= 4.7 && < 5
                      , repa
                      , repa-algorithms
+                     , hspec
+                     , ieee754
   default-language:    Haskell2010
 
 executable deepnet
@@ -32,6 +34,7 @@ executable deepnet
                      , repa
                      , hspec
                      , QuickCheck
+                     , ieee754
   default-language:    Haskell2010
 
 test-suite deepnet-test
@@ -44,6 +47,7 @@ test-suite deepnet-test
                      , QuickCheck
                      , repa
                      , repa-algorithms
+                     , ieee754
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 
