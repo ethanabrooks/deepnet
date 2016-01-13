@@ -1,3 +1,12 @@
+{-
+- TODO:
+- 1. incorporate bias!
+- 2. test single layer with sigmoid
+- 3. refactor Network class
+- 4. add getters and setters to weight, input, etc.
+- 5. test train
+-}
+
 module Model ( linearLayer
              , linearLayerFromMatrix
              , sequentialNet
@@ -160,3 +169,6 @@ linearLayerFromMatrix :: Matrix -> Network
 linearLayerFromMatrix matrix =
     (linearLayer sizeIn sizeOut) { weights = matrix }
     where Z :. sizeIn :. sizeOut = extent matrix
+
+cost :: Output -> Targets -> Error
+cost = (-)

@@ -34,9 +34,6 @@ shouldAlmostEqual m1 m2 = shouldSatisfy m1 $ (~==) m2
 instance AEq Matrix where
     m1 ~== m2 = sumAllS (m1 - m2) ~== 0
 
-transpose :: Matrix -> Matrix
-transpose = transpose2S
-
 rmap :: (Double -> Double) -> Matrix -> Matrix
 rmap f = computeS . Repa.map f
 
@@ -51,6 +48,11 @@ ifInitialized m = case m of Just a  -> a
 
 randomArray :: Int -> Int -> Matrix
 randomArray h w = randomishDoubleArray (Z :. h :. w) 0 1 0
+
+addOnes :: Matrix -> Matrix
+addOnes m = ones ++ m
+  where Z :. height :. _ = extent m
+        ones = fromFunction (Z :. height :. 1) $ const 1
 
 -- CODE FOR TESTS --
 
