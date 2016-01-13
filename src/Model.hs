@@ -78,6 +78,11 @@ getNet input targets (Untrained buildNetwork _ _) =
           Z :. _ :. sizeOut = extent targets
 getNet _ _ model                                  = network model
 
+instance Show Network where
+    show (Network _ children _ _) =
+      "{\n  " ++ (concatMap show children) ++ " \n}"
+    show _ = show "|"
+
 
 addGradients :: Network -> Double -> Matrix -> Network
 {-Network-}
@@ -110,8 +115,8 @@ sequentialNet headNet tailNets sizeIn sizeOut = Network
       in  (net { input = Just input
                , children = reverse $ children net }, output)
   , backpropogate = \ network learningRate error ->
-      sequence (\ error ->
-               backprop error learningRate) error (children network) network
+      sequence (\ error -> backprop error learningRate)
+        error (reverse $ children network) network
   }
 
 linearLayer :: Int -> Int -> Network
@@ -144,7 +149,6 @@ sequentialNetFromMatrices :: [Matrix] -> Network
 sequentialNetFromMatrices matrices =
     network { children = map linearLayerFromMatrix matrices }
     where network = sequentialNet linearLayer [(linearLayer, 2)] 2 2
-
 
 linearLayerFromValues :: [[Double]] -> Network
 linearLayerFromValues values =

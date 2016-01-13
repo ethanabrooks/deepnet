@@ -60,14 +60,14 @@ spec = do
 
   describe "Sequential Network" $ do
     let network = sequentialNetFromMatrices [m1, m2]
+        (network', output) = feedThru network m
     it "has no initial input" $ do
       input network `shouldBe` Nothing
     it "has two children" $ do
       (length $ children network) `shouldBe` 2
     it "feeds forward" $ do
-      let (network', output) = feedThru network m
       output `shouldBe` m * m1 * m2
       input network' `shouldBe` Just m
     it "backpropogates" $ do
-      let (network', inputError) = backprop network' 0 m
+      let (network'', inputError) = backprop network' 0 m
       inputError `shouldBe` m * transpose m2 * transpose m1
