@@ -1,4 +1,3 @@
-{-# LANGUAGE NamedFieldPuns #-}
 {-
 - TODO:
 - 1. incorporate bias!
@@ -30,7 +29,7 @@ import           Data.Array.Repa.Algorithms.Matrix
 import           Data.List (foldl')
 import           Data.Maybe
 import           Control.Monad (join)
-import           Prelude hiding (zipWith, sequence)
+import           Prelude hiding (sequence)
 import Debug.Trace
 
 type Input   = Matrix
@@ -73,7 +72,7 @@ getNet input targets (Untrained buildNetwork _ _) =
     buildNetwork sizeIn sizeOut
     where Z :. _ :. sizeIn  = extent input
           Z :. _ :. sizeOut = extent targets
-getNet _ _ model = network model
+getNet _ _ model                                  = network model
 
 addGradients :: (Weighted a) => Double -> Matrix -> a -> Matrix
 addGradients learningRate gradient' network =
@@ -100,9 +99,9 @@ sequentialNet headNet tailNets sizeIn sizeOut = SequentialNet
       in  head:tail }
 
 instance Network a => Network (SequentialNet a) where
-  feedThru network@(SequentialNet children) input =
-    (net { children = reverse children }, output)
-    where (net, output) = sequence feedThru input children network
+  feedThru network input =
+    (net { children = reverse $ children net }, output)
+    where (net, output) = sequence feedThru input (children network) network
   backprop network learningRate error =
     sequence backprop' error (reverse $ children network) network
     where backprop' error = backprop error learningRate
@@ -112,8 +111,8 @@ data LinearLayer = LinearLayer { input   :: Maybe Input
 
 linearLayer :: Int -> Int -> LinearLayer
 linearLayer sizeIn sizeOut = LinearLayer
-  { input   = Nothing
-  , weights = randomArray (sizeIn + 1) sizeOut }
+  { input            = Nothing
+  , weights          = randomArray (sizeIn + 1) sizeOut }
 
 
 instance Network LinearLayer where
@@ -137,10 +136,10 @@ sigmoid = Sigmoid { sigmoidInput = Nothing }
 instance Network Sigmoid where
   feedThru sigmoid input = (sigmoid { sigmoidInput = Just input }
                            , rmap (\ x -> 1 / (1 + exp (-x))) input)
-  backprop sigmoid _ error = (sigmoid, computeS derivative)
+  backprop sigmoid _ error = (sigmoid, derivative)
       where activation = ifInitialized $ sigmoidInput sigmoid
-            derivative = zipWith (\ e a -> e * a * (1 - a)) error activation
-              {-computeS $ error *^ (activation *^ (rmap ((-)1) activation))-}
+            derivative =
+              computeS $ error *^ (activation *^ (rmap ((-)1) activation))
 
 
 -- CODE FOR TESTS --
