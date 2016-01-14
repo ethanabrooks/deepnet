@@ -1,12 +1,10 @@
 {-
 - TODO:
-- 1. incorporate bias!
-- 2. test single layer with sigmoid
-- 3. refactor Network class
-- 4. add getters and setters to weight, input, etc.
-- 5. test train
-- 5. regularization
-- 7. parallelize
+- test single layer with sigmoid
+- regularization
+- add getters and setters to weight, input, etc.
+- test train
+- parallelize
 -}
 
 module Model ( linearLayer
@@ -29,7 +27,7 @@ import           Data.Array.Repa.Algorithms.Matrix
 import           Data.List (foldl')
 import           Data.Maybe
 import           Control.Monad (join)
-import           Prelude hiding (sequence)
+import           Prelude hiding (sequence, zipWith)
 import Debug.Trace
 
 type Input   = Matrix
@@ -72,19 +70,11 @@ getNet input targets (Untrained buildNetwork _ _) =
     buildNetwork sizeIn sizeOut
     where Z :. _ :. sizeIn  = extent input
           Z :. _ :. sizeOut = extent targets
-getNet _ _ model                                  = network model
+getNet _ _ model = network model
 
 addGradients :: (Weighted a) => Double -> Matrix -> a -> Matrix
 addGradients learningRate gradient' network =
     getWeights network + rmap (*learningRate) gradient'
-
-sequence :: Network a => (a -> Matrix -> (a, Matrix)) ->
-  Matrix -> [a] -> SequentialNet a -> (SequentialNet a, Matrix)
-sequence function signal children network =
-      (network { children = children' }, out)
-      where (children', out) = foldl' propogate ([], signal) $ children
-            propogate (children, signal) child = (child':children, signal')
-                       where (child', signal') = function child signal
 
 data (Network a) => SequentialNet a = SequentialNet { children :: [a] }
 
@@ -98,6 +88,19 @@ sequentialNet headNet tailNets sizeIn sizeOut = SequentialNet
           head = headNet sizeIn sizeOut
       in  head:tail }
 
+
+sequence :: Network a => (a -> Matrix -> (a, Matrix)) ->
+  Matrix -> [a] -> SequentialNet a -> (SequentialNet a, Matrix)
+sequence function signal children network =
+      (network { children = children' }, out)
+      where (children', out) = foldl' propogate ([], signal) $ children
+            propogate (children, signal) child = (child':children, signal')
+                       where (child', signal') = function child signal
+
+{-neuralNetLayer :: Int -> Int -> SequentialNet-}
+{-neuralNetLayer sizeIn sizeOut = sequentialNet [linearLayer, sigmoid]-}
+
+
 instance Network a => Network (SequentialNet a) where
   feedThru network input =
     (net { children = reverse $ children net }, output)
@@ -106,13 +109,14 @@ instance Network a => Network (SequentialNet a) where
     sequence backprop' error (reverse $ children network) network
     where backprop' error = backprop error learningRate
 
+
 data LinearLayer = LinearLayer { input   :: Maybe Input
                                , weights :: Matrix }
 
 linearLayer :: Int -> Int -> LinearLayer
 linearLayer sizeIn sizeOut = LinearLayer
-  { input            = Nothing
-  , weights          = randomArray (sizeIn + 1) sizeOut }
+  { input   = Nothing
+  , weights = randomArray (sizeIn + 1) sizeOut }
 
 
 instance Network LinearLayer where
@@ -128,6 +132,7 @@ instance Weighted LinearLayer where
     getWeights           = weights
     gradient layer error = (transpose . ifInitialized $ input layer) * error
 
+
 data Sigmoid = Sigmoid { sigmoidInput :: Maybe Input }
 
 sigmoid :: Sigmoid
@@ -136,11 +141,18 @@ sigmoid = Sigmoid { sigmoidInput = Nothing }
 instance Network Sigmoid where
   feedThru sigmoid input = (sigmoid { sigmoidInput = Just input }
                            , rmap (\ x -> 1 / (1 + exp (-x))) input)
-  backprop sigmoid _ error = (sigmoid, derivative)
+  backprop sigmoid _ error = (sigmoid, computeS derivative)
       where activation = ifInitialized $ sigmoidInput sigmoid
-            derivative =
-              computeS $ error *^ (activation *^ (rmap ((-)1) activation))
+            derivative = zipWith (\ e a -> e * a * (1 - a)) error activation
 
+data (Network a) => RecurrentNet a = RecurrentNet { output :: Output
+                                                  , core :: a }
+
+{-instance Network RecurrentNet where-}
+  {-feedThru sigmoid input = feedThru input ++ (output-}
+  {-backprop sigmoid _ error = (sigmoid, computeS derivative)-}
+      {-where activation = ifInitialized $ sigmoidInput sigmoid-}
+            {-derivative = zipWith (\ e a -> e * a * (1 - a)) error activation-}
 
 -- CODE FOR TESTS --
 
