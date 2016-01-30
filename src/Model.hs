@@ -1,3 +1,4 @@
+{-# LANGUAGE NamedFieldPuns #-}
 {-
 - TODO:
 - test single layer with sigmoid
@@ -20,14 +21,17 @@ module Model ( linearLayer
              , Network
              , feedThru ) where
 import           Util
-
-import           Data.Array.Repa hiding (map, (++), transpose, transpose2S)
+{-import           Control.Monad.State.Lazy-}
+import           Data.Array.Repa hiding (map,
+                                        transpose,
+                                        transpose2S,
+                                        size)
 import qualified Data.Array.Repa as Repa
 import           Data.Array.Repa.Algorithms.Matrix
 import           Data.List (foldl')
 import           Data.Maybe
 import           Control.Monad (join)
-import           Prelude hiding (sequence, zipWith)
+import           Prelude hiding (sequence, zipWith, (++))
 import Debug.Trace
 
 type Input   = Matrix
@@ -36,6 +40,7 @@ type Targets = Matrix
 type Error   = Matrix
 
 class Network a where
+    size     :: a -> Int
     feedThru :: a -> Input -> (a, Output)
     backprop :: a -> Double -> Error -> (a, Error)
 
@@ -43,7 +48,7 @@ class (Network a) => Weighted a where
     getWeights :: a -> Matrix
     gradient   :: a -> Matrix -> Matrix
 
-data (Network a) => Model a =
+data Model a =
   Trained     { network      :: a
               , costFunction :: Output -> Targets -> Error
               , learningRate :: Double }
@@ -51,6 +56,19 @@ data (Network a) => Model a =
   | Untrained { buildNetwork :: Int -> Int -> a
               , costFunction :: Output -> Targets -> Error
               , learningRate :: Double }
+
+{-test :: Model -> Input -> Targets -> (Targets -> Output -> Double)-}
+{-test model input targets scoreFunc numFolds = mean $ map score folds-}
+  {-where score    = scoreFunc (targets, output)-}
+        {-output   = model `predict` input-}
+        {-folds    = map getFold foldSize input targets [1..numFolds]-}
+        {-foldSize = numInstances / numFolds-}
+        {-Z :. numInstances :. _ = extent input-}
+
+{-accuracy :: Targets -> Output -> Double-}
+{-accuracy targets output = mean $ zipWith equals targets ouput-}
+  {-where x `equals` x = 1-}
+        {-_ `equals` _ = 0-}
 
 train :: Network a => Input -> Targets -> Model a -> Int -> Model a
 train input targets model numEpochs =
@@ -76,17 +94,17 @@ addGradients :: (Weighted a) => Double -> Matrix -> a -> Matrix
 addGradients learningRate gradient' network =
     getWeights network + rmap (*learningRate) gradient'
 
-data (Network a) => SequentialNet a = SequentialNet { children :: [a] }
+data SequentialNet a = SequentialNet { sizeSN   :: Int
+                                     , children :: [a] }
 
 sequentialNet :: (Network a) => (Int -> Int -> a) ->
-  [(Int -> Int -> a, Int)] -> Int -> Int -> SequentialNet a
-sequentialNet headNet tailNets sizeIn sizeOut = SequentialNet
-  { children =
-      let build (built, sizeOut) (buildChild, sizeIn) =
-            (buildChild sizeIn sizeOut:built, sizeIn)
-          (tail, _) = foldl' build ([], sizeOut) $ reverse tailNets
-          head = headNet sizeIn sizeOut
-      in  head:tail }
+  [Int -> a] -> Int -> Int -> SequentialNet a
+sequentialNet head tail sizeIn sizeOut = SequentialNet
+  { children = let build (built, sizeOut) buildChild =
+                      let child = buildChild sizeOut
+                      in  (child:built, size child)
+                   (tail', _) = foldl' build ([], sizeOut) $ reverse tail
+               in  head sizeIn sizeOut:tail' }
 
 
 sequence :: Network a => (a -> Matrix -> (a, Matrix)) ->
@@ -97,11 +115,14 @@ sequence function signal children network =
             propogate (children, signal) child = (child':children, signal')
                        where (child', signal') = function child signal
 
-{-neuralNetLayer :: Int -> Int -> SequentialNet-}
-{-neuralNetLayer sizeIn sizeOut = sequentialNet [linearLayer, sigmoid]-}
+{-neuralNetLayer :: Network a => Int -> Int -> SequentialNet a-}
+{-neuralNetLayer = sequentialNet linearLayer [sigmoid]-}
+
+-- sequentialNet linearyLayer [linearLayer 3, linearLayer2]
 
 
 instance Network a => Network (SequentialNet a) where
+  size = sizeSN
   feedThru network input =
     (net { children = reverse $ children net }, output)
     where (net, output) = sequence feedThru input (children network) network
@@ -110,16 +131,19 @@ instance Network a => Network (SequentialNet a) where
     where backprop' error = backprop error learningRate
 
 
-data LinearLayer = LinearLayer { input   :: Maybe Input
-                               , weights :: Matrix }
+data LinearLayer = LinearLayer { sizeLinearLayer :: Int
+                               , input           :: Maybe Input
+                               , weights         :: Matrix }
 
 linearLayer :: Int -> Int -> LinearLayer
 linearLayer sizeIn sizeOut = LinearLayer
-  { input   = Nothing
-  , weights = randomArray (sizeIn + 1) sizeOut }
+  { sizeLinearLayer = sizeIn
+  , input           = Nothing
+  , weights         = randomArray (sizeIn + 1) sizeOut }
 
 
 instance Network LinearLayer where
+  size = sizeLinearLayer
   feedThru layer input =
     (layer { input = Just input' }, input' * (weights layer))
     where input' = addOnes input
@@ -133,33 +157,37 @@ instance Weighted LinearLayer where
     gradient layer error = (transpose . ifInitialized $ input layer) * error
 
 
-data Sigmoid = Sigmoid { sigmoidInput :: Maybe Input }
+data Sigmoid = Sigmoid { sigmoidInput :: Maybe Input
+                       , sigmoidSize  :: Int }
 
-sigmoid :: Sigmoid
-sigmoid = Sigmoid { sigmoidInput = Nothing }
+sigmoid :: Int -> Sigmoid
+sigmoid size = Sigmoid { sigmoidInput = Nothing
+                       , sigmoidSize  = size }
 
 instance Network Sigmoid where
+  size = sigmoidSize
   feedThru sigmoid input = (sigmoid { sigmoidInput = Just input }
                            , rmap (\ x -> 1 / (1 + exp (-x))) input)
   backprop sigmoid _ error = (sigmoid, computeS derivative)
       where activation = ifInitialized $ sigmoidInput sigmoid
             derivative = zipWith (\ e a -> e * a * (1 - a)) error activation
 
-data (Network a) => RecurrentNet a = RecurrentNet { output :: Output
-                                                  , core :: a }
+data RecurrentNet a = RecurrentNet { sizeRN :: Int
+                                   , output :: Output
+                                   , core   :: a }
 
-{-instance Network RecurrentNet where-}
-  {-feedThru sigmoid input = feedThru input ++ (output-}
-  {-backprop sigmoid _ error = (sigmoid, computeS derivative)-}
-      {-where activation = ifInitialized $ sigmoidInput sigmoid-}
-            {-derivative = zipWith (\ e a -> e * a * (1 - a)) error activation-}
+{-instance Network a => Network (RecurrentNet a) where-}
+  {-size = sizeRN-}
+  {-feedThru RecurrentNet { output, core } input = feedThru core input-}
+    {-where input = computeS $ input ++ output-}
+  {-backprop network = backprop core-}
 
 -- CODE FOR TESTS --
 
 sequentialNetFromMatrices :: [Matrix] -> SequentialNet LinearLayer
 sequentialNetFromMatrices matrices =
     network { children = map linearLayerFromMatrix matrices }
-    where network = sequentialNet linearLayer [(linearLayer, 2)] 2 2
+    where network = sequentialNet linearLayer [linearLayer 2] 2 2
 
 linearLayerFromValues :: [[Double]] -> LinearLayer
 linearLayerFromValues values =

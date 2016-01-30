@@ -1,5 +1,6 @@
 {-# LANGUAGE TypeSynonymInstances #-}
 {-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE BangPatterns #-}
 
 module Util where
 
@@ -42,6 +43,9 @@ matrix :: [[Double]] -> Matrix
 matrix values = fromListUnboxed (Z :. height :. width) $ concat values
   where height = length values
         width  = length $ values !! 0
+
+mean :: Floating a => [a] -> a
+mean x = fst $ foldl' (\(!m, !n) x -> (m+(x-m)/(n+1),n+1)) (0,0) x
 
 ifInitialized :: Maybe a -> a
 ifInitialized m = case m of Just a  -> a

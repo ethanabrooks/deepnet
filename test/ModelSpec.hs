@@ -45,7 +45,7 @@ spec = do
           weights layer'' `shouldBe` (transpose (addOnes m1) * m1 + m)
 
   describe "Sigmoid" $ do
-    let layer = sigmoid
+    let layer = sigmoid 2
     it "has no initial input" $ do
       sigmoidInput layer `shouldBe` Nothing
     it "feeds forwards" $ do
