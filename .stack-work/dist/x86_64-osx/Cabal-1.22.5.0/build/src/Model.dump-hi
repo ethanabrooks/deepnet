@@ -1,0 +1,803 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-15 00:44:41.291251 UTC
+
+interface deepn_98vzwQjA0spLmxroj6F8bT:Model 7103
+  interface hash: a4350b31ab5cf7b5d2110f66f8d6e5b4
+  ABI hash: 222f0c25a74a114b9f7879d8699ed007
+  export-list hash: 1f3da339a276008de1f12ad27e7caa65
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 16d31e5e8eb07e4b1ea59bb4e3a6bab3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Model.linearLayer
+  Model.linearLayerFromMatrix
+  Model.sequentialNet
+  Model.sequentialNetFromMatrices
+  Model.sigmoid
+  Model.LinearLayer|{Model.input Model.weights}
+  Model.Network{Model.backprop Model.feedThru}
+  Model.SequentialNet|{Model.children}
+  Model.Sigmoid|{Model.sigmoidInput}
+module dependencies: Util
+package dependencies: HUnit-1.3.0.0@HUnit_BG7FInvjg0k8rLNKmL1VFA
+                      QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      ansi-terminal-0.6.2.3@ansit_BDlVdfJGo3VHCIHxPTNjH1
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      async-2.0.2@async_1QvsFXyq0AKLt4KdNR0ChF base-4.8.2.0
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      hspec-expectations-0.7.2@hspec_19YQSHkZ0r2ED4k4Dnbroh
+                      hspec-2.2.1@hspec_4R8oqeKmp2qHiEwtLGb3ih
+                      hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi
+                      ieee754-0.7.6@ieee7_E4oWks01x7uFbXdcWiQ2b6 integer-gmp-1.0.0.0
+                      pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL
+                      repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz
+                      repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic
+                      setenv-0.1.1.3@seten_6IUqFDI6NejGrNz9ulqEjc
+                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         deepn_98vzwQjA0spLmxroj6F8bT:Util
+         quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx:Test.QuickCheck.IO
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Arbitrary
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Reduction
+         stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD:Control.Monad.STM
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi:Test.Hspec.Core.Example
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ByteString
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Cursored
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Delayed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ForeignPtr
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintInterleave
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintSmall
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Partitioned
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Unboxed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Undefined
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Vector
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Slice
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:Debug.Trace 6660afb6094d69397ea084364da8f950
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Float e532d434ec2447d809887c0fca1d78a5
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Util f3515a7cd17b7af1db2671413e3a55e8
+  exports: 1a92f9c899454932dd27d69a705ef81e
+  Matrix 96f30c3561b511e72a722f4ba1ad9263
+  addOnes c5458a683844d4ae8cdf3e210009cb7c
+  ifInitialized e9c7ffbc3fa5aaef002b7f616c43045d
+  matrix 310f9be338bc2077a060802750fbc4e0
+  randomArray e83265fbc26d6f36901e4e30be387e34
+  rmap df76f897c5dc75fffdc1c504ebe7ab72
+  transpose f0a7678c70d80534f9b8572f42829a9e
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa e211591ce9704be9903af9111b06e0a5
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Base 1078f22f7c65f425f11551a0db7792af
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Eval 93b2e956df96cc91e2a04417db3da6b8
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Index 47c3134574cf06a75bf9a7010a594e30
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping 7bc3f85c3bdf02ce37fb7c58c1e9af40
+import  -/  repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic:Data.Array.Repa.Algorithms.Matrix be4e74a2ef97fec43da89fcb08de3b5f
+ef223cf33b9c88fa373ccc984e001721
+  $fNetworkLinearLayer :: Model.Network Model.LinearLayer
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Model.LinearLayer
+                  Model.sizeLinearLayer
+                  Model.$fNetworkLinearLayer_$cfeedThru
+                  Model.$fNetworkLinearLayer_$cbackprop -}
+155a6397a6b167493ec0f2876e2507b3
+  $fNetworkLinearLayer_$cbackprop ::
+    Model.LinearLayer
+    -> GHC.Types.Double
+    -> Model.Error
+    -> (Model.LinearLayer, Model.Error)
+  {- Arity: 3,
+     Strictness: <L,U(U,U,U(U(U(H,U(U)),U(U)),U(U,A,U)))><L,U(U)><L,U(U(U(U,U(U)),U(U)),U(U,U,U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: Model.LinearLayer
+                   w1 :: GHC.Types.Double
+                   w2 :: Model.Error ->
+                 case Model.$w$cbackprop w w1 w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+26d7e9e4f1668b6b5f4a8bf2229e98cd
+  $fNetworkLinearLayer_$cfeedThru ::
+    Model.LinearLayer
+    -> Model.Input -> (Model.LinearLayer, Model.Output)
+  {- Arity: 2,
+     Strictness: <L,U(U,A,U)><L,1*U(U(U(H,U(U)),U(U)),U(U,A,U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Model.LinearLayer w1 :: Model.Input ->
+                 case Model.$w$cfeedThru w w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+ef223cf33b9c88fa373ccc984e001721
+  $fNetworkSequentialNet ::
+    Model.Network a => Model.Network (Model.SequentialNet a)
+  DFunId[0]
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U(U,U))),C(C1(C1(U(U,U)))))>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a $dNetwork :: Model.Network a.
+                  @ (Model.SequentialNet a)
+                  (Model.sizeSN @ a $dNetwork)
+                  (Model.$fNetworkSequentialNet_$cfeedThru @ a $dNetwork)
+                  (Model.$fNetworkSequentialNet_$cbackprop @ a $dNetwork) -}
+ef223cf33b9c88fa373ccc984e001721
+  $fNetworkSequentialNet_$cbackprop ::
+    Model.Network a =>
+    Model.SequentialNet a
+    -> GHC.Types.Double
+    -> Model.Error
+    -> (Model.SequentialNet a, Model.Error)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(C1(U(U,U)))))><L,U(U,1*U)><L,U><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   w :: Model.Network a
+                   w1 :: Model.SequentialNet a
+                   w2 :: GHC.Types.Double
+                   w3 :: Model.Error ->
+                 case Model.$w$cbackprop1 @ a w w1 w2 w3 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+ef223cf33b9c88fa373ccc984e001721
+  $fNetworkSequentialNet_$cfeedThru ::
+    Model.Network a =>
+    Model.SequentialNet a
+    -> Model.Input -> (Model.SequentialNet a, Model.Output)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,1*C(C1(U(U,U))),A)><L,U(U,1*U)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   w :: Model.Network a
+                   w1 :: Model.SequentialNet a
+                   w2 :: Model.Input ->
+                 case Model.$w$cfeedThru1 @ a w w1 w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+ef223cf33b9c88fa373ccc984e001721
+  $fNetworkSigmoid :: Model.Network Model.Sigmoid
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Model.Sigmoid
+                  Model.sigmoidSize
+                  Model.$fNetworkSigmoid_$cfeedThru
+                  Model.$fNetworkSigmoid_$cbackprop -}
+d6746a4f31901a90dd9723dfd248fc16
+  $fNetworkSigmoid1 :: GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: GHC.Types.Double ->
+                 case x of wild { GHC.Types.D# x1 ->
+                 case GHC.Prim./##
+                        1.0
+                        (GHC.Prim.+##
+                           1.0
+                           (GHC.Prim.expDouble#
+                              (GHC.Prim.negateDouble# x1))) of wild2 { DEFAULT ->
+                 GHC.Types.D# wild2 } }) -}
+9c6784589e0ea47e22c85683a694f600
+  $fNetworkSigmoid_$cbackprop ::
+    Model.Sigmoid
+    -> GHC.Types.Double -> Model.Error -> (Model.Sigmoid, Model.Error)
+  {- Arity: 3,
+     Strictness: <L,U(U,U)><L,A><L,1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: Model.Sigmoid w1 :: GHC.Types.Double w2 :: Model.Error ->
+                 case Model.$w$cbackprop2 w w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+0584626b56c1ce1ae2ac513f2a70b00e
+  $fNetworkSigmoid_$cfeedThru ::
+    Model.Sigmoid -> Model.Input -> (Model.Sigmoid, Model.Output)
+  {- Arity: 2,
+     Strictness: <L,1*U(A,U)><L,U(U(U(U,U(U)),U(U)),U(U,U,U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Model.Sigmoid w1 :: Model.Input ->
+                 (case w of wild { Model.Sigmoid ds ds1 ->
+                  Model.Sigmoid (GHC.Base.Just @ Model.Input w1) ds1 },
+                  case w1
+                         `cast`
+                       (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                 <GHC.Types.Double>_N
+                                 <Data.Array.Repa.Index.DIM1
+                                  Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                  case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                  case ww2
+                         `cast`
+                       (Trans
+                            (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                            (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                  Util.$wrmap Model.$fNetworkSigmoid1 ww4 ww5 ww7 ww9 } } })) -}
+be4d5b155701227aade88831a298ef9a
+  $fWeightedLinearLayer :: Model.Weighted Model.LinearLayer
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Model.LinearLayer
+                  Model.$fNetworkLinearLayer
+                  Model.weights
+                  Model.$fWeightedLinearLayer_$cgradient -}
+bbad93dc0b79e560e9da127d28a67b40
+  $fWeightedLinearLayer_$cgradient ::
+    Model.LinearLayer -> Util.Matrix -> Util.Matrix
+  {- Arity: 2, Strictness: <S(LSL),1*U(A,1*U,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ layer :: Model.LinearLayer error :: Util.Matrix ->
+                 case layer of wild { Model.LinearLayer ds ds1 ds2 ->
+                 case ds1 of wild1 {
+                   GHC.Base.Nothing
+                   -> case Util.ifInitialized1
+                      ret_ty (Data.Array.Repa.Base.Array
+                                Data.Array.Repa.Repr.Unboxed.U
+                                Data.Array.Repa.Index.DIM2
+                                GHC.Types.Double)
+                      of {}
+                   GHC.Base.Just a4
+                   -> Data.Array.Repa.Algorithms.Matrix.mmultS
+                        (Data.Array.Repa.Algorithms.Matrix.transpose2S a4)
+                        error } }) -}
+672243a9bc087c0c727c5d313d6b745e
+  $w$cbackprop ::
+    Model.LinearLayer
+    -> GHC.Types.Double
+    -> Model.Error
+    -> (# Model.LinearLayer, Model.Error #)
+  {- Arity: 3,
+     Strictness: <L,U(U,U,U(U(U(H,U(U)),U(U)),U(U,A,U)))><L,U(U)><L,U(U(U(U,U(U)),U(U)),U(U,U,U))>,
+     Inline: [0],
+     Unfolding: (\ w :: Model.LinearLayer
+                   w1 :: GHC.Types.Double
+                   w2 :: Model.Error ->
+                 (# case w of wild { Model.LinearLayer ds ds1 ds2 ->
+                    Model.LinearLayer
+                      ds
+                      ds1
+                      (case ds1 of wild1 {
+                         GHC.Base.Nothing
+                         -> case Util.ifInitialized1 ret_ty Util.Matrix of {}
+                         GHC.Base.Just a4
+                         -> case ds2
+                                   `cast`
+                                 (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                           <GHC.Types.Double>_N
+                                           <Data.Array.Repa.Index.DIM1
+                                            Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                            case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                            case ww4 of ww6 { Data.Array.Repa.Index.:. ww7 ww8 ->
+                            case ww8 of ww9 { GHC.Types.I# ww10 ->
+                            case ww5 of ww11 { GHC.Types.I# ww12 ->
+                            case ww2
+                                   `cast`
+                                 (Trans
+                                      (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                                      (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww13 { Data.Vector.Primitive.Vector ww14 ww15 ww16 ->
+                            case (Data.Array.Repa.Algorithms.Matrix.mmultS
+                                    (Data.Array.Repa.Algorithms.Matrix.transpose2S a4)
+                                    w2)
+                                   `cast`
+                                 (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                           <GHC.Types.Double>_N
+                                           <Data.Array.Repa.Index.DIM1
+                                            Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww22 { Data.Array.Repa.Repr.Unboxed.AUnboxed ww23 ww24 ->
+                            case ww23 of ww25 { Data.Array.Repa.Index.:. ww26 ww27 ->
+                            case ww24
+                                   `cast`
+                                 (Trans
+                                      (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                                      (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww28 { Data.Vector.Primitive.Vector ww29 ww30 ww31 ->
+                            Util.$w$c+
+                              ww7
+                              ww10
+                              ww12
+                              ww14
+                              ww16
+                              (Util.$wrmap
+                                 (\ ds3 :: GHC.Types.Double -> GHC.Float.timesDouble ds3 w1)
+                                 ww26
+                                 ww27
+                                 ww29
+                                 ww31) } } } } } } } } } }) },
+                    case w of wild { Model.LinearLayer ds ds1 ds2 ->
+                    Data.Array.Repa.Algorithms.Matrix.mmultS
+                      w2
+                      (Data.Array.Repa.Algorithms.Matrix.transpose2S ds2) } #)) -}
+ef223cf33b9c88fa373ccc984e001721
+  $w$cbackprop1 ::
+    Model.Network a =>
+    Model.SequentialNet a
+    -> GHC.Types.Double
+    -> Model.Error
+    -> (# Model.SequentialNet a, Model.Error #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(C1(U(U,U)))))><L,U(U,1*U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   w :: Model.Network a
+                   w1 :: Model.SequentialNet a
+                   w2 :: GHC.Types.Double
+                   w3 :: Model.Error ->
+                 Model.$wsequence
+                   @ a
+                   (\ error :: a -> Model.backprop @ a w error w2)
+                   w3
+                   (case w1 of wild { Model.SequentialNet ds ds1 ->
+                    GHC.List.reverse1 @ a ds1 (GHC.Types.[] @ a) })
+                   w1) -}
+7d6fb4a413fa56ba7ba904e1b5e04a14
+  $w$cbackprop2 ::
+    Model.Sigmoid -> Model.Error -> (# Model.Sigmoid, Model.Error #)
+  {- Arity: 2,
+     Strictness: <L,U(U,U)><L,1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))>,
+     Inline: [0] -}
+debaaeec31900127f5067d94eb2b71e0
+  $w$cfeedThru ::
+    Model.LinearLayer
+    -> Model.Input -> (# Model.LinearLayer, Model.Output #)
+  {- Arity: 2,
+     Strictness: <L,U(U,A,U)><L,1*U(U(U(H,U(U)),U(U)),U(U,A,U))>,
+     Inline: [0],
+     Unfolding: (\ w :: Model.LinearLayer w1 :: Model.Input ->
+                 let {
+                   input' :: Util.Matrix
+                   = case w1
+                            `cast`
+                          (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                    <GHC.Types.Double>_N
+                                    <Data.Array.Repa.Index.DIM1
+                                     Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                     case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                     case ww4 of ww6 { Data.Array.Repa.Index.:. ww7 ww8 ->
+                     case ww8 of ww9 { GHC.Types.I# ww10 ->
+                     case ww5 of ww11 { GHC.Types.I# ww12 ->
+                     case ww2
+                            `cast`
+                          (Trans
+                               (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                               (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww13 { Data.Vector.Primitive.Vector ww14 ww15 ww16 ->
+                     Util.$waddOnes ww7 ww10 ww12 ww14 ww16 } } } } } }
+                 } in
+                 (# case w of wild { Model.LinearLayer ds ds1 ds2 ->
+                    Model.LinearLayer ds (GHC.Base.Just @ Model.Input input') ds2 },
+                    case w of wild { Model.LinearLayer ds ds1 ds2 ->
+                    Data.Array.Repa.Algorithms.Matrix.mmultS input' ds2 } #)) -}
+ef223cf33b9c88fa373ccc984e001721
+  $w$cfeedThru1 ::
+    Model.Network a =>
+    Model.SequentialNet a
+    -> Model.Input -> (# Model.SequentialNet a, Model.Output #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,1*C(C1(U(U,U))),A)><L,U(U,1*U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   w :: Model.Network a
+                   w1 :: Model.SequentialNet a
+                   w2 :: Model.Input ->
+                 let {
+                   ds :: (Model.SequentialNet a, Util.Matrix)
+                   = case Model.$wsequence
+                            @ a
+                            (Model.feedThru @ a w)
+                            w2
+                            (case w1 of wild { Model.SequentialNet ds1 ds2 -> ds2 })
+                            w1 of ww { (#,#) ww1 ww2 ->
+                     (ww1, ww2) }
+                 } in
+                 (# case ds of wild { (,) net output1 ->
+                    case net of wild1 { Model.SequentialNet ds1 ds2 ->
+                    Model.SequentialNet
+                      @ a
+                      ds1
+                      (GHC.List.reverse1 @ a ds2 (GHC.Types.[] @ a)) } },
+                    case ds of wild { (,) net output1 -> output1 } #)) -}
+ef223cf33b9c88fa373ccc984e001721
+  $wsequence ::
+    (a -> Util.Matrix -> (a, Util.Matrix))
+    -> Util.Matrix
+    -> [a]
+    -> Model.SequentialNet a
+    -> (# Model.SequentialNet a, Util.Matrix #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,C(C1(U(U,U)))><L,U><L,1*U><L,1*U(U,A)>, Inline: [0],
+     Unfolding: (\ @ a
+                   w :: a -> Util.Matrix -> (a, Util.Matrix)
+                   w1 :: Util.Matrix
+                   w2 :: [a]
+                   w3 :: Model.SequentialNet a ->
+                 let {
+                   ds :: ([a], Util.Matrix)
+                   = letrec {
+                       $wgo1 :: [a] -> [a] -> Util.Matrix -> (# [a], Util.Matrix #)
+                         {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [0] -}
+                       = \ w4 :: [a] ww :: [a] ww1 :: Util.Matrix ->
+                         case w4 of wild {
+                           [] -> (# ww, ww1 #)
+                           : y ys
+                           -> let {
+                                ds1 :: (a, Util.Matrix) = w y ww1
+                              } in
+                              $wgo1
+                                ys
+                                (GHC.Types.:
+                                   @ a
+                                   (case ds1 of wild1 { (,) child' signal' -> child' })
+                                   ww)
+                                (case ds1 of wild1 { (,) child' signal' -> signal' }) }
+                     } in
+                     case $wgo1 w2 (GHC.Types.[] @ a) w1 of ww { (#,#) ww1 ww2 ->
+                     (ww1, ww2) }
+                 } in
+                 (# case w3 of wild { Model.SequentialNet ds1 ds2 ->
+                    Model.SequentialNet
+                      @ a
+                      ds1
+                      (case ds of wild1 { (,) children' out -> children' }) },
+                    case ds of wild { (,) children' out -> out } #)) -}
+d8650d3573896ee39f6604b9be22486d
+  $wsequentialNet ::
+    Model.Network a =>
+    (GHC.Types.Int -> GHC.Types.Int -> a)
+    -> [GHC.Types.Int -> a]
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> (# GHC.Types.Int, [a] #)
+  {- Arity: 5,
+     Strictness: <L,U(C(U),A,A)><L,1*C1(C1(U))><L,1*U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   w :: Model.Network a
+                   w1 :: GHC.Types.Int -> GHC.Types.Int -> a
+                   w2 :: [GHC.Types.Int -> a]
+                   w3 :: GHC.Types.Int
+                   w4 :: GHC.Types.Int ->
+                 (# Model.sequentialNet1,
+                    GHC.Types.:
+                      @ a
+                      (w1 w3 w4)
+                      (letrec {
+                         $wgo1 :: [GHC.Types.Int -> a]
+                                  -> [a] -> GHC.Types.Int -> (# [a], GHC.Types.Int #)
+                           {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [0] -}
+                         = \ w5 :: [GHC.Types.Int -> a] ww :: [a] ww1 :: GHC.Types.Int ->
+                           case w5 of wild {
+                             [] -> (# ww, ww1 #)
+                             : y ys
+                             -> let {
+                                  child :: a = y ww1
+                                } in
+                                $wgo1 ys (GHC.Types.: @ a child ww) (Model.size @ a w child) }
+                       } in
+                       case $wgo1
+                              (GHC.List.reverse1
+                                 @ (GHC.Types.Int -> a)
+                                 w2
+                                 (GHC.Types.[] @ (GHC.Types.Int -> a)))
+                              (GHC.Types.[] @ a)
+                              w4 of ww { (#,#) ww1 ww2 ->
+                       ww1 }) #)) -}
+5a2e2a46c79b7a1158c4b37f945b6cf5
+  type Error = Util.Matrix
+bf8f01b70c88da35b7a79d6e0f2c875e
+  type Input = Util.Matrix
+6e8accd8bffe6cfe9513c6461d04cc91
+  data LinearLayer
+    = LinearLayer {sizeLinearLayer :: GHC.Types.Int,
+                   input :: GHC.Base.Maybe Model.Input,
+                   weights :: Util.Matrix}
+33291c20e93ea30cca7fe18e471f91e1
+  type role Model nominal
+  data Model.Network a => Model a
+    = Trained {network :: a,
+               costFunction :: Model.Output -> Model.Targets -> Model.Error,
+               learningRate :: GHC.Types.Double}
+    | Untrained {buildNetwork :: GHC.Types.Int -> GHC.Types.Int -> a,
+                 costFunction :: Model.Output -> Model.Targets -> Model.Error,
+                 learningRate :: GHC.Types.Double}
+ef223cf33b9c88fa373ccc984e001721
+  class Network a where
+    size :: a -> GHC.Types.Int
+    feedThru :: a -> Model.Input -> (a, Model.Output)
+    backprop ::
+      a -> GHC.Types.Double -> Model.Error -> (a, Model.Error)
+09898793178cd6a9cc50bd154071c10d
+  type Output = Util.Matrix
+b8f32dab760d2b137775f22a521acda2
+  type role RecurrentNet nominal
+  data Model.Network a => RecurrentNet a
+    = RecurrentNet {sizeRN :: GHC.Types.Int,
+                    output :: Model.Output,
+                    core :: a}
+ef223cf33b9c88fa373ccc984e001721
+  type role SequentialNet nominal
+  data Model.Network a => SequentialNet a
+    = SequentialNet {sizeSN :: GHC.Types.Int, children :: [a]}
+8f13e8ba1d7d1f1cd1a47547b596e629
+  data Sigmoid
+    = Sigmoid {sigmoidInput :: GHC.Base.Maybe Model.Input,
+               sigmoidSize :: GHC.Types.Int}
+b8c4728910ae18dcfe89099b52ca56cb
+  type Targets = Util.Matrix
+be4d5b155701227aade88831a298ef9a
+  class Model.Network a => Weighted a where
+    getWeights :: a -> Util.Matrix
+    gradient :: a -> Util.Matrix -> Util.Matrix
+507e208e559c52018733af0466083df9
+  buildNetwork ::
+    Model.Network a =>
+    Model.Model a -> GHC.Types.Int -> GHC.Types.Int -> a
+  RecSel Model.Model
+  {- Arity: 2, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.Model a ->
+                 case ds of wild {
+                   Model.Trained ipv ipv1 ipv2 -> Model.buildNetwork1 @ a
+                   Model.Untrained ds1 ds2 ds3 -> ds1 }) -}
+bf25a562e92e59cf8fed18794eb6d3e1
+  buildNetwork1 :: GHC.Types.Int -> GHC.Types.Int -> a
+  {- Strictness: b -}
+7bc795c3515b577f92fc58eaa891a210
+  children :: Model.Network a => Model.SequentialNet a -> [a]
+  RecSel Model.SequentialNet
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.SequentialNet a ->
+                 case ds of wild { Model.SequentialNet ds1 ds2 -> ds2 }) -}
+5097573313a0844d9ffe00b004d2a5e3
+  core :: Model.Network a => Model.RecurrentNet a -> a
+  RecSel Model.RecurrentNet
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.RecurrentNet a ->
+                 case ds of wild { Model.RecurrentNet ds1 ds2 ds3 -> ds3 }) -}
+7e886a54bb0df9ff2b76572545c2ecbd
+  costFunction ::
+    Model.Network a =>
+    Model.Model a -> Model.Output -> Model.Targets -> Model.Error
+  RecSel Model.Model
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.Model a ->
+                 case ds of wild {
+                   Model.Trained ds1 ds2 ds3 -> ds2
+                   Model.Untrained ds1 ds2 ds3 -> ds2 }) -}
+c8cc31426093c46ff7b3829c257d496a
+  input :: Model.LinearLayer -> GHC.Base.Maybe Model.Input
+  RecSel Model.LinearLayer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.LinearLayer ->
+                 case ds of wild { Model.LinearLayer ds1 ds2 ds3 -> ds2 }) -}
+528d31f00c1022e255d987cd772a4b85
+  learningRate ::
+    Model.Network a => Model.Model a -> GHC.Types.Double
+  RecSel Model.Model
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.Model a ->
+                 case ds of wild {
+                   Model.Trained ds1 ds2 ds3 -> ds3
+                   Model.Untrained ds1 ds2 ds3 -> ds3 }) -}
+27f3cfc4addb512a1a106da60cd8fd8b
+  linearLayer :: GHC.Types.Int -> GHC.Types.Int -> Model.LinearLayer
+  {- Arity: 2, Strictness: <L,U(U)><L,1*U(U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: GHC.Types.Int ->
+                 Model.LinearLayer
+                   w
+                   (GHC.Base.Nothing @ Model.Input)
+                   (case w of wild { GHC.Types.I# x ->
+                    case w1 of ww2 { GHC.Types.I# ww3 ->
+                    Data.Array.Repa.Algorithms.Randomish.$wrandomishDoubleArray
+                      @ Data.Array.Repa.Index.DIM2
+                      Util.$fAEqArray_$s$fShape:.
+                      (Data.Array.Repa.Index.:.
+                         @ Data.Array.Repa.Index.DIM1
+                         @ GHC.Types.Int
+                         (Data.Array.Repa.Index.:.
+                            @ Data.Array.Repa.Index.DIM0
+                            @ GHC.Types.Int
+                            Data.Array.Repa.Index.Z
+                            (GHC.Types.I# (GHC.Prim.+# x 1)))
+                         (GHC.Types.I# ww3))
+                      0.0
+                      1.0
+                      0 } })) -}
+dc45ff8c5a0a92563e0f8d06e112a31d
+  linearLayerFromMatrix :: Util.Matrix -> Model.LinearLayer
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(U(U(U,U),U),U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ matrix :: Util.Matrix ->
+                 Model.LinearLayer
+                   (case matrix
+                           `cast`
+                         (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                   <GHC.Types.Double>_N
+                                   <(Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                                    Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed sh1 ds1 ->
+                    case sh1 of wild1 { Data.Array.Repa.Index.:. ds sizeOut ->
+                    case ds of wild2 { Data.Array.Repa.Index.:. ds2 sizeIn ->
+                    sizeIn } } })
+                   (GHC.Base.Nothing @ Model.Input)
+                   matrix) -}
+a89d1a7da6f4effe9797d64f506cf0d8
+  network :: Model.Network a => Model.Model a -> a
+  RecSel Model.Model
+  {- Arity: 2, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.Model a ->
+                 case ds of wild {
+                   Model.Trained ds1 ds2 ds3 -> ds1
+                   Model.Untrained ipv ipv1 ipv2 -> Model.network1 @ a }) -}
+427fd208d73465b62f6a5797279b1e8e
+  network1 :: a
+  {- Strictness: b -}
+7fd47eb08e2424d6b5e666aca0183c17
+  output :: Model.Network a => Model.RecurrentNet a -> Model.Output
+  RecSel Model.RecurrentNet
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,A><S(LSL),1*U(A,1*U(U,U),A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.RecurrentNet a ->
+                 case ds of wild { Model.RecurrentNet ds1 ds2 ds3 -> ds2 }) -}
+d3f1cda2111721fc9740f3d7e45543ba
+  sequentialNet ::
+    Model.Network a =>
+    (GHC.Types.Int -> GHC.Types.Int -> a)
+    -> [GHC.Types.Int -> a]
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Model.SequentialNet a
+  {- Arity: 5,
+     Strictness: <L,U(C(U),A,A)><L,1*C1(C1(U))><L,1*U><L,U><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   w :: Model.Network a
+                   w1 :: GHC.Types.Int -> GHC.Types.Int -> a
+                   w2 :: [GHC.Types.Int -> a]
+                   w3 :: GHC.Types.Int
+                   w4 :: GHC.Types.Int ->
+                 case Model.$wsequentialNet
+                        @ a
+                        w
+                        w1
+                        w2
+                        w3
+                        w4 of ww { (#,#) ww1 ww2 ->
+                 Model.SequentialNet @ a ww1 ww2 }) -}
+cf747c46a62efd4819b9e22973e56e74
+  sequentialNet1 :: GHC.Types.Int
+  {- Strictness: b -}
+f015f8cab0a025d05cfaca674586749c
+  sequentialNetFromMatrices ::
+    [Util.Matrix] -> Model.SequentialNet Model.LinearLayer
+  {- Arity: 1, Strictness: <L,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ matrices :: [Util.Matrix] ->
+                 Model.SequentialNet
+                   @ Model.LinearLayer
+                   Model.sequentialNet1
+                   (GHC.Base.build
+                      @ Model.LinearLayer
+                      (\ @ b1
+                         c :: Model.LinearLayer -> b1 -> b1[OneShot]
+                         n :: b1[OneShot] ->
+                       GHC.Base.foldr
+                         @ (Data.Array.Repa.Base.Array
+                              Data.Array.Repa.Repr.Unboxed.U
+                              Data.Array.Repa.Index.DIM2
+                              GHC.Types.Double)
+                         @ b1
+                         (GHC.Base.mapFB
+                            @ Model.LinearLayer
+                            @ b1
+                            @ (Data.Array.Repa.Base.Array
+                                 Data.Array.Repa.Repr.Unboxed.U
+                                 Data.Array.Repa.Index.DIM2
+                                 GHC.Types.Double)
+                            c
+                            Model.linearLayerFromMatrix)
+                         n
+                         matrices))) -}
+11b763cc12c7d5b67313aaa7d7df87e2
+  sigmoid :: GHC.Types.Int -> Model.Sigmoid
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ size1 :: GHC.Types.Int ->
+                 Model.Sigmoid (GHC.Base.Nothing @ Model.Input) size1) -}
+94a39c3c017544f482212aa158a91b6e
+  sigmoidInput :: Model.Sigmoid -> GHC.Base.Maybe Model.Input
+  RecSel Model.Sigmoid
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.Sigmoid ->
+                 case ds of wild { Model.Sigmoid ds1 ds2 -> ds1 }) -}
+1d33f174728e7c924b22dfe4e2e68abc
+  sigmoidSize :: Model.Sigmoid -> GHC.Types.Int
+  RecSel Model.Sigmoid
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.Sigmoid ->
+                 case ds of wild { Model.Sigmoid ds1 ds2 -> ds2 }) -}
+318f4293a5d1175822db33be10483003
+  sizeLinearLayer :: Model.LinearLayer -> GHC.Types.Int
+  RecSel Model.LinearLayer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.LinearLayer ->
+                 case ds of wild { Model.LinearLayer ds1 ds2 ds3 -> ds1 }) -}
+d97ec6f2ff48d0d4fc32a8b6f7643011
+  sizeRN :: Model.Network a => Model.RecurrentNet a -> GHC.Types.Int
+  RecSel Model.RecurrentNet
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,A><S(SLL),1*U(1*U(U),A,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.RecurrentNet a ->
+                 case ds of wild { Model.RecurrentNet ds1 ds2 ds3 -> ds1 }) -}
+ef223cf33b9c88fa373ccc984e001721
+  sizeSN :: Model.Network a => Model.SequentialNet a -> GHC.Types.Int
+  RecSel Model.SequentialNet
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S(SL),1*U(1*U(U),A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dNetwork :: Model.Network a ds :: Model.SequentialNet a ->
+                 case ds of wild { Model.SequentialNet ds1 ds2 -> ds1 }) -}
+905dcfce447543a4aa5ce90860abb309
+  weights :: Model.LinearLayer -> Util.Matrix
+  RecSel Model.LinearLayer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.LinearLayer ->
+                 case ds of wild { Model.LinearLayer ds1 ds2 ds3 -> ds3 }) -}
+instance Model.Network [Model.LinearLayer]
+  = Model.$fNetworkLinearLayer
+instance Model.Network [Model.SequentialNet]
+  = Model.$fNetworkSequentialNet
+instance Model.Network [Model.Sigmoid] = Model.$fNetworkSigmoid
+instance Model.Weighted [Model.LinearLayer]
+  = Model.$fWeightedLinearLayer
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,238 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-12 20:56:46.790068 UTC
+
+interface main@main:Main 7103
+  interface hash: 9961d6aa85dd22c674f0460a47e8f069
+  ABI hash: 009260fb691931f7b21556563a5ce1fb
+  export-list hash: 3888f974e56ab3a141ddfd7831e08dd0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 49e0ee32363989b64661aaeb27dad83c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.spec
+module dependencies: Data.String.StripSpec
+package dependencies: HUnit-1.3.0.0@HUnit_BG7FInvjg0k8rLNKmL1VFA
+                      QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      ansi-terminal-0.6.2.3@ansit_BDlVdfJGo3VHCIHxPTNjH1
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      async-2.0.2@async_1QvsFXyq0AKLt4KdNR0ChF base-4.8.2.0
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      hspec-expectations-0.7.2@hspec_19YQSHkZ0r2ED4k4Dnbroh
+                      hspec-2.2.1@hspec_4R8oqeKmp2qHiEwtLGb3ih
+                      hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi integer-gmp-1.0.0.0
+                      pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      proj-0.1.0.0@proj_CS93O1rx1ZPH7PcMfWS1Ts
+                      quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL
+                      repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz
+                      repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic
+                      setenv-0.1.1.3@seten_6IUqFDI6NejGrNz9ulqEjc
+                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         proj-0.1.0.0@proj_CS93O1rx1ZPH7PcMfWS1Ts:Util
+         quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx:Test.QuickCheck.IO
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Arbitrary
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Reduction
+         stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD:Control.Monad.STM
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi:Test.Hspec.Core.Example
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ByteString
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Cursored
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Delayed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ForeignPtr
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintInterleave
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintSmall
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Partitioned
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Unboxed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Undefined
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Vector
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Slice
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  hspec-2.2.1@hspec_4R8oqeKmp2qHiEwtLGb3ih:Test.Hspec.Discover 5c71da378a28fbd4e1b1ad0b0a3809a5
+import  -/  hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi:Test.Hspec.Core.Runner 75f6c9611a20b82f9441f8d9cac2058d
+import  -/  hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi:Test.Hspec.Core.Spec c54b2f4d41918202cba2c721fb29c24f
+import  -/  hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi:Test.Hspec.Core.Spec.Monad 44097e8e37ec551f9c09bbe5676bbb2f
+import  -/  Data.String.StripSpec a1c049236790a682cafb365a148cc61c
+  exports: aafd465ffc208afa54261da4af98dd82
+  spec b4c6cde249b63cbc9930a99dc46705ca
+36b8396990f6dc68c11885f37f62aa58
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+ca1835ce8ce2db8736275d2db2cd753a
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Test.Hspec.Core.Runner.hspec2
+                        Test.Hspec.Options.defaultConfig
+                        Main.main2
+                          `cast`
+                        (Trans
+                             (Sym (GHC.Types.NTCo:IO[0]
+                                       <((), [Test.Hspec.Core.Tree.SpecTree ()])>_R))
+                             (Trans
+                                  (Sym (Control.Monad.Trans.Writer.Lazy.NTCo:WriterT[0]
+                                            <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                            <GHC.Types.IO>_R
+                                            <()>_N))
+                                  (Sym (Test.Hspec.Core.Spec.Monad.NTCo:SpecM[0] <()>_N) <()>_N)))
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { Test.Hspec.Core.Runner.Summary ds ds2 ->
+                 case ds2 of wild1 { GHC.Types.I# x ->
+                 case x of wild2 {
+                   DEFAULT -> System.Exit.die2 @ () ipv
+                   0 -> (# ipv, GHC.Tuple.() #) } } } }) -}
+31da4081c0b12d53f8342591ca4a8a08
+  main10 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'D') -}
+0f12eb41d2a6235b68b48e57b64fa4fd
+  main11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "test/Data/String/StripSpec.hs"#) -}
+8a400cdd2316bb55ff17f6526474f7d2
+  main12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+02e2c7f54b2df7656944fa7a921b14dd
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((), [Test.Hspec.Core.Tree.SpecTree ()]) #)
+  {- Arity: 1,
+     Unfolding: (Test.Hspec.Discover.postProcessSpec1
+                   Main.main11
+                   Main.main3
+                     `cast`
+                   (Trans
+                        (Sym (GHC.Types.NTCo:IO[0]
+                                  <((), [Test.Hspec.Core.Tree.SpecTree ()])>_R))
+                        (Trans
+                             (Sym (Control.Monad.Trans.Writer.Lazy.NTCo:WriterT[0]
+                                       <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                       <GHC.Types.IO>_R
+                                       <()>_N))
+                             (Sym (Test.Hspec.Core.Spec.Monad.NTCo:SpecM[0]
+                                       <()>_N) <()>_N)))) -}
+b0ff0e3a23211168c323984b34291674
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           [Test.Hspec.Core.Tree.Tree
+              (Test.Hspec.Core.Example.ActionWith ())
+              (Test.Hspec.Core.Tree.Item ())]) #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta2 :: GHC.Prim.State#
+                             GHC.Prim.RealWorld[OneShot] ->
+                 (# eta2, Main.main4 #)) -}
+b70c53b1f215b19410e81cc2511177f6
+  main4 ::
+    ((),
+     [Test.Hspec.Core.Tree.Tree
+        (Test.Hspec.Core.Example.ActionWith ())
+        (Test.Hspec.Core.Tree.Item ())])
+  {- Unfolding: ((GHC.Tuple.(), Main.main5)) -}
+6482efe4ecc9e88a818f89538fcab58e
+  main5 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main6
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.Tree
+                           (Test.Hspec.Core.Example.ActionWith ())
+                           (Test.Hspec.Core.Tree.Item ())))) -}
+56421f8ab55934cf7f77b265188c8dbe
+  main6 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith ())
+      (Test.Hspec.Core.Tree.Item ())
+  {- Unfolding: (Test.Hspec.Core.Tree.Node
+                   @ (Test.Hspec.Core.Example.ActionWith ())
+                   @ (Test.Hspec.Core.Tree.Item ())
+                   Main.main8
+                   Main.main7) -}
+17570154ad2d30d2dd00d40f2bffb01c
+  main7 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Data.String.StripSpec.main50
+                   Data.String.StripSpec.main3) -}
+2038477d7d2a15234ade043c919ad614
+  main8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main10
+                   Main.main9) -}
+83a83348aa34693c4a5280709388f1f2
+  main9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ata.String.Strip"#) -}
+7a6da43997babed36254e9322f3cfb9f
+  spec :: Test.Hspec.Core.Spec.Monad.Spec
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.main2
+                  `cast`
+                (Trans
+                     (Sym (GHC.Types.NTCo:IO[0]
+                               <((), [Test.Hspec.Core.Tree.SpecTree ()])>_R))
+                     (Trans
+                          (Sym (Control.Monad.Trans.Writer.Lazy.NTCo:WriterT[0]
+                                    <[Test.Hspec.Core.Tree.SpecTree ()]>_N <GHC.Types.IO>_R <()>_N))
+                          (Sym (Test.Hspec.Core.Spec.Monad.NTCo:SpecM[0] <()>_N) <()>_N))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

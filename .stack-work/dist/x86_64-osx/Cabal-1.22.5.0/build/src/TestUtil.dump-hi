@@ -1,0 +1,238 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-12 23:41:23.508216 UTC
+
+interface deepn_1dktY55YjgMAa28dvjZDvR:TestUtil 7103
+  interface hash: 8826068228ac21fee2f053853339bc4f
+  ABI hash: 7c80890ed408f4f19eca7c6b57fbabcf
+  export-list hash: b893a35bb4edd3413b1b99147a72e7f8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 834442e8c9071e771aa94f08b354ab18
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  TestUtil.linearLayerFromValues
+  TestUtil.m
+  TestUtil.m1
+  TestUtil.m2
+module dependencies: Model Util
+package dependencies: QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL
+                      repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz
+                      repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         deepn_1dktY55YjgMAa28dvjZDvR:Util
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Arbitrary
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Reduction
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ByteString
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Cursored
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Delayed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ForeignPtr
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintInterleave
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintSmall
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Partitioned
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Unboxed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Undefined
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Vector
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Slice
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Model e531915a0c80e09db0180c53562152e6
+  exports: 40aa5d4688d4cf6146c1125af25e830e
+  Network eafb2fb6c3312f6e8d0b81b9b2261e88
+  linearLayer 54260331c337f587054f7df6b7646f54
+  weights 0abc0c7855ec7ff4f2075c7192912dfb
+import  -/  Util 6824666c2c6fb06c231fb6514c000d7c
+  exports: 7b53d56efe7c32589c84d0a1f4ed8aeb
+  Matrix 14ffd26c86c9528670c2a99f1d88dedf
+  matrix cb88d9b87167815606c284fdb874fba0
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa e211591ce9704be9903af9111b06e0a5
+import  -/  repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic:Data.Array.Repa.Algorithms.Matrix be4e74a2ef97fec43da89fcb08de3b5f
+import  -/  repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic:Data.Array.Repa.Algorithms.Randomish 3bcd0fb924b8456dddf0076dc3e1bc88
+5d42c50455d730fb16ae81fbe377c216
+  linearLayerFromValues :: [[GHC.Types.Double]] -> Model.Network
+  {- Arity: 1, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ values :: [[GHC.Types.Double]] ->
+                 Model.Layer
+                   (Util.matrix values)
+                   (GHC.Base.Nothing @ Model.Input)
+                   Model.linearLayer4
+                   Model.linearLayer1) -}
+7e34f89ee6723a7f5db681bf31872867
+  m :: Util.Matrix
+  {- Unfolding: (Util.matrix TestUtil.m4) -}
+ff4837a3a1820ab117fe7d0bd12161a2
+  m1 :: Util.Matrix
+  {- Unfolding: (Util.matrix TestUtil.m14) -}
+1f112d63e3e1d2419caac5e1835c17c7
+  m10 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m13
+                   TestUtil.m11) -}
+02d1280fb84722a7408c527710748daa
+  m11 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m12
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+8e26966751fd60ef8fffc78cba97bcf0
+  m12 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 2.0) -}
+c11d0871af9312683edadc8f8c6b8758
+  m13 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 1.0) -}
+2edae4b15f99f0fb0226d6e2ff9741db
+  m14 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   TestUtil.m10
+                   TestUtil.m15) -}
+8e7a5beef0641da2723f863d842f7f70
+  m15 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   TestUtil.m16
+                   (GHC.Types.[] @ [GHC.Types.Double])) -}
+d7e50a963a654e3637f84314c1cace0c
+  m16 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m13
+                   TestUtil.m17) -}
+8277f4e4ab997f0ed43a9a2443c005f8
+  m17 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m13
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+9eb0fc8f1f529e757dd88b411f2215c9
+  m18 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   TestUtil.m23
+                   TestUtil.m19) -}
+8d62e15ecdc1e7049a6685884481a9d9
+  m19 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   TestUtil.m20
+                   (GHC.Types.[] @ [GHC.Types.Double])) -}
+0d82a33335295ccad366bd275a3f6403
+  m2 :: Util.Matrix
+  {- Unfolding: (Util.matrix TestUtil.m18) -}
+3193be94b0acfa34166dda1144c4b95d
+  m20 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m22
+                   TestUtil.m21) -}
+9498f7ca54063e2e46160d0091516702
+  m21 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m22
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+741baf6d8043bda52c6c868d40a53209
+  m22 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 0.5) -}
+062410526bd33abcbc92dd692b17cd7d
+  m23 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m22
+                   TestUtil.m24) -}
+975560aedea6bb955c61d6b6d8fbda06
+  m24 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m25
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+7e2c806788fc6bced71cb9bdbb784646
+  m25 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 0.2) -}
+2016de481657e3b70389e7d9485fd25c
+  m4 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   TestUtil.m10
+                   TestUtil.m5) -}
+b01a6293963f8e5533a376518de84aaf
+  m5 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   TestUtil.m6
+                   (GHC.Types.[] @ [GHC.Types.Double])) -}
+4ae60c9a867d49be4e44d53b65790ed9
+  m6 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m9
+                   TestUtil.m7) -}
+2e3bd8156c4afbe3b5a260a29fcc83a1
+  m7 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   TestUtil.m8
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+69ad17b270073c9b1fdb3bd2701a15fb
+  m8 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# -1.0) -}
+e0403339875d6418ea9a24555c784880
+  m9 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 0.0) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

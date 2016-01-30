@@ -1,0 +1,19 @@
+Configuring haskell-lexer-1.0...
+Building haskell-lexer-1.0...
+Preprocessing library haskell-lexer-1.0...
+[1 of 6] Compiling Language.Haskell.Lexer.Tokens ( Language/Haskell/Lexer/Tokens.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Lexer/Tokens.o )
+[2 of 6] Compiling Language.Haskell.Lexer.Utils ( Language/Haskell/Lexer/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Lexer/Utils.o )
+[3 of 6] Compiling Language.Haskell.Lexer.Lex ( Language/Haskell/Lexer/Lex.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Lexer/Lex.o )
+[4 of 6] Compiling Language.Haskell.Lexer.Position ( Language/Haskell/Lexer/Position.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Lexer/Position.o )
+
+Language/Haskell/Lexer/Position.hs:25:5: Warning:
+    Pattern match(es) are overlapped
+    In a case alternative: '\n' -> ...
+[5 of 6] Compiling Language.Haskell.Lexer.Layout ( Language/Haskell/Lexer/Layout.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Lexer/Layout.o )
+
+Language/Haskell/Lexer/Layout.hs:24:23: Warning: Tab character
+[6 of 6] Compiling Language.Haskell.Lexer ( Language/Haskell/Lexer.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Language/Haskell/Lexer.o )
+In-place registering haskell-lexer-1.0...
+Installing library in
+/Users/Ethan/.stack/snapshots/x86_64-osx/lts-4.0/7.10.3/lib/x86_64-osx-ghc-7.10.3/haskell-lexer-1.0-Gq0nBnLQUZ0Cm5X5CHJfgn
+Registering haskell-lexer-1.0...

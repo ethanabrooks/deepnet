@@ -1,0 +1,2981 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-30 17:25:42.866264 UTC
+
+interface deepn_98vzwQjA0spLmxroj6F8bT:Util [orphan module] 7103
+  interface hash: a1c34256cfb583efd2cb2d5a4571d4cf
+  ABI hash: e20be9023bbe33e71978114af85881fb
+  export-list hash: 13ac1d18b66d1fe307849ec9bd9ee08f
+  orphan hash: 7d5a223bc309dadbb70b52ca05e1ccae
+  flag hash: ff059d4ddbef22c051d6fa97d4150917
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Util.addOnes
+  Util.ifInitialized
+  Util.m
+  Util.m1
+  Util.m2
+  Util.m3
+  Util.matrix
+  Util.mean
+  Util.randomArray
+  Util.rmap
+  Util.s
+  Util.sAddOnes
+  Util.shouldAlmostEqual
+  Util.transpose
+  Util.zeros
+  Util.Matrix
+  Util.Vector
+module dependencies:
+package dependencies: HUnit-1.3.0.0@HUnit_BG7FInvjg0k8rLNKmL1VFA
+                      QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      ansi-terminal-0.6.2.3@ansit_BDlVdfJGo3VHCIHxPTNjH1
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      async-2.0.2@async_1QvsFXyq0AKLt4KdNR0ChF base-4.8.2.0
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      hspec-expectations-0.7.2@hspec_19YQSHkZ0r2ED4k4Dnbroh
+                      hspec-2.2.1@hspec_4R8oqeKmp2qHiEwtLGb3ih
+                      hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi
+                      ieee754-0.7.6@ieee7_E4oWks01x7uFbXdcWiQ2b6 integer-gmp-1.0.0.0
+                      pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL
+                      repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz
+                      repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic
+                      setenv-0.1.1.3@seten_6IUqFDI6NejGrNz9ulqEjc
+                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx:Test.QuickCheck.IO
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Arbitrary
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Reduction
+         stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD:Control.Monad.STM
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi:Test.Hspec.Core.Example
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ByteString
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Cursored
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Delayed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ForeignPtr
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintInterleave
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintSmall
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Partitioned
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Unboxed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Undefined
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Vector
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Slice
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.2.0:Debug.Trace 6660afb6094d69397ea084364da8f950
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Float e532d434ec2447d809887c0fca1d78a5
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  hspec-expectations-0.7.2@hspec_19YQSHkZ0r2ED4k4Dnbroh:Test.Hspec.Expectations e12b441a7b72d3aa83fa9750ec6e0e23
+import  -/  hspec-2.2.1@hspec_4R8oqeKmp2qHiEwtLGb3ih:Test.Hspec 43710f8862aee78438860de68c4c6703
+import  -/  ieee754-0.7.6@ieee7_E4oWks01x7uFbXdcWiQ2b6:Data.AEq 811502a661b153a76fce5528ae84ee32
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa e211591ce9704be9903af9111b06e0a5
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Base 1078f22f7c65f425f11551a0db7792af
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Eval 93b2e956df96cc91e2a04417db3da6b8
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Index 47c3134574cf06a75bf9a7010a594e30
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.IndexSpace 199cc43c2fd6c3ea4984f7ffdeb7dd94
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping 7bc3f85c3bdf02ce37fb7c58c1e9af40
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Reduction 44502c5a35c265efaceb10e51a1add2d
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Delayed dfeca34b74d3313e21943747d4ddbbb6
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Unboxed ebe6babe5ae379a48c58a3a743d47765
+import  -/  repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic:Data.Array.Repa.Algorithms.Matrix be4e74a2ef97fec43da89fcb08de3b5f
+import  -/  repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic:Data.Array.Repa.Algorithms.Randomish 3bcd0fb924b8456dddf0076dc3e1bc88
+f91f62ecbcff775341726c6ee026ee46
+  $fAEqArray :: Data.AEq.AEq Util.Matrix
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Util.Matrix
+                  Util.$fAEqArray8
+                  Util.$fAEqArray6
+                  Util.$fAEqArray_$c~== -}
+ae9ba73602c5cc13e2cfb68b17ff6b00
+  $fAEqArray1 ::
+    GHC.Prim.Int#
+    -> GHC.Types.IO
+         (Data.Vector.Primitive.Mutable.MVector
+            (Control.Monad.Primitive.PrimState GHC.Types.IO) GHC.Types.Double)
+  {- Arity: 1, Strictness: <L,U>b -}
+db37e5a567ecc3446b3908410987f397
+  $fAEqArray10 ::
+    Data.Array.Repa.Shape.Shape
+      ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+       Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- Unfolding: InlineRule (0, True, True)
+                Util.$fAEqArray_$s$fShape:. -}
+21eefab1fe60f75299c701e3f2e06e54
+  $fAEqArray2 ::
+    GHC.Prim.Int#
+    -> GHC.Types.IO
+         (Data.Vector.Primitive.Mutable.MVector
+            (Control.Monad.Primitive.PrimState GHC.Types.IO) GHC.Types.Double)
+  {- Arity: 1, Strictness: <L,U>b -}
+aa790ee6358e800e5f4a8fa28365850e
+  $fAEqArray3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Repa.loadS[Delayed]: end"#) -}
+8c5107872ab2d346c36585704f380783
+  $fAEqArray4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Repa.loadS[Delayed]: start"#) -}
+97462bd8b3c61aed7be5e1a0716f506a
+  $fAEqArray5 ::
+    GHC.Prim.Int#
+    -> GHC.Types.IO
+         (Data.Vector.Unboxed.Base.MVector
+            (Control.Monad.Primitive.PrimState GHC.Types.IO) GHC.Types.Double)
+  {- Arity: 1, Strictness: <L,U>b -}
+c3fb18abfad45e8268ed5dba49412df5
+  $fAEqArray6 ::
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U
+      (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+      GHC.Types.Double
+    -> Data.Array.Repa.Base.Array
+         Data.Array.Repa.Repr.Unboxed.U
+         (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+         GHC.Types.Double
+    -> GHC.Types.Bool
+  {- Arity: 2,
+     Unfolding: (Data.Array.Repa.Operators.Reduction.$fEqArray_$c==
+                   @ Data.Array.Repa.Repr.Unboxed.U
+                   @ (Data.Array.Repa.Index.DIM1
+                      Data.Array.Repa.Index.:. GHC.Types.Int)
+                   @ GHC.Types.Double
+                   Util.$fAEqArray_$s$fShape:.
+                   Util.$fAEqArray_$s$fEq:.
+                   Util.$fAEqArray_$s$fSourceUa
+                   GHC.Classes.$fEqDouble) -}
+b818ad72bdfbcfba8fc324144a1757b6
+  $fAEqArray7 ::
+    GHC.Classes.Eq
+      (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Util.$fAEqArray_$s$fEq:.1 -}
+0739e6a5b4e6f1c010acb9c3a5fb466a
+  $fAEqArray8 :: GHC.Classes.Eq Util.Matrix
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Util.$fAEqArray_$s$fEqArray -}
+5b8ad018db5a97aa0dc897cbd6ec9bc1
+  $fAEqArray9 ::
+    Data.Array.Repa.Base.Source
+      Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Util.$fAEqArray_$s$fSourceUa -}
+fa2de1e61b6d3cb1bd6d0d8010563148
+  $fAEqArray_$c~== :: Util.Matrix -> Util.Matrix -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))><S(SS),1*U(U(U(U,U(U)),U(U)),U(U,A,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Util.Matrix w1 :: Util.Matrix ->
+                 case w `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww4 of ww6 { Data.Array.Repa.Index.:. ww7 ww8 ->
+                 case ww8 of ww9 { GHC.Types.I# ww10 ->
+                 case ww5 of ww11 { GHC.Types.I# ww12 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww13 { Data.Vector.Primitive.Vector ww14 ww15 ww16 ->
+                 case w1
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww17 { Data.Array.Repa.Repr.Unboxed.AUnboxed ww18 ww19 ->
+                 case ww18 of ww20 { Data.Array.Repa.Index.:. ww21 ww22 ->
+                 case ww19
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww23 { Data.Vector.Primitive.Vector ww24 ww25 ww26 ->
+                 Util.$w$c~==
+                   ww7
+                   ww10
+                   ww12
+                   ww14
+                   ww16
+                   ww21
+                   ww22
+                   ww24
+                   ww26 } } } } } } } } }) -}
+881db278c6011da3103e181522b36f37
+  $fAEqArray_$dEq ::
+    GHC.Classes.Eq
+      ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+       Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Util.$fAEqArray_$s$fEq:. -}
+be4445e049060d5fa154a495a9cad7e2
+  $fAEqArray_$dShape ::
+    Data.Array.Repa.Shape.Shape
+      (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- Unfolding: InlineRule (0, True, True)
+                Util.$fAEqArray_$s$fShape:.1 -}
+10f07b5d773325c2486b580c3735d170
+  $fAEqArray_$s$fEq:. ::
+    GHC.Classes.Eq
+      ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+       Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Data.Array.Repa.Index.:. GHC.Types.Int)
+                  (Data.Array.Repa.Index.$fEq:._$c==
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     @ GHC.Types.Int
+                     Util.$fAEqArray7
+                     GHC.Classes.$fEqInt)
+                  (Data.Array.Repa.Index.$fEq:._$c/=
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     @ GHC.Types.Int
+                     Util.$fAEqArray7
+                     GHC.Classes.$fEqInt) -}
+21cd2f8115e8aceaad0e64f28b311152
+  $fAEqArray_$s$fEq:.1 ::
+    GHC.Classes.Eq
+      (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                  (Data.Array.Repa.Index.$fEq:._$c==
+                     @ Data.Array.Repa.Index.Z
+                     @ GHC.Types.Int
+                     Data.Array.Repa.Index.$fEqZ
+                     GHC.Classes.$fEqInt)
+                  (Data.Array.Repa.Index.$fEq:._$c/=
+                     @ Data.Array.Repa.Index.Z
+                     @ GHC.Types.Int
+                     Data.Array.Repa.Index.$fEqZ
+                     GHC.Classes.$fEqInt) -}
+6d926d09482f6583ef3929444b6bf61c
+  $fAEqArray_$s$fEqArray ::
+    GHC.Classes.Eq
+      (Data.Array.Repa.Base.Array
+         Data.Array.Repa.Repr.Unboxed.U
+         (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+         GHC.Types.Double)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Repa.Base.Array
+                       Data.Array.Repa.Repr.Unboxed.U
+                       (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+                       GHC.Types.Double)
+                  (Data.Array.Repa.Operators.Reduction.$fEqArray_$c==
+                     @ Data.Array.Repa.Repr.Unboxed.U
+                     @ (Data.Array.Repa.Index.DIM1
+                        Data.Array.Repa.Index.:. GHC.Types.Int)
+                     @ GHC.Types.Double
+                     Util.$fAEqArray10
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray9
+                     GHC.Classes.$fEqDouble)
+                  Util.$fAEqArray_$s$fEqArray_$c/= -}
+4ad5f0da614c0df744796f1c02c26893
+  $fAEqArray_$s$fEqArray_$c/= ::
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U
+      (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+      GHC.Types.Double
+    -> Data.Array.Repa.Base.Array
+         Data.Array.Repa.Repr.Unboxed.U
+         (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+         GHC.Types.Double
+    -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ x :: Data.Array.Repa.Base.Array
+                          Data.Array.Repa.Repr.Unboxed.U
+                          (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+                          GHC.Types.Double
+                   y :: Data.Array.Repa.Base.Array
+                          Data.Array.Repa.Repr.Unboxed.U
+                          (Data.Array.Repa.Index.DIM1 Data.Array.Repa.Index.:. GHC.Types.Int)
+                          GHC.Types.Double ->
+                 GHC.Classes.not
+                   (Data.Array.Repa.Operators.Reduction.$fEqArray_$c==
+                      @ Data.Array.Repa.Repr.Unboxed.U
+                      @ (Data.Array.Repa.Index.DIM1
+                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                      @ GHC.Types.Double
+                      Util.$fAEqArray10
+                      Util.$fAEqArray_$dEq
+                      Util.$fAEqArray9
+                      GHC.Classes.$fEqDouble
+                      x
+                      y)) -}
+dea312a1754ae8fb965cfb14f60ed678
+  $fAEqArray_$s$fShape:. ::
+    Data.Array.Repa.Shape.Shape
+      ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+       Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Data.Array.Repa.Index.:. GHC.Types.Int)
+                  Util.$fAEqArray_$dEq
+                  (Data.Array.Repa.Index.$fShape:._$crank
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$czeroDim
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$cunitDim
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$cintersectDim
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$caddDim
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$csize
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$csizeIsValid
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$ctoIndex
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$cfromIndex
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$cinShapeRange
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$clistOfShape
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  (Data.Array.Repa.Index.$fShape:._$cshapeOfList
+                     @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                     Util.$fAEqArray_$dEq
+                     Util.$fAEqArray_$dShape)
+                  Util.$fAEqArray_$s$fShape:._$cdeepSeq -}
+44b7030be1a6fddb63652300ae3d76ab
+  $fAEqArray_$s$fShape:.1 ::
+    Data.Array.Repa.Shape.Shape
+      (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                  Util.$fAEqArray7
+                  (Data.Array.Repa.Index.$fShape:._$crank
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$czeroDim
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$cunitDim
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$cintersectDim
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$caddDim
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$csize
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$csizeIsValid
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$ctoIndex
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$cfromIndex
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$cinShapeRange
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$clistOfShape
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  (Data.Array.Repa.Index.$fShape:._$cshapeOfList
+                     @ Data.Array.Repa.Index.Z
+                     Util.$fAEqArray7
+                     Data.Array.Repa.Index.$fShapeZ)
+                  Util.$fAEqArray_$s$fShape:._$cdeepSeq1 -}
+3c660c88333904fe131f2962d7e90c9d
+  $fAEqArray_$s$fShape:._$cdeepSeq ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,1*H)><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a3
+                   ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   x :: a3 ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n -> x }) -}
+92709f5fd4f9408d73ea7fd056948f0f
+  $fAEqArray_$s$fShape:._$cdeepSeq1 ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,1*H)><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a3
+                   ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   x :: a3 ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n -> x }) -}
+5e646a6fc57b944ed8daa24d5182ec9a
+  $fAEqArray_$s$fSourceUa ::
+    Data.Array.Repa.Base.Source
+      Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Repa.Repr.Unboxed.U
+                  @ GHC.Types.Double
+                  Util.$fAEqArray_$s$fSourceUa_$cextent
+                  Util.$fAEqArray_$s$fSourceUa_$cindex
+                  Util.$fAEqArray_$s$fSourceUa_$cunsafeIndex
+                  Util.$fAEqArray_$s$fSourceUa_$clinearIndex
+                  Util.$fAEqArray_$s$fSourceUa_$cunsafeLinearIndex
+                  Util.$fAEqArray_$s$fSourceUa_$cdeepSeqArray -}
+845c5223cf86790b15a9cdb05e30ea13
+  $fAEqArray_$s$fSourceUa_$cdeepSeqArray ::
+    Data.Array.Repa.Shape.Shape sh =>
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+    -> b -> b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLC(C(S))),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,1*C1(C1(U)))><S(SS),1*U(U,1*H)><L,U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ sh
+                   @ b
+                   $dShape :: Data.Array.Repa.Shape.Shape sh
+                   ds :: Data.Array.Repa.Base.Array
+                           Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+                   x :: b ->
+                 case ds
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <sh>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed sh1 vec ->
+                 Data.Array.Repa.Shape.deepSeq @ sh $dShape @ b sh1 x }) -}
+42f08f578c7b86e94b48f5315c9893ec
+  $fAEqArray_$s$fSourceUa_$cextent ::
+    Data.Array.Repa.Shape.Shape sh =>
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+    -> sh
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S(SS),1*U(U,1*H)>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ sh
+                   $dShape :: Data.Array.Repa.Shape.Shape sh
+                   ds :: Data.Array.Repa.Base.Array
+                           Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double ->
+                 case ds
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <sh>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed sh1 ds1 ->
+                 sh1 }) -}
+7e69e46a14dfa10d5cefcd64123d9456
+  $fAEqArray_$s$fSourceUa_$cindex ::
+    Data.Array.Repa.Shape.Shape sh =>
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+    -> sh -> GHC.Types.Double
+  {- Arity: 3,
+     Strictness: <S(LLLLLLLLC(C(S))LLLLL),1*U(A,A,A,A,A,A,A,A,1*C1(C1(U(U))),A,A,A,A,A)><S(SS),1*U(U,U(U,U,U))><L,U>m,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ sh
+                   $dShape :: Data.Array.Repa.Shape.Shape sh
+                   arr :: Data.Array.Repa.Base.Array
+                            Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+                   ix :: sh ->
+                 case arr
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <sh>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed ds vec ->
+                 Data.Vector.Generic.!
+                   @ Data.Vector.Unboxed.Base.Vector
+                   @ GHC.Types.Double
+                   Data.Vector.Unboxed.Base.$fVectorVectorDouble
+                   vec
+                   (Data.Array.Repa.Shape.toIndex @ sh $dShape ds ix) }) -}
+6a1e8cc81ddb5a5bcf2de4188d4fb61f
+  $fAEqArray_$s$fSourceUa_$clinearIndex ::
+    Data.Array.Repa.Shape.Shape sh =>
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+    -> GHC.Types.Int -> GHC.Types.Double
+  {- Arity: 3, Strictness: <L,A><S(SS),1*U(1*H,U(U,U,U))><S,1*U(U)>m,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ sh
+                   $dShape :: Data.Array.Repa.Shape.Shape sh
+                   ds :: Data.Array.Repa.Base.Array
+                           Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+                   ix :: GHC.Types.Int ->
+                 case ds
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <sh>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed ds1 vec ->
+                 Data.Vector.Generic.!
+                   @ Data.Vector.Unboxed.Base.Vector
+                   @ GHC.Types.Double
+                   Data.Vector.Unboxed.Base.$fVectorVectorDouble
+                   vec
+                   ix }) -}
+6b7cc2cb0dc7c822042e74f457394558
+  $fAEqArray_$s$fSourceUa_$cunsafeIndex ::
+    Data.Array.Repa.Shape.Shape sh =>
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+    -> sh -> GHC.Types.Double
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLC(C(S))LLLLL),1*U(A,A,A,A,A,A,A,A,1*C1(C1(U(U))),A,A,A,A,A)><S(SS),1*U(U,U(U,A,U))><L,U>m,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ sh
+                   $dShape :: Data.Array.Repa.Shape.Shape sh
+                   arr :: Data.Array.Repa.Base.Array
+                            Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+                   ix :: sh ->
+                 case arr
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <sh>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed ds vec ->
+                 Data.Vector.Generic.unsafeIndex
+                   @ Data.Vector.Unboxed.Base.Vector
+                   @ GHC.Types.Double
+                   Data.Vector.Unboxed.Base.$fVectorVectorDouble
+                   vec
+                   (Data.Array.Repa.Shape.toIndex @ sh $dShape ds ix) }) -}
+0ea89e364869ca7b28bc1af89730eebf
+  $fAEqArray_$s$fSourceUa_$cunsafeLinearIndex ::
+    Data.Array.Repa.Shape.Shape sh =>
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+    -> GHC.Types.Int -> GHC.Types.Double
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><S(SS),1*U(1*H,U(U,A,U))><S,1*U(U)>m,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ sh
+                   $dShape :: Data.Array.Repa.Shape.Shape sh
+                   ds :: Data.Array.Repa.Base.Array
+                           Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double
+                   ix :: GHC.Types.Int ->
+                 case ds
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <sh>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed ds1 vec ->
+                 Data.Vector.Generic.unsafeIndex
+                   @ Data.Vector.Unboxed.Base.Vector
+                   @ GHC.Types.Double
+                   Data.Vector.Unboxed.Base.$fVectorVectorDouble
+                   vec
+                   ix }) -}
+e2d62f225734ebc843904ac31bd12827
+  $fNumArray :: GHC.Num.Num Util.Matrix
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Util.Matrix
+                  Util.$fNumArray_$c+
+                  Util.$fNumArray_$c-
+                  Data.Array.Repa.Algorithms.Matrix.mmultS
+                  Util.$fNumArray_$cnegate
+                  Util.$fNumArray_$cabs
+                  Util.$fNumArray_$csignum
+                  Util.$fNumArray_$cfromInteger -}
+ab61a0728e6ec55e750559d68080a7be
+  $fNumArray1 ::
+    GHC.Types.IO
+      (Data.Vector.Primitive.Mutable.MVector
+         (Control.Monad.Primitive.PrimState GHC.Types.IO) GHC.Types.Double)
+  {- Strictness: b -}
+441646f417b7039d9134b84c5476c144
+  $fNumArray2 ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    Data.Array.Repa.Index.:. GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.Array.Repa.Index.:.
+                   @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                   @ GHC.Types.Int
+                   Util.$fNumArray4
+                   Util.$fNumArray3) -}
+fe28fb405d2e2fbebbe968789c39a05a
+  $fNumArray3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1) -}
+23e56fdf23d31ad40d39e1c7861e96ed
+  $fNumArray4 ::
+    Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.Array.Repa.Index.:.
+                   @ Data.Array.Repa.Index.Z
+                   @ GHC.Types.Int
+                   Data.Array.Repa.Index.Z
+                   Util.$fNumArray3) -}
+6c341760355f617623f49a57502ab687
+  $fNumArray_$c+ :: Util.Matrix -> Util.Matrix -> Util.Matrix
+  {- Arity: 2,
+     Strictness: <S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Util.Matrix w1 :: Util.Matrix ->
+                 case w `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww4 of ww6 { Data.Array.Repa.Index.:. ww7 ww8 ->
+                 case ww8 of ww9 { GHC.Types.I# ww10 ->
+                 case ww5 of ww11 { GHC.Types.I# ww12 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww13 { Data.Vector.Primitive.Vector ww14 ww15 ww16 ->
+                 Util.$w$c+ ww7 ww10 ww12 ww14 ww16 w1 } } } } } }) -}
+35ed1fbb1b128f17146c8bab4fb033e8
+  $fNumArray_$c- :: Util.Matrix -> Util.Matrix -> Util.Matrix
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ x :: Util.Matrix y :: Util.Matrix ->
+                 Util.$fNumArray_$c+ x (Util.$fNumArray_$cnegate y)) -}
+2161bcf5ad1c644e05e92e18a9b6dc8a
+  $fNumArray_$cabs :: Util.Matrix -> Util.Matrix
+  {- Arity: 1, Strictness: <S(SS),1*U(U(U(U,U(U)),U(U)),U(U,A,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ m31 :: Util.Matrix ->
+                 Util.rmap GHC.Float.$fNumDouble_$cabs m31) -}
+91ccf286ffd16d575f3e1d1665e18afe
+  $fNumArray_$cfromInteger :: GHC.Integer.Type.Integer -> Util.Matrix
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ n :: GHC.Integer.Type.Integer ->
+                 let {
+                   x :: GHC.Types.Double
+                   = case GHC.Integer.Type.doubleFromInteger n of wild { DEFAULT ->
+                     GHC.Types.D# wild }
+                 } in
+                 GHC.IO.unsafeDupablePerformIO
+                   @ (Data.Array.Repa.Base.Array
+                        Data.Array.Repa.Repr.Unboxed.U
+                        ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                        GHC.Types.Double)
+                   (\ s2 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                    case GHC.Prim.noDuplicate# s2 of s' { DEFAULT ->
+                    case GHC.Classes.divInt# 9223372036854775807 8 of ww4 { DEFAULT ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.># 1 ww4) of wild3 {
+                      GHC.Types.False
+                      -> case GHC.Prim.newByteArray#
+                                @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                8
+                                s'
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of ds1 { (#,#) ipv ipv1 ->
+                         case {__pkg_ccall primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3 hsprimitive_memset_Word8 forall s.
+                                                                                                                   GHC.Prim.MutableByteArray#
+                                                                                                                     s
+                                                                                                                   -> GHC.Prim.Int#
+                                                                                                                   -> GHC.Prim.Word#
+                                                                                                                   -> GHC.Prim.Word#
+                                                                                                                   -> GHC.Prim.State#
+                                                                                                                        GHC.Prim.RealWorld
+                                                                                                                   -> (# GHC.Prim.State#
+                                                                                                                           GHC.Prim.RealWorld #)}
+                                @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                ipv1
+                                0
+                                __word 8
+                                __word 0
+                                ipv
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R of wild { (##) ds8 ->
+                         case GHC.Foreign.charIsRepresentable3
+                                @ ()
+                                GHC.IO.Encoding.UTF8.utf8
+                                Util.$fAEqArray4
+                                Debug.Trace.traceEventIO2
+                                  `cast`
+                                (<GHC.Ptr.Ptr Foreign.C.Types.CChar>_R
+                                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                                ds8 of ds2 { (#,#) ipv2 ipv3 ->
+                         letrec {
+                           a3 :: GHC.Prim.Int#
+                                 -> GHC.Prim.State# GHC.Prim.RealWorld
+                                 -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                             {- Arity: 2, Strictness: <L,U><L,U> -}
+                           = \ ix :: GHC.Prim.Int#
+                               eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                             case GHC.Prim.>=# ix 1 of ds3 {
+                               DEFAULT
+                               -> case x of wild1 { GHC.Types.D# x# ->
+                                  case GHC.Prim.writeDoubleArray#
+                                         @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                         ipv1
+                                         ix
+                                         x#
+                                         eta
+                                           `cast`
+                                         (GHC.Prim.State#
+                                            (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of s'# { DEFAULT ->
+                                  a3
+                                    (GHC.Prim.+# ix 1)
+                                    s'#
+                                      `cast`
+                                    (GHC.Prim.State#
+                                       (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R } }
+                               1 -> (# eta, GHC.Tuple.() #) }
+                         } in
+                         case a3 0 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                         case GHC.Foreign.charIsRepresentable3
+                                @ ()
+                                GHC.IO.Encoding.UTF8.utf8
+                                Util.$fAEqArray3
+                                Debug.Trace.traceEventIO2
+                                  `cast`
+                                (<GHC.Ptr.Ptr Foreign.C.Types.CChar>_R
+                                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                                ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                         case GHC.Prim.unsafeFreezeByteArray#
+                                @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                ipv1
+                                ipv6
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of ds5 { (#,#) ipv8 ipv9 ->
+                         (# ipv8
+                              `cast`
+                            (GHC.Prim.State#
+                               (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R,
+                            (Data.Array.Repa.Repr.Unboxed.AUnboxed
+                               @ GHC.Types.Double
+                               @ ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                                  Data.Array.Repa.Index.:. GHC.Types.Int)
+                               Util.$fNumArray2
+                               (Data.Vector.Primitive.Vector @ GHC.Types.Double 0 1 ipv9)
+                                 `cast`
+                               (Trans
+                                    (Sym (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0]))
+                                    (Sub (Sym (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0])))))
+                              `cast`
+                            (Sub (Sym (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                           <GHC.Types.Double>_N
+                                           <(Data.Array.Repa.Index.Z
+                                             Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            Data.Array.Repa.Index.:. GHC.Types.Int>_N))) #) } } } } } }
+                      GHC.Types.True
+                      -> case Util.$fNumArray1
+                         ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                   Data.Array.Repa.Base.Array
+                                     Data.Array.Repa.Repr.Unboxed.U
+                                     ((Data.Array.Repa.Index.Z
+                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                      Data.Array.Repa.Index.:. GHC.Types.Int)
+                                     GHC.Types.Double #)
+                         of {} } } })
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0]
+                             <Data.Array.Repa.Base.Array
+                                Data.Array.Repa.Repr.Unboxed.U
+                                ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                GHC.Types.Double>_R))) -}
+ed0767c85b94638ff94eeb17aa9beebe
+  $fNumArray_$cnegate :: Util.Matrix -> Util.Matrix
+  {- Arity: 1,
+     Unfolding: (\ w :: Util.Matrix ->
+                 case w `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                 Util.$wrmap GHC.Float.negateDouble ww4 ww5 ww7 ww9 } } }) -}
+89ac7f474f184dde4cde202f7e31b18f
+  $fNumArray_$csignum :: Util.Matrix -> Util.Matrix
+  {- Arity: 1,
+     Unfolding: (\ w :: Util.Matrix ->
+                 case w `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                 Util.$wrmap
+                   GHC.Float.$fNumDouble_$csignum
+                   ww4
+                   ww5
+                   ww7
+                   ww9 } } }) -}
+6dca0eba4b197f224945140ccb303b20
+  $s!_$slength ::
+    Data.Vector.Unboxed.Base.Vector GHC.Types.Double -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,U,A)>m,
+     Inline: [NEVER] -}
+f48fb5ca1bed3eefb9364a0d3de7903f
+  $s$fShape:._$caddDim ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SS),1*U(1*H,U(U))><S(SS),1*U(1*H,U(U))>m,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n1 ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh2 n2 ->
+                 case n1 of wild2 { GHC.Types.I# x ->
+                 case n2 of wild3 { GHC.Types.I# y ->
+                 Data.Array.Repa.Index.:.
+                   @ Data.Array.Repa.Index.Z
+                   @ GHC.Types.Int
+                   Data.Array.Repa.Index.Z
+                   (GHC.Types.I# (GHC.Prim.+# x y)) } } } }) -}
+3cfc462e9eea580714482922d480c9df
+  $s$fShape:._$caddDim1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> ((Data.Array.Repa.Index.Z
+         Data.Array.Repa.Index.:. GHC.Types.Int)
+        Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+       Data.Array.Repa.Index.:. GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(SS)S),1*U(U(1*H,U(U)),U(U))><S(S(SS)S),1*U(U(1*H,U(U)),U(U))>m,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: (Data.Array.Repa.Index.Z
+                           Data.Array.Repa.Index.:. GHC.Types.Int)
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n1 ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh2 n2 ->
+                 case sh1 of wild2 { Data.Array.Repa.Index.:. sh4 n4 ->
+                 case sh2 of wild3 { Data.Array.Repa.Index.:. sh5 n5 ->
+                 case n4 of wild4 { GHC.Types.I# x ->
+                 case n5 of wild5 { GHC.Types.I# y ->
+                 case n1 of wild6 { GHC.Types.I# x1 ->
+                 case n2 of wild7 { GHC.Types.I# y1 ->
+                 Data.Array.Repa.Index.:.
+                   @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                   @ GHC.Types.Int
+                   (Data.Array.Repa.Index.:.
+                      @ Data.Array.Repa.Index.Z
+                      @ GHC.Types.Int
+                      Data.Array.Repa.Index.Z
+                      (GHC.Types.I# (GHC.Prim.+# x y)))
+                   (GHC.Types.I# (GHC.Prim.+# x1 y1)) } } } } } } } }) -}
+35b6a70bcd6a61e2bbedf98129d0c421
+  $s$fShape:._$cfromIndex ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+    -> Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SS),1*U(1*H,1*H)><S,1*U(U)>m,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   n :: GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. ds1 d ->
+                 case n of dt1 { GHC.Types.I# ipv ->
+                 Data.Array.Repa.Index.:.
+                   @ Data.Array.Repa.Index.Z
+                   @ GHC.Types.Int
+                   Data.Array.Repa.Index.Z
+                   dt1 } }) -}
+e0ac67b4c40566e4aa44881695fddd73
+  $s$fShape:._$cfromIndex1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+       Data.Array.Repa.Index.:. GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SS),1*U(1*H,U(U))><S,1*U(U)>m,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   n :: GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. ds1 d ->
+                 case n of wild1 { GHC.Types.I# x ->
+                 case d of wild2 { GHC.Types.I# y ->
+                 case GHC.Prim.quotInt# x y of wild3 { DEFAULT ->
+                 case GHC.Prim.remInt# x y of wild5 { DEFAULT ->
+                 Data.Array.Repa.Index.:.
+                   @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                   @ GHC.Types.Int
+                   (Data.Array.Repa.Index.:.
+                      @ Data.Array.Repa.Index.Z
+                      @ GHC.Types.Int
+                      Data.Array.Repa.Index.Z
+                      (GHC.Types.I# wild3))
+                   (GHC.Types.I# wild5) } } } } }) -}
+35f1a4db9cce81577c1ee11d64b2dbff
+  $s$fShape:._$cinShapeRange ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SS),1*U(1*H,U(U))><S(SS),1*U(1*H,U(U))><S(SS),1*U(1*H,U(U))>,
+     Inline: INLINE[1] (sat-args=3),
+     Unfolding: InlineRule (3, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds2 :: Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. zs z ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh1 n1 ->
+                 case ds2 of wild2 { Data.Array.Repa.Index.:. sh2 n2 ->
+                 case n2 of wild3 { GHC.Types.I# x ->
+                 case z of wild4 { GHC.Types.I# y ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# x y) of wild5 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case n1 of wild6 { GHC.Types.I# y1 ->
+                      GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<# x y1) } } } } } } }) -}
+4699391ba12a86c939f55c884f2110c2
+  $s$fShape:._$cinShapeRange1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> ((Data.Array.Repa.Index.Z
+         Data.Array.Repa.Index.:. GHC.Types.Int)
+        Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> ((Data.Array.Repa.Index.Z
+         Data.Array.Repa.Index.:. GHC.Types.Int)
+        Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SS),1*U(U(1*H,U(U)),U(U))><S(SS),1*U(U(1*H,U(U)),U(U))><S(SS),1*U(U(1*H,U(U)),U(U))>,
+     Inline: INLINE[1] (sat-args=3),
+     Unfolding: InlineRule (3, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: (Data.Array.Repa.Index.Z
+                           Data.Array.Repa.Index.:. GHC.Types.Int)
+                          Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds2 :: (Data.Array.Repa.Index.Z
+                           Data.Array.Repa.Index.:. GHC.Types.Int)
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. zs z ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh1 n1 ->
+                 case ds2 of wild2 { Data.Array.Repa.Index.:. sh2 n2 ->
+                 case n2 of wild3 { GHC.Types.I# x ->
+                 case z of wild4 { GHC.Types.I# y ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# x y) of wild5 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case n1 of wild6 { GHC.Types.I# y1 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<# x y1) of wild7 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case zs of wild11 { Data.Array.Repa.Index.:. zs1 z1 ->
+                           case sh1 of wild12 { Data.Array.Repa.Index.:. sh4 n4 ->
+                           case sh2 of wild13 { Data.Array.Repa.Index.:. sh5 n5 ->
+                           case n5 of wild14 { GHC.Types.I# x1 ->
+                           case z1 of wild15 { GHC.Types.I# y2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x1 y2) of wild16 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case n4 of wild17 { GHC.Types.I# y3 ->
+                                GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<# x1 y3) } } } } } } } } } } } } } } }) -}
+e83945f10355f67c361693a93e71e3cb
+  $s$fShape:._$cintersectDim ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SS),1*U(1*H,U(U))><S(SS),1*U(1*H,U(U))>m,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n1 ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh2 n2 ->
+                 case n1 of wild2 { GHC.Types.I# x1 ->
+                 case n2 of wild3 { GHC.Types.I# y1 ->
+                 case case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# x1 y1) of wild4 {
+                        GHC.Types.False -> wild3
+                        GHC.Types.True -> wild2 } of dt1 { GHC.Types.I# ipv ->
+                 Data.Array.Repa.Index.:.
+                   @ Data.Array.Repa.Index.Z
+                   @ GHC.Types.Int
+                   Data.Array.Repa.Index.Z
+                   dt1 } } } } }) -}
+b1c49432aca7ca2b8a280b2a0b494b38
+  $s$fShape:._$cintersectDim1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> ((Data.Array.Repa.Index.Z
+         Data.Array.Repa.Index.:. GHC.Types.Int)
+        Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+       Data.Array.Repa.Index.:. GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(SS)S),1*U(U(1*H,U(U)),U(U))><S(S(SS)S),1*U(U(1*H,U(U)),U(U))>m,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: (Data.Array.Repa.Index.Z
+                           Data.Array.Repa.Index.:. GHC.Types.Int)
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n1 ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh2 n2 ->
+                 case sh1 of wild2 { Data.Array.Repa.Index.:. sh4 n4 ->
+                 case sh2 of wild3 { Data.Array.Repa.Index.:. sh5 n5 ->
+                 case n4 of wild4 { GHC.Types.I# x1 ->
+                 case n5 of wild5 { GHC.Types.I# y1 ->
+                 case case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# x1 y1) of wild6 {
+                        GHC.Types.False -> wild5
+                        GHC.Types.True -> wild4 } of dt1 { GHC.Types.I# ipv ->
+                 case n1 of wild6 { GHC.Types.I# x2 ->
+                 case n2 of wild7 { GHC.Types.I# y2 ->
+                 case case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# x2 y2) of wild8 {
+                        GHC.Types.False -> wild7
+                        GHC.Types.True -> wild6 } of dt2 { GHC.Types.I# ipv1 ->
+                 Data.Array.Repa.Index.:.
+                   @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                   @ GHC.Types.Int
+                   (Data.Array.Repa.Index.:.
+                      @ Data.Array.Repa.Index.Z
+                      @ GHC.Types.Int
+                      Data.Array.Repa.Index.Z
+                      dt1)
+                   dt2 } } } } } } } } } }) -}
+cdfdab4b487faf19ba48e5fb97936c54
+  $s$fShape:._$crank ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,1*H)>m,
+     Inline: INLINE[1] (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 ds1 ->
+                 GHC.Types.I# 1 }) -}
+c5afd345764a739ba6d250b3d695ac26
+  $s$fShape:._$crank1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,1*H)>m,
+     Inline: INLINE[1] (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 ds1 ->
+                 GHC.Types.I# 2 }) -}
+f4d9032e4b98e9756967a5e68a60a256
+  $s$fShape:._$csize ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,U(U))>,
+     Inline: INLINE[1] (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n -> n }) -}
+ddda5825ed9afce5317e07342842b170
+  $s$fShape:._$csize1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(SS)S),1*U(U(1*H,U(U)),U(U))>m,
+     Inline: INLINE[1] (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n ->
+                 case sh1 of wild1 { Data.Array.Repa.Index.:. sh2 n1 ->
+                 case n1 of wild2 { GHC.Types.I# y ->
+                 case n of wild3 { GHC.Types.I# y1 ->
+                 GHC.Types.I# (GHC.Prim.*# y y1) } } } }) -}
+e269474a4062bfbd3a6f204973e7bf04
+  $s$fShape:._$csizeIsValid ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SS),1*U(1*H,U(U))>,
+     Inline: INLINE[1] (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n ->
+                 case n of wild3 { GHC.Types.I# x1 ->
+                 case GHC.Real.$fIntegralInt_$cdiv
+                        GHC.Base.maxInt
+                        (GHC.Types.I# 1) of wild4 { GHC.Types.I# y ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.<=# x1 y) } } }) -}
+a59f00cb4075b12c4f970d647df0829b
+  $s$fShape:._$csizeIsValid1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S(S(SS)S),1*U(U(1*H,U(U)),U(U))>,
+     Inline: INLINE[1] (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 n ->
+                 case sh1 of wild1 { Data.Array.Repa.Index.:. sh2 n1 ->
+                 case n1 of wild2 { GHC.Types.I# y ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># y 0) of wild3 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case n of wild4 { GHC.Types.I# x1 ->
+                      case GHC.Real.$fIntegralInt_$cdiv
+                             GHC.Base.maxInt
+                             (GHC.Types.I# y) of wild5 { GHC.Types.I# y1 ->
+                      GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=# x1 y1) } } } } } }) -}
+c7c190844e4b4e6bc8fcbaf95f32f089
+  $s$fShape:._$ctoIndex ::
+    (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SS),1*U(1*H,1*H)><S(SS),1*U(1*H,U(U))>,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: Data.Array.Repa.Index.Z
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 sh2 ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh1' sh2' ->
+                 sh2' } }) -}
+4a6eb44a52a45545504d51d4aa200520
+  $s$fShape:._$ctoIndex1 ::
+    ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+     Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> ((Data.Array.Repa.Index.Z
+         Data.Array.Repa.Index.:. GHC.Types.Int)
+        Data.Array.Repa.Index.:. GHC.Types.Int)
+    -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SS),1*U(1*H,U(U))><S(S(SS)S),1*U(U(1*H,U(U)),U(U))>m,
+     Inline: INLINE[1] (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: (Data.Array.Repa.Index.Z
+                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int
+                   ds1 :: (Data.Array.Repa.Index.Z
+                           Data.Array.Repa.Index.:. GHC.Types.Int)
+                          Data.Array.Repa.Index.:. GHC.Types.Int ->
+                 case ds of wild { Data.Array.Repa.Index.:. sh1 sh2 ->
+                 case ds1 of wild1 { Data.Array.Repa.Index.:. sh1' sh2' ->
+                 case sh1' of wild2 { Data.Array.Repa.Index.:. sh1'1 sh2'1 ->
+                 case sh2'1 of wild4 { GHC.Types.I# y1 ->
+                 case sh2 of wild3 { GHC.Types.I# y ->
+                 case sh2' of wild6 { GHC.Types.I# y2 ->
+                 GHC.Types.I# (GHC.Prim.+# (GHC.Prim.*# y1 y) y2) } } } } } }) -}
+cf013159922131aa29b3be5946bfa784
+  $s$fTargetUe ::
+    Data.Array.Repa.Eval.Target.Target
+      Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Array.Repa.Repr.Unboxed.U
+                  @ GHC.Types.Double
+                  (Data.Array.Repa.Repr.Unboxed.$fTargetUe_$cnewMVec
+                     @ GHC.Types.Double
+                     Data.Vector.Unboxed.Base.$fUnboxDouble)
+                  Data.Array.Repa.Algorithms.Matrix.$s$fTargetUe_$s$fTargetUe_$cunsafeWriteMVec
+                  Util.$s$fTargetUe_$s$fTargetUe_$cunsafeFreezeMVec
+                  Util.$s$fTargetUe_$s$fTargetUe_$cdeepSeqMVec
+                  (Data.Array.Repa.Repr.Unboxed.$fTargetUe_$ctouchMVec
+                     @ GHC.Types.Double
+                     Data.Vector.Unboxed.Base.$fUnboxDouble) -}
+ddf8f3afa405c2d2e043b276294f0dbc
+  $s$fTargetUe_$s$fTargetUe_$cdeepSeqMVec ::
+    Data.Array.Repa.Eval.Target.MVec
+      Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double
+    -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(1*U)><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a4
+                   ds :: Data.Array.Repa.Eval.Target.MVec
+                           Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double
+                   x :: a4 ->
+                 case ds
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:MVecUe[0]) <GHC.Types.Double>_N) of wild { Data.Array.Repa.Repr.Unboxed.UMVec vec ->
+                 case vec of vec1 { DEFAULT -> x } }) -}
+c9d7c7151bca24b6c0f17da63b3cb92a
+  $s$fTargetUe_$s$fTargetUe_$cunsafeFreezeMVec ::
+    sh
+    -> Data.Array.Repa.Eval.Target.MVec
+         Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double
+    -> GHC.Types.IO
+         (Data.Array.Repa.Base.Array
+            Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U><S(S),1*U(1*U(U,U,U))><L,U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ sh
+                   sh1 :: sh
+                   ds :: Data.Array.Repa.Eval.Target.MVec
+                           Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case ds
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:MVecUe[0]) <GHC.Types.Double>_N) of wild { Data.Array.Repa.Repr.Unboxed.UMVec mvec ->
+                 (GHC.Base.bindIO
+                    @ (Data.Vector.Unboxed.Base.Vector GHC.Types.Double)
+                    @ (Data.Array.Repa.Base.Array
+                         Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double)
+                    (GHC.Base.$fFunctorIO_$cfmap
+                       @ (Data.Vector.Primitive.Vector GHC.Types.Double)
+                       @ (Data.Vector.Unboxed.Base.Vector GHC.Types.Double)
+                       (\ tpl :: Data.Vector.Primitive.Vector GHC.Types.Double -> tpl)
+                         `cast`
+                       (<Data.Vector.Primitive.Vector GHC.Types.Double>_R
+                        ->_R Trans
+                                 (Sym (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0]))
+                                 (Sub (Sym (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))))
+                       (case mvec
+                               `cast`
+                             (Trans
+                                  (Data.Vector.Unboxed.Base.MVector
+                                     (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))
+                                     <GHC.Types.Double>_N)_R
+                                  (Trans
+                                       (Sub (Data.Vector.Unboxed.Base.TFCo:R:MVectorsDouble[0]
+                                                 <Control.Monad.Primitive.PrimState
+                                                    GHC.Types.IO>_N))
+                                       (Data.Vector.Unboxed.Base.NTCo:R:MVectorsDouble[0]
+                                            <Control.Monad.Primitive.PrimState
+                                               GHC.Types.IO>_N))) of wild1 { Data.Vector.Primitive.Mutable.MVector dt dt1 dt2 ->
+                        GHC.Base.$fFunctorIO_$cfmap
+                          @ Data.Primitive.ByteArray.ByteArray
+                          @ (Data.Vector.Primitive.Vector GHC.Types.Double)
+                          (Data.Vector.Primitive.$WVector
+                             @ GHC.Types.Double
+                             (GHC.Types.I# dt)
+                             (GHC.Types.I# dt1))
+                          (\ s# :: GHC.Prim.State#
+                                     (Control.Monad.Primitive.PrimState GHC.Types.IO)[OneShot] ->
+                           case GHC.Prim.unsafeFreezeByteArray#
+                                  @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                  dt2
+                                  s# of ds1 { (#,#) ipv ipv1 ->
+                           (# ipv, Data.Primitive.ByteArray.ByteArray ipv1 #) })
+                            `cast`
+                          (Trans
+                               ((GHC.Prim.State#
+                                   (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R
+                                ->_R ((# (GHC.Prim.State#
+                                            (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R,
+                                         <Data.Primitive.ByteArray.ByteArray>_R #))_R)
+                               (Sym (GHC.Types.NTCo:IO[0]
+                                         <Data.Primitive.ByteArray.ByteArray>_R))) }))
+                    (\ vec :: Data.Vector.Unboxed.Base.Vector GHC.Types.Double ->
+                     GHC.Base.$
+                       @ (Data.Array.Repa.Base.Array
+                            Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double)
+                       @ (GHC.Types.IO
+                            (Data.Array.Repa.Base.Array
+                               Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double))
+                       (GHC.Base.returnIO
+                          @ (Data.Array.Repa.Base.Array
+                               Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double))
+                       (Data.Array.Repa.Repr.Unboxed.$WAUnboxed
+                          @ GHC.Types.Double
+                          @ sh
+                          sh1
+                          vec)))
+                   `cast`
+                 (GHC.Types.NTCo:IO[0]
+                      <Data.Array.Repa.Base.Array
+                         Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double>_R)
+                   eta })
+                  `cast`
+                (forall sh.
+                 <sh>_R
+                 ->_R <Data.Array.Repa.Eval.Target.MVec
+                         Data.Array.Repa.Repr.Unboxed.U GHC.Types.Double>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0]
+                               <Data.Array.Repa.Base.Array
+                                  Data.Array.Repa.Repr.Unboxed.U sh GHC.Types.Double>_R)) -}
+7854b349fb39a20f9160e6b4f8e7ef4e
+  $w$c+ ::
+    Data.Array.Repa.Index.DIM0
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> Util.Matrix
+    -> Data.Array.Repa.Base.Array
+         Data.Array.Repa.Repr.Unboxed.U
+         ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+          Data.Array.Repa.Index.:. GHC.Types.Int)
+         GHC.Types.Double
+  {- Arity: 6, Strictness: <S,1*H><L,U><L,U><L,U><L,U><S,1*U>,
+     Inline: [0] -}
+1a09ecdcf082bcd0d651fa304ee9dcac
+  $w$c~== ::
+    Data.Array.Repa.Index.DIM0
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> Data.Array.Repa.Index.DIM1
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Types.Bool
+  {- Arity: 9,
+     Strictness: <S,1*H><L,U><L,U><L,U><L,U><L,U(U,U(U))><L,U(U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ ww :: Data.Array.Repa.Index.DIM0
+                   ww1 :: GHC.Prim.Int#
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.Int#
+                   ww4 :: GHC.Prim.ByteArray#
+                   ww5 :: Data.Array.Repa.Index.DIM1
+                   ww6 :: GHC.Types.Int
+                   ww7 :: GHC.Prim.Int#
+                   ww8 :: GHC.Prim.ByteArray# ->
+                 case (Util.$w$c+
+                         ww
+                         ww1
+                         ww2
+                         ww3
+                         ww4
+                         (Util.$wrmap GHC.Float.negateDouble ww5 ww6 ww7 ww8))
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM2>_N)) of wild { Data.Array.Repa.Repr.Unboxed.AUnboxed sh1 vec ->
+                 case sh1 of wild1 { Data.Array.Repa.Index.:. sh2 n ->
+                 case sh2 of wild2 { Data.Array.Repa.Index.:. sh3 n1 ->
+                 case n1 of wild3 { GHC.Types.I# y ->
+                 case n of wild4 { GHC.Types.I# y1 ->
+                 case vec
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of wild5 { Data.Vector.Primitive.Vector dt dt1 dt2 ->
+                 let {
+                   end :: GHC.Prim.Int# = GHC.Prim.*# y y1
+                 } in
+                 let {
+                   f :: GHC.Prim.Int# -> GHC.Prim.Double#
+                     {- Arity: 1, Strictness: <L,U>,
+                        Unfolding: InlineRule (1, True, False)
+                                   (\ i :: GHC.Prim.Int# ->
+                                    case GHC.Prim.quotInt# i y1 of wild6 { DEFAULT ->
+                                    case GHC.Prim.remInt# i y1 of wild7 { DEFAULT ->
+                                    GHC.Prim.indexDoubleArray#
+                                      dt2
+                                      (GHC.Prim.+#
+                                         dt
+                                         (GHC.Prim.+# (GHC.Prim.*# wild6 y1) wild7)) } }) -}
+                   = \ i :: GHC.Prim.Int# ->
+                     case GHC.Prim.quotInt# i y1 of wild6 { DEFAULT ->
+                     case GHC.Prim.remInt# i y1 of wild7 { DEFAULT ->
+                     GHC.Prim.indexDoubleArray#
+                       dt2
+                       (GHC.Prim.+# dt (GHC.Prim.+# (GHC.Prim.*# wild6 y1) wild7)) } }
+                 } in
+                 letrec {
+                   iter :: GHC.Prim.Int# -> GHC.Prim.Double# -> GHC.Prim.Double#
+                     {- Arity: 2, Strictness: <L,U><L,U>, Inline: INLINE (sat-args=2),
+                        Unfolding(loop-breaker): InlineRule (2, False, False)
+                                                 (\ i :: GHC.Prim.Int# z :: GHC.Prim.Double# ->
+                                                  case GHC.Prim.>=# i end of ds {
+                                                    DEFAULT
+                                                    -> case f i of wild6 { DEFAULT ->
+                                                       iter
+                                                         (GHC.Prim.+# i 1)
+                                                         (GHC.Prim.+## z wild6) }
+                                                    1 -> z }) -}
+                   = \ i :: GHC.Prim.Int# z :: GHC.Prim.Double# ->
+                     case GHC.Prim.>=# i end of ds {
+                       DEFAULT
+                       -> case GHC.Prim.quotInt# i y1 of wild6 { DEFAULT ->
+                          case GHC.Prim.remInt# i y1 of wild7 { DEFAULT ->
+                          case GHC.Prim.indexDoubleArray#
+                                 dt2
+                                 (GHC.Prim.+#
+                                    dt
+                                    (GHC.Prim.+#
+                                       (GHC.Prim.*# wild6 y1)
+                                       wild7)) of wild8 { DEFAULT ->
+                          iter (GHC.Prim.+# i 1) (GHC.Prim.+## z wild8) } } }
+                       1 -> z }
+                 } in
+                 case iter 0 0.0 of wild6 { DEFAULT ->
+                 case {__pkg_ccall ieee754-0.7.6@ieee7_E4oWks01x7uFbXdcWiQ2b6 feqrel GHC.Prim.Double#
+                                                                                     -> GHC.Prim.Double#
+                                                                                     -> GHC.Prim.State#
+                                                                                          GHC.Prim.RealWorld
+                                                                                     -> (# GHC.Prim.State#
+                                                                                             GHC.Prim.RealWorld,
+                                                                                           GHC.Prim.Int# #)}
+                        wild6
+                        0.0
+                        GHC.Prim.realWorld# of wild7 { (#,#) ds6 ds7 ->
+                 case GHC.Classes.divInt# 54 2 of ww9 { DEFAULT ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ds7 ww9) of wild8 {
+                   GHC.Types.False
+                   -> let {
+                        $j :: GHC.Prim.Double# -> GHC.Types.Bool
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ x :: GHC.Prim.Double#[OneShot] ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.<## x 2.220446049250313e-16) of wild9 {
+                            GHC.Types.False
+                            -> case {__pkg_ccall base-4.8.2.0 isDoubleNaN GHC.Prim.Double#
+                                                                          -> GHC.Prim.State#
+                                                                               GHC.Prim.RealWorld
+                                                                          -> (# GHC.Prim.State#
+                                                                                  GHC.Prim.RealWorld,
+                                                                                GHC.Prim.Int# #)}
+                                      wild6
+                                      GHC.Prim.realWorld# of wild10 { (#,#) ds2 ds3 ->
+                               case ds3 of wild11 {
+                                 DEFAULT
+                                 -> case {__pkg_ccall base-4.8.2.0 isDoubleNaN GHC.Prim.Double#
+                                                                               -> GHC.Prim.State#
+                                                                                    GHC.Prim.RealWorld
+                                                                               -> (# GHC.Prim.State#
+                                                                                       GHC.Prim.RealWorld,
+                                                                                     GHC.Prim.Int# #)}
+                                           0.0
+                                           GHC.Prim.realWorld# of wild12 { (#,#) ds1 ds5 ->
+                                    case ds5 of wild13 {
+                                      DEFAULT -> GHC.Types.True 0 -> GHC.Types.False } }
+                                 0 -> GHC.Types.False } }
+                            GHC.Types.True -> GHC.Types.True }
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==## wild6 0.0) of wild9 {
+                        GHC.Types.False
+                        -> case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>## wild6 0.0) of wild10 {
+                             GHC.Types.False -> $j (GHC.Prim.negateDouble# wild6)
+                             GHC.Types.True -> $j wild6 }
+                        GHC.Types.True -> $j 0.0 }
+                   GHC.Types.True -> GHC.Types.True } } } } } } } } } }) -}
+3a78868638b77548bbf2280d2bb91bfd
+  $wa ::
+    Data.Array.Repa.Index.DIM1
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> Data.Array.Repa.Index.DIM0
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 11,
+     Strictness: <L,U(U,U(U))><L,U(U)><L,U><L,U><L,U><S,1*H><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ ww :: Data.Array.Repa.Index.DIM1
+                   ww1 :: GHC.Types.Int
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.Int#
+                   ww4 :: GHC.Prim.ByteArray#
+                   ww5 :: Data.Array.Repa.Index.DIM0
+                   ww6 :: GHC.Prim.Int#
+                   ww7 :: GHC.Prim.Int#
+                   ww8 :: GHC.Prim.Int#
+                   ww9 :: GHC.Prim.ByteArray#
+                   w :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Util.$w$c~== ww5 ww6 ww7 ww8 ww9 ww ww1 ww2 ww4 of wild {
+                   GHC.Types.False
+                   -> (Util.shouldAlmostEqual2
+                         (GHC.CString.unpackAppendCString#
+                            "predicate failed on: "#
+                            (GHC.Base.++
+                               @ GHC.Types.Char
+                               Data.Array.Repa.Repr.Unboxed.$fShowArray2
+                               (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.shows9
+                                  (case ww of ww10 { Data.Array.Repa.Index.:. ww11 ww12 ->
+                                   case ww12 of ww13 { GHC.Types.I# ww14 ->
+                                   GHC.Types.:
+                                     @ GHC.Types.Char
+                                     GHC.Show.shows9
+                                     (let {
+                                        eta :: GHC.Base.String
+                                        = GHC.Base.++
+                                            @ GHC.Types.Char
+                                            Data.Array.Repa.Index.$fShow:.2
+                                            (case GHC.Show.$wshowSignedInt
+                                                    4
+                                                    ww14
+                                                    (GHC.Types.:
+                                                       @ GHC.Types.Char
+                                                       GHC.Show.shows8
+                                                       (GHC.Base.++
+                                                          @ GHC.Types.Char
+                                                          Data.Array.Repa.Index.$fShow:.2
+                                                          (case ww1 of ww15 { GHC.Types.I# ww16 ->
+                                                           case GHC.Show.$wshowSignedInt
+                                                                  4
+                                                                  ww16
+                                                                  (GHC.Types.:
+                                                                     @ GHC.Types.Char
+                                                                     GHC.Show.shows8
+                                                                     (GHC.Types.:
+                                                                        @ GHC.Types.Char
+                                                                        GHC.Show.showSpace1
+                                                                        (Data.Vector.Unboxed.$w$cshowsPrec
+                                                                           @ GHC.Types.Double
+                                                                           GHC.Float.$fShowDouble
+                                                                           Data.Vector.Unboxed.Base.$fUnboxDouble
+                                                                           (Data.Vector.Primitive.Vector
+                                                                              @ GHC.Types.Double
+                                                                              ww2
+                                                                              ww3
+                                                                              ww4)
+                                                                             `cast`
+                                                                           (Trans
+                                                                                (Sym (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0]))
+                                                                                (Sub (Sym (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))))
+                                                                           (GHC.Types.[]
+                                                                              @ GHC.Types.Char)))) of ww17 { (#,#) ww18 ww19 ->
+                                                           GHC.Types.:
+                                                             @ GHC.Types.Char
+                                                             ww18
+                                                             ww19 } }))) of ww15 { (#,#) ww16 ww17 ->
+                                             GHC.Types.: @ GHC.Types.Char ww16 ww17 })
+                                      } in
+                                      letrec {
+                                        go :: [GHC.Types.Char] -> [GHC.Types.Char] {- Arity: 1 -}
+                                        = \ ds :: [GHC.Types.Char] ->
+                                          case ds of wild1 {
+                                            [] -> eta
+                                            : y ys -> GHC.Types.: @ GHC.Types.Char y (go ys) }
+                                      } in
+                                      go Data.Array.Repa.Index.$fReadZ4) } })))))
+                        `cast`
+                      (GHC.Types.NTCo:IO[0] <()>_R)
+                        w
+                   GHC.Types.True -> (# w, GHC.Tuple.() #) }) -}
+6fafd4f53f152c1d264a07b8305add8a
+  $waddOnes ::
+    Data.Array.Repa.Index.DIM0
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> Util.Matrix
+  {- Arity: 5, Strictness: <S,1*H><L,U><L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: Data.Array.Repa.Index.DIM0
+                   ww1 :: GHC.Prim.Int#
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.Int#
+                   ww4 :: GHC.Prim.ByteArray# ->
+                 let {
+                   a3 :: GHC.Prim.Int# = GHC.Prim.+# 1 ww2
+                 } in
+                 GHC.IO.unsafeDupablePerformIO
+                   @ (Data.Array.Repa.Base.Array
+                        Data.Array.Repa.Repr.Unboxed.U
+                        ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                        GHC.Types.Double)
+                   (\ s2 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                    case GHC.Prim.noDuplicate# s2 of s' { DEFAULT ->
+                    let {
+                      x1 :: GHC.Prim.Int# = GHC.Prim.*# ww1 a3
+                    } in
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.>=# x1 0) of wild2 {
+                      GHC.Types.False
+                      -> case Util.$fAEqArray5 x1
+                         ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                   Data.Array.Repa.Base.Array
+                                     Data.Array.Repa.Repr.Unboxed.U
+                                     ((Data.Array.Repa.Index.Z
+                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                      Data.Array.Repa.Index.:. GHC.Types.Int)
+                                     GHC.Types.Double #)
+                         of {}
+                      GHC.Types.True
+                      -> case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.<# x1 0) of wild1 {
+                           GHC.Types.False
+                           -> case GHC.Classes.divInt#
+                                     9223372036854775807
+                                     8 of ww5 { DEFAULT ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.># x1 ww5) of wild3 {
+                                GHC.Types.False
+                                -> case GHC.Prim.newByteArray#
+                                          @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                          (GHC.Prim.*# x1 8)
+                                          s'
+                                            `cast`
+                                          (GHC.Prim.State#
+                                             (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of ds1 { (#,#) ipv ipv1 ->
+                                   case {__pkg_ccall primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3 hsprimitive_memset_Word8 forall s.
+                                                                                                                             GHC.Prim.MutableByteArray#
+                                                                                                                               s
+                                                                                                                             -> GHC.Prim.Int#
+                                                                                                                             -> GHC.Prim.Word#
+                                                                                                                             -> GHC.Prim.Word#
+                                                                                                                             -> GHC.Prim.State#
+                                                                                                                                  GHC.Prim.RealWorld
+                                                                                                                             -> (# GHC.Prim.State#
+                                                                                                                                     GHC.Prim.RealWorld #)}
+                                          @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                          ipv1
+                                          0
+                                          (GHC.Prim.int2Word# (GHC.Prim.*# x1 8))
+                                          __word 0
+                                          ipv
+                                            `cast`
+                                          (GHC.Prim.State#
+                                             (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R of wild { (##) ds8 ->
+                                   case GHC.Foreign.charIsRepresentable3
+                                          @ ()
+                                          GHC.IO.Encoding.UTF8.utf8
+                                          Util.$fAEqArray4
+                                          Debug.Trace.traceEventIO2
+                                            `cast`
+                                          (<GHC.Ptr.Ptr Foreign.C.Types.CChar>_R
+                                           ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                                          ds8 of ds2 { (#,#) ipv2 ipv3 ->
+                                   letrec {
+                                     a4 :: GHC.Prim.Int#
+                                           -> GHC.Prim.State# GHC.Prim.RealWorld
+                                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                                       {- Arity: 2, Strictness: <L,U><L,U> -}
+                                     = \ ix :: GHC.Prim.Int#
+                                         eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                                       case GHC.Prim.>=# ix x1 of ds3 {
+                                         DEFAULT
+                                         -> case GHC.Prim.remInt# ix a3 of wild5 { DEFAULT ->
+                                            case GHC.Prim.tagToEnum#
+                                                   @ GHC.Types.Bool
+                                                   (GHC.Prim.<# wild5 1) of wild7 {
+                                              GHC.Types.False
+                                              -> case GHC.Prim.quotInt# ix a3 of wild4 { DEFAULT ->
+                                                 case GHC.Prim.indexDoubleArray#
+                                                        ww4
+                                                        (GHC.Prim.+#
+                                                           ww3
+                                                           (GHC.Prim.+#
+                                                              (GHC.Prim.*# wild4 ww2)
+                                                              (GHC.Prim.-#
+                                                                 wild5
+                                                                 1))) of wild6 { DEFAULT ->
+                                                 case GHC.Prim.writeDoubleArray#
+                                                        @ (Control.Monad.Primitive.PrimState
+                                                             GHC.Types.IO)
+                                                        ipv1
+                                                        ix
+                                                        wild6
+                                                        eta
+                                                          `cast`
+                                                        (GHC.Prim.State#
+                                                           (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of s'# { DEFAULT ->
+                                                 a4
+                                                   (GHC.Prim.+# ix 1)
+                                                   s'#
+                                                     `cast`
+                                                   (GHC.Prim.State#
+                                                      (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R } } }
+                                              GHC.Types.True
+                                              -> case GHC.Prim.writeDoubleArray#
+                                                        @ (Control.Monad.Primitive.PrimState
+                                                             GHC.Types.IO)
+                                                        ipv1
+                                                        ix
+                                                        1.0
+                                                        eta
+                                                          `cast`
+                                                        (GHC.Prim.State#
+                                                           (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of s'# { DEFAULT ->
+                                                 a4
+                                                   (GHC.Prim.+# ix 1)
+                                                   s'#
+                                                     `cast`
+                                                   (GHC.Prim.State#
+                                                      (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R } } }
+                                         1 -> (# eta, GHC.Tuple.() #) }
+                                   } in
+                                   case a4 0 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                                   case GHC.Foreign.charIsRepresentable3
+                                          @ ()
+                                          GHC.IO.Encoding.UTF8.utf8
+                                          Util.$fAEqArray3
+                                          Debug.Trace.traceEventIO2
+                                            `cast`
+                                          (<GHC.Ptr.Ptr Foreign.C.Types.CChar>_R
+                                           ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                                          ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                                   case GHC.Prim.unsafeFreezeByteArray#
+                                          @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                          ipv1
+                                          ipv6
+                                            `cast`
+                                          (GHC.Prim.State#
+                                             (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of ds5 { (#,#) ipv8 ipv9 ->
+                                   (# ipv8
+                                        `cast`
+                                      (GHC.Prim.State#
+                                         (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R,
+                                      (Data.Array.Repa.Repr.Unboxed.AUnboxed
+                                         @ GHC.Types.Double
+                                         @ ((Data.Array.Repa.Index.Z
+                                             Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            Data.Array.Repa.Index.:. GHC.Types.Int)
+                                         (Data.Array.Repa.Index.:.
+                                            @ (Data.Array.Repa.Index.Z
+                                               Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            @ GHC.Types.Int
+                                            (Data.Array.Repa.Index.:.
+                                               @ Data.Array.Repa.Index.Z
+                                               @ GHC.Types.Int
+                                               Data.Array.Repa.Index.Z
+                                               (GHC.Types.I# ww1))
+                                            (GHC.Types.I# a3))
+                                         (Data.Vector.Primitive.Vector @ GHC.Types.Double 0 x1 ipv9)
+                                           `cast`
+                                         (Trans
+                                              (Sym (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0]))
+                                              (Sub (Sym (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0])))))
+                                        `cast`
+                                      (Sub (Sym (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                                     <GHC.Types.Double>_N
+                                                     <(Data.Array.Repa.Index.Z
+                                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                      Data.Array.Repa.Index.:. GHC.Types.Int>_N))) #) } } } } } }
+                                GHC.Types.True
+                                -> case Util.$fAEqArray2 x1
+                                   ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                             Data.Array.Repa.Base.Array
+                                               Data.Array.Repa.Repr.Unboxed.U
+                                               ((Data.Array.Repa.Index.Z
+                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                Data.Array.Repa.Index.:. GHC.Types.Int)
+                                               GHC.Types.Double #)
+                                   of {} } }
+                           GHC.Types.True
+                           -> case Util.$fAEqArray1 x1
+                              ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                        Data.Array.Repa.Base.Array
+                                          Data.Array.Repa.Repr.Unboxed.U
+                                          ((Data.Array.Repa.Index.Z
+                                            Data.Array.Repa.Index.:. GHC.Types.Int)
+                                           Data.Array.Repa.Index.:. GHC.Types.Int)
+                                          GHC.Types.Double #)
+                              of {} } } })
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0]
+                             <Data.Array.Repa.Base.Array
+                                Data.Array.Repa.Repr.Unboxed.U
+                                ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                GHC.Types.Double>_R))) -}
+ceb429371a431d0539843412cc02e469
+  $wrandomArray ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Array.Repa.Base.Array
+         Data.Array.Repa.Repr.Unboxed.U
+         Data.Array.Repa.Index.DIM2
+         GHC.Types.Double
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int# ww1 :: GHC.Prim.Int# ->
+                 Data.Array.Repa.Algorithms.Randomish.$wrandomishDoubleArray
+                   @ Data.Array.Repa.Index.DIM2
+                   Util.$fAEqArray_$s$fShape:.
+                   (Data.Array.Repa.Index.:.
+                      @ Data.Array.Repa.Index.DIM1
+                      @ GHC.Types.Int
+                      (Data.Array.Repa.Index.:.
+                         @ Data.Array.Repa.Index.DIM0
+                         @ GHC.Types.Int
+                         Data.Array.Repa.Index.Z
+                         (GHC.Types.I# ww))
+                      (GHC.Types.I# ww1))
+                   0.0
+                   1.0
+                   0) -}
+b3140d1016802e42a40768f337e46d0a
+  $wrmap ::
+    (GHC.Types.Double -> GHC.Types.Double)
+    -> Data.Array.Repa.Index.DIM1
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> Data.Array.Repa.Base.Array
+         Data.Array.Repa.Repr.Unboxed.U
+         ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+          Data.Array.Repa.Index.:. GHC.Types.Int)
+         GHC.Types.Double
+  {- Arity: 5,
+     Strictness: <L,C(U(U))><L,U(U,U(U))><L,U(U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ w :: GHC.Types.Double -> GHC.Types.Double
+                   ww :: Data.Array.Repa.Index.DIM1
+                   ww1 :: GHC.Types.Int
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.ByteArray# ->
+                 GHC.IO.unsafeDupablePerformIO
+                   @ (Data.Array.Repa.Base.Array
+                        Data.Array.Repa.Repr.Unboxed.U
+                        ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                        GHC.Types.Double)
+                   (\ s2 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                    case GHC.Prim.noDuplicate# s2 of s' { DEFAULT ->
+                    case ww of wild { Data.Array.Repa.Index.:. sh1 n ->
+                    case n of wild2 { GHC.Types.I# y ->
+                    case ww1 of wild1 { GHC.Types.I# y1 ->
+                    let {
+                      x1 :: GHC.Prim.Int# = GHC.Prim.*# y y1
+                    } in
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.>=# x1 0) of wild3 {
+                      GHC.Types.False
+                      -> case Util.$fAEqArray5 x1
+                         ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                   Data.Array.Repa.Base.Array
+                                     Data.Array.Repa.Repr.Unboxed.U
+                                     ((Data.Array.Repa.Index.Z
+                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                      Data.Array.Repa.Index.:. GHC.Types.Int)
+                                     GHC.Types.Double #)
+                         of {}
+                      GHC.Types.True
+                      -> case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.<# x1 0) of wild4 {
+                           GHC.Types.False
+                           -> case GHC.Classes.divInt#
+                                     9223372036854775807
+                                     8 of ww4 { DEFAULT ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.># x1 ww4) of wild5 {
+                                GHC.Types.False
+                                -> case GHC.Prim.newByteArray#
+                                          @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                          (GHC.Prim.*# x1 8)
+                                          s'
+                                            `cast`
+                                          (GHC.Prim.State#
+                                             (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of ds1 { (#,#) ipv ipv1 ->
+                                   case {__pkg_ccall primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3 hsprimitive_memset_Word8 forall s.
+                                                                                                                             GHC.Prim.MutableByteArray#
+                                                                                                                               s
+                                                                                                                             -> GHC.Prim.Int#
+                                                                                                                             -> GHC.Prim.Word#
+                                                                                                                             -> GHC.Prim.Word#
+                                                                                                                             -> GHC.Prim.State#
+                                                                                                                                  GHC.Prim.RealWorld
+                                                                                                                             -> (# GHC.Prim.State#
+                                                                                                                                     GHC.Prim.RealWorld #)}
+                                          @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                          ipv1
+                                          0
+                                          (GHC.Prim.int2Word# (GHC.Prim.*# x1 8))
+                                          __word 0
+                                          ipv
+                                            `cast`
+                                          (GHC.Prim.State#
+                                             (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R of wild6 { (##) ds8 ->
+                                   case GHC.Foreign.charIsRepresentable3
+                                          @ ()
+                                          GHC.IO.Encoding.UTF8.utf8
+                                          Util.$fAEqArray4
+                                          Debug.Trace.traceEventIO2
+                                            `cast`
+                                          (<GHC.Ptr.Ptr Foreign.C.Types.CChar>_R
+                                           ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                                          ds8 of ds2 { (#,#) ipv2 ipv3 ->
+                                   letrec {
+                                     a3 :: GHC.Prim.Int#
+                                           -> GHC.Prim.State# GHC.Prim.RealWorld
+                                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                                       {- Arity: 2, Strictness: <L,U><L,U> -}
+                                     = \ ix :: GHC.Prim.Int#
+                                         eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                                       case GHC.Prim.>=# ix x1 of ds3 {
+                                         DEFAULT
+                                         -> case w (case GHC.Prim.quotInt#
+                                                           ix
+                                                           y1 of wild7 { DEFAULT ->
+                                                    case GHC.Prim.remInt#
+                                                           ix
+                                                           y1 of wild8 { DEFAULT ->
+                                                    case GHC.Prim.indexDoubleArray#
+                                                           ww3
+                                                           (GHC.Prim.+#
+                                                              ww2
+                                                              (GHC.Prim.+#
+                                                                 (GHC.Prim.*# wild7 y1)
+                                                                 wild8)) of wild9 { DEFAULT ->
+                                                    GHC.Types.D#
+                                                      wild9 } } }) of wild7 { GHC.Types.D# x# ->
+                                            case GHC.Prim.writeDoubleArray#
+                                                   @ (Control.Monad.Primitive.PrimState
+                                                        GHC.Types.IO)
+                                                   ipv1
+                                                   ix
+                                                   x#
+                                                   eta
+                                                     `cast`
+                                                   (GHC.Prim.State#
+                                                      (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of s'# { DEFAULT ->
+                                            a3
+                                              (GHC.Prim.+# ix 1)
+                                              s'#
+                                                `cast`
+                                              (GHC.Prim.State#
+                                                 (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R } }
+                                         1 -> (# eta, GHC.Tuple.() #) }
+                                   } in
+                                   case a3 0 ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                                   case GHC.Foreign.charIsRepresentable3
+                                          @ ()
+                                          GHC.IO.Encoding.UTF8.utf8
+                                          Util.$fAEqArray3
+                                          Debug.Trace.traceEventIO2
+                                            `cast`
+                                          (<GHC.Ptr.Ptr Foreign.C.Types.CChar>_R
+                                           ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))
+                                          ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                                   case GHC.Prim.unsafeFreezeByteArray#
+                                          @ (Control.Monad.Primitive.PrimState GHC.Types.IO)
+                                          ipv1
+                                          ipv6
+                                            `cast`
+                                          (GHC.Prim.State#
+                                             (Sym (Control.Monad.Primitive.TFCo:R:PrimStateIO[0])))_R of ds5 { (#,#) ipv8 ipv9 ->
+                                   (# ipv8
+                                        `cast`
+                                      (GHC.Prim.State#
+                                         (Control.Monad.Primitive.TFCo:R:PrimStateIO[0]))_R,
+                                      (Data.Array.Repa.Repr.Unboxed.AUnboxed
+                                         @ GHC.Types.Double
+                                         @ ((Data.Array.Repa.Index.Z
+                                             Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            Data.Array.Repa.Index.:. GHC.Types.Int)
+                                         (Data.Array.Repa.Index.:.
+                                            @ Data.Array.Repa.Index.DIM1
+                                            @ GHC.Types.Int
+                                            wild
+                                            wild1)
+                                         (Data.Vector.Primitive.Vector @ GHC.Types.Double 0 x1 ipv9)
+                                           `cast`
+                                         (Trans
+                                              (Sym (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0]))
+                                              (Sub (Sym (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0])))))
+                                        `cast`
+                                      (Sub (Sym (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                                     <GHC.Types.Double>_N
+                                                     <(Data.Array.Repa.Index.Z
+                                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                      Data.Array.Repa.Index.:. GHC.Types.Int>_N))) #) } } } } } }
+                                GHC.Types.True
+                                -> case Util.$fAEqArray2 x1
+                                   ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                             Data.Array.Repa.Base.Array
+                                               Data.Array.Repa.Repr.Unboxed.U
+                                               ((Data.Array.Repa.Index.Z
+                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                Data.Array.Repa.Index.:. GHC.Types.Int)
+                                               GHC.Types.Double #)
+                                   of {} } }
+                           GHC.Types.True
+                           -> case Util.$fAEqArray1 x1
+                              ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                        Data.Array.Repa.Base.Array
+                                          Data.Array.Repa.Repr.Unboxed.U
+                                          ((Data.Array.Repa.Index.Z
+                                            Data.Array.Repa.Index.:. GHC.Types.Int)
+                                           Data.Array.Repa.Index.:. GHC.Types.Int)
+                                          GHC.Types.Double #)
+                              of {} } } } } } })
+                     `cast`
+                   (Sym (GHC.Types.NTCo:IO[0]
+                             <Data.Array.Repa.Base.Array
+                                Data.Array.Repa.Repr.Unboxed.U
+                                ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                GHC.Types.Double>_R))) -}
+96f30c3561b511e72a722f4ba1ad9263
+  type Matrix =
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U
+      Data.Array.Repa.Index.DIM2
+      GHC.Types.Double
+0621a3d8e5bb967eacf9e62d87bc8ceb
+  type Vector =
+    Data.Array.Repa.Base.Array
+      Data.Array.Repa.Repr.Unboxed.U
+      Data.Array.Repa.Index.DIM1
+      GHC.Types.Double
+c5458a683844d4ae8cdf3e210009cb7c
+  addOnes :: Util.Matrix -> Util.Matrix
+  {- Arity: 1,
+     Strictness: <S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Util.Matrix ->
+                 case w `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww4 of ww6 { Data.Array.Repa.Index.:. ww7 ww8 ->
+                 case ww8 of ww9 { GHC.Types.I# ww10 ->
+                 case ww5 of ww11 { GHC.Types.I# ww12 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww13 { Data.Vector.Primitive.Vector ww14 ww15 ww16 ->
+                 Util.$waddOnes ww7 ww10 ww12 ww14 ww16 } } } } } }) -}
+e9c7ffbc3fa5aaef002b7f616c43045d
+  ifInitialized :: GHC.Base.Maybe a -> a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a3 m31 :: GHC.Base.Maybe a3 ->
+                 case m31 of wild {
+                   GHC.Base.Nothing -> Util.ifInitialized1 @ a3
+                   GHC.Base.Just a4 -> a4 }) -}
+cdeb8c45ade744bac09cb35ac42f41cf
+  ifInitialized1 :: a
+  {- Strictness: b -}
+693b0dba1e7fb6f671949a85953f3721
+  m :: Util.Matrix
+  {- Unfolding: (Util.matrix Util.m4) -}
+2d3950a7b9229279d76353bc369076e1
+  m1 :: Util.Matrix
+  {- Unfolding: (Util.matrix Util.m18) -}
+8cfabf7bb424872aa9bfdbe31fb9ac5b
+  m10 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 0.2) -}
+d19d06eab44dcf198c8ed63d41253da1
+  m11 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m14 Util.m12) -}
+71683bbfc42ab8702c5132a0568ac76e
+  m12 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Util.m13
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+65703bd791b2975160777ac5d7c7530e
+  m13 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.0) -}
+a3647a623765463b2ad0f1098a761de8
+  m14 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 0.5) -}
+6e061a157225103abefc9db33d43c559
+  m15 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m14 Util.m16) -}
+faab3f61a13041f96ec975f34203ec92
+  m16 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Util.m17
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+41a2607a1fb613f16483838c10fc5463
+  m17 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 0.25) -}
+daeeea28f8afc75cf16d25e4e379314e
+  m18 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ [GHC.Types.Double] Util.m26 Util.m19) -}
+429e75c99992e22e5b59b20a159c9e98
+  m19 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ [GHC.Types.Double] Util.m24 Util.m20) -}
+199d7682c46b3f935822c007f543f326
+  m2 :: Util.Matrix
+  {- Unfolding: (case Util.m
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                 Util.$wrmap Util.m30 ww4 ww5 ww7 ww9 } } }) -}
+262946ecee9e83ebd4d398fee5faf8d0
+  m20 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Util.m21
+                   (GHC.Types.[] @ [GHC.Types.Double])) -}
+bdb67eb009bd6b8b84176003bfa9a2be
+  m21 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m13 Util.m22) -}
+53ce1d74b9e80f92ec744b3d43ccb601
+  m22 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Util.m23
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+cf64883b85f2b26b54d9b0a6e004687b
+  m23 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# -2.0) -}
+c7724016700cb37a62fc5293de154163
+  m24 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m25 Util.m12) -}
+d40bba7e9847e075eab23756aeb25fcc
+  m25 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 5.0) -}
+c66a79c03c78494edc7c80be7c9bffa4
+  m26 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m29 Util.m27) -}
+aaf5ebe967a484924061604882b45a4a
+  m27 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Util.m28
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+5fe8c732cded0828ae1ebae1cacfb0b2
+  m28 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 2.0) -}
+ff0c26d356bb16b29e4634a99b20b4d4
+  m29 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 4.0) -}
+4d8848ab44e0da797f4ef56617cd8796
+  m2_x :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.1) -}
+8554708405b8b37fa4a88aa7a5bbceed
+  m3 :: Util.Matrix
+da39cac88d875d021a813c94c91782e5
+  m30 :: GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ ds :: GHC.Types.Double -> Util.m2_x) -}
+4f15e9aab372ad81ee33bcbbf0567f7c
+  m4 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ [GHC.Types.Double] Util.m15 Util.m5) -}
+065a192e14e11bbaf3694bdc305c9099
+  m5 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ [GHC.Types.Double] Util.m11 Util.m6) -}
+a49624b0b2d7f4d3788c9f0149ab800f
+  m6 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Util.m7
+                   (GHC.Types.[] @ [GHC.Types.Double])) -}
+73bf691aeaf3ac78152b215821e43b81
+  m7 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m10 Util.m8) -}
+0ff32abc363cd480f532b2b9d9c9c3bf
+  m8 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Util.m9
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+c12772560f34c4ee332b328de54d89a7
+  m9 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 1.0) -}
+310f9be338bc2077a060802750fbc4e0
+  matrix :: [[GHC.Types.Double]] -> Util.Matrix
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ values :: [[GHC.Types.Double]] ->
+                 Data.Array.Repa.Eval.Target.fromList
+                   @ ((Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                      Data.Array.Repa.Index.:. GHC.Types.Int)
+                   @ GHC.Types.Double
+                   @ Data.Array.Repa.Repr.Unboxed.U
+                   Util.$fAEqArray_$s$fShape:.
+                   Util.$s$fTargetUe
+                   (case GHC.List.$wlenAcc
+                           @ [GHC.Types.Double]
+                           values
+                           0 of ww2 { DEFAULT ->
+                    case GHC.List.$wlenAcc
+                           @ GHC.Types.Double
+                           (GHC.List.$w!! @ [GHC.Types.Double] values 0)
+                           0 of ww1 { DEFAULT ->
+                    Data.Array.Repa.Index.:.
+                      @ (Data.Array.Repa.Index.Z Data.Array.Repa.Index.:. GHC.Types.Int)
+                      @ GHC.Types.Int
+                      (Data.Array.Repa.Index.:.
+                         @ Data.Array.Repa.Index.Z
+                         @ GHC.Types.Int
+                         Data.Array.Repa.Index.Z
+                         (GHC.Types.I# ww2))
+                      (GHC.Types.I# ww1) } })
+                   (Util.matrix_go values)) -}
+7b9b973a7f4641b4fce951ce19aa073b
+  matrix_go :: [[GHC.Types.Double]] -> [GHC.Types.Double]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+e9798c82210748f6c603601fa3607c9a
+  mean :: GHC.Float.Floating a => [a] -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(1*U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
+     Unfolding: (\ @ a3
+                   $dFloating :: GHC.Float.Floating a3
+                   eta :: [a3] ->
+                 let {
+                   $dFractional :: GHC.Real.Fractional a3
+                   = GHC.Float.$p1Floating @ a3 $dFloating
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num a3 = GHC.Real.$p1Fractional @ a3 $dFractional
+                 } in
+                 let {
+                   lvl31 :: a3 = GHC.Num.fromInteger @ a3 $dNum Util.mean2
+                 } in
+                 letrec {
+                   $wgo :: [a3] -> a3 -> a3 -> (# a3, a3 #)
+                     {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [0] -}
+                   = \ w :: [a3] ww :: a3 ww1 :: a3 ->
+                     case w of wild {
+                       [] -> (# ww, ww1 #)
+                       : y ys
+                       -> case ww of m31 { DEFAULT ->
+                          case ww1 of n { DEFAULT ->
+                          $wgo
+                            ys
+                            (GHC.Num.+
+                               @ a3
+                               $dNum
+                               m31
+                               (GHC.Real./
+                                  @ a3
+                                  $dFractional
+                                  (GHC.Num.- @ a3 $dNum y m31)
+                                  (GHC.Num.+ @ a3 $dNum n lvl31)))
+                            (GHC.Num.+ @ a3 $dNum n lvl31) } } }
+                 } in
+                 case $wgo
+                        eta
+                        (GHC.Num.fromInteger @ a3 $dNum Util.mean1)
+                        (GHC.Num.fromInteger
+                           @ a3
+                           $dNum
+                           Util.mean1) of ww { (#,#) ww1 ww2 ->
+                 ww1 }) -}
+2e54b807a206ca359bf0673e208a73f0
+  mean1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 0) -}
+29c49f7cf0f7ac2ce306f6c7cc333a41
+  mean2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 1) -}
+e83265fbc26d6f36901e4e30be387e34
+  randomArray :: GHC.Types.Int -> GHC.Types.Int -> Util.Matrix
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: GHC.Types.Int ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { GHC.Types.I# ww3 ->
+                 Util.$wrandomArray ww1 ww3 } }) -}
+df76f897c5dc75fffdc1c504ebe7ab72
+  rmap ::
+    (GHC.Types.Double -> GHC.Types.Double)
+    -> Util.Matrix -> Util.Matrix
+  {- Arity: 2,
+     Strictness: <L,C(U(U))><S(SS),1*U(U(U(U,U(U)),U(U)),U(U,A,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Double -> GHC.Types.Double w1 :: Util.Matrix ->
+                 case w1
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                 Util.$wrmap w ww4 ww5 ww7 ww9 } } }) -}
+6a56eaada7f044d14da7155491d112dc
+  s :: Util.Matrix
+  {- Unfolding: (Util.matrix Util.s1) -}
+570b480cd07b88b71a64a3b8b326919d
+  s1 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ [GHC.Types.Double] Util.m26 Util.m20) -}
+cd877f30ab99f4364adb4c865e947823
+  sAddOnes :: Util.Matrix
+  {- Unfolding: (Util.matrix Util.sAddOnes1) -}
+4a0f451474094b9add6de3376d3aefb5
+  sAddOnes1 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Util.sAddOnes4
+                   Util.sAddOnes2) -}
+34498356ecd888d131bb95590a89cebb
+  sAddOnes2 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Util.sAddOnes3
+                   (GHC.Types.[] @ [GHC.Types.Double])) -}
+c51e2764eb952e22a33f081c03e9ef70
+  sAddOnes3 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m9 Util.m21) -}
+6b6db2a68eaf460200cec7ba565a9045
+  sAddOnes4 :: [GHC.Types.Double]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.: @ GHC.Types.Double Util.m9 Util.m26) -}
+8e8383f1098825fac0b4e30f8c760a29
+  shouldAlmostEqual ::
+    Util.Matrix -> Util.Matrix -> Test.Hspec.Expectations.Expectation
+  {- Arity: 3,
+     Strictness: <S(SS),U(U(U(U,U(U)),U(U)),U(U,U,U))><S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Util.shouldAlmostEqual1
+                  `cast`
+                (<Util.Matrix>_R
+                 ->_R <Util.Matrix>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+42a1604138027b29219654c2a1c4a4aa
+  shouldAlmostEqual1 ::
+    Util.Matrix
+    -> Util.Matrix
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(SS),U(U(U(U,U(U)),U(U)),U(U,U,U))><S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: Util.Matrix
+                   w1 :: Util.Matrix
+                   w2 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case w `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                 case w1
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww10 { Data.Array.Repa.Repr.Unboxed.AUnboxed ww11 ww12 ->
+                 case ww11 of ww13 { Data.Array.Repa.Index.:. ww14 ww15 ->
+                 case ww14 of ww16 { Data.Array.Repa.Index.:. ww17 ww18 ->
+                 case ww18 of ww19 { GHC.Types.I# ww20 ->
+                 case ww15 of ww21 { GHC.Types.I# ww22 ->
+                 case ww12
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww23 { Data.Vector.Primitive.Vector ww24 ww25 ww26 ->
+                 Util.$wa
+                   ww4
+                   ww5
+                   ww7
+                   ww8
+                   ww9
+                   ww17
+                   ww20
+                   ww22
+                   ww24
+                   ww26
+                   w2 } } } } } } } } }) -}
+c068bfe9cfc09412054afcdae97111a5
+  shouldAlmostEqual10 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 40) -}
+8b378045e8561b719fa67b7990481e68
+  shouldAlmostEqual11 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 27) -}
+4c35ecbee2aab92c2001d11debb84e0d
+  shouldAlmostEqual12 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 34) -}
+7810086d3cd3dbd0689a559fa42940db
+  shouldAlmostEqual13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "src/Util.hs"#) -}
+df14322a84e404d276000f0e50ec2fa0
+  shouldAlmostEqual14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Util"#) -}
+3f7756fd6d5a8952b676fe123e7730f5
+  shouldAlmostEqual15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "deepn_98vzwQjA0spLmxroj6F8bT"#) -}
+fd452a0bdd10f4180b52dbb7420081ab
+  shouldAlmostEqual16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "shouldSatisfy"#) -}
+a23ff663633c3ba1caad3cb007a7c647
+  shouldAlmostEqual2 :: GHC.Base.String -> Test.HUnit.Lang.Assertion
+  {- Unfolding: (Test.HUnit.Lang.assertFailure
+                   Util.shouldAlmostEqual3
+                     `cast`
+                   (Sym (GHC.IP.NTCo:IP[0] <"loc">_N <GHC.Stack.CallStack>_N))) -}
+67d606009a1f55849250c8b4e1fd59c5
+  shouldAlmostEqual3 :: GHC.Stack.CallStack
+  {- Unfolding: (GHC.Stack.CallStack Util.shouldAlmostEqual4) -}
+a54427c17d6fef7261ecf89e33f23e0a
+  shouldAlmostEqual4 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.Hspec.Expectations.expectationFailure1
+                   Util.shouldAlmostEqual5) -}
+07818bec83321d6c81555c51ebf29a43
+  shouldAlmostEqual5 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.Hspec.Expectations.shouldBe8
+                   Util.shouldAlmostEqual6) -}
+5c5606cf82baa65121efd6be18c30ab2
+  shouldAlmostEqual6 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Test.Hspec.Expectations.shouldSatisfy2
+                   Util.shouldAlmostEqual7) -}
+af2676503968acbb472d02405bcaeb9e
+  shouldAlmostEqual7 :: [([GHC.Types.Char], GHC.SrcLoc.SrcLoc)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+                   Util.shouldAlmostEqual8
+                   (GHC.Types.[] @ ([GHC.Types.Char], GHC.SrcLoc.SrcLoc))) -}
+65d915888f5a3708d8f34b62703cffa7
+  shouldAlmostEqual8 :: ([GHC.Types.Char], GHC.SrcLoc.SrcLoc)
+  {- Strictness: m,
+     Unfolding: ((Util.shouldAlmostEqual16, Util.shouldAlmostEqual9)) -}
+08a8e33d64ad4d520f0698fe6adafe7e
+  shouldAlmostEqual9 :: GHC.SrcLoc.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.SrcLoc.SrcLoc
+                   Util.shouldAlmostEqual15
+                   Util.shouldAlmostEqual14
+                   Util.shouldAlmostEqual13
+                   Util.shouldAlmostEqual12
+                   Util.shouldAlmostEqual11
+                   Util.shouldAlmostEqual12
+                   Util.shouldAlmostEqual10) -}
+f0a7678c70d80534f9b8572f42829a9e
+  transpose :: Util.Matrix -> Util.Matrix
+  {- Arity: 1,
+     Strictness: <S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Array.Repa.Algorithms.Matrix.transpose2S -}
+2890a2fa8b4f05206b2bc122fce9cb71
+  zeros :: Util.Matrix
+  {- Unfolding: (case Util.m
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                 Util.$wrmap Util.zeros1 ww4 ww5 ww7 ww9 } } }) -}
+96c35383b7b4a49dc02bb79206e1c22a
+  zeros1 :: GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ ds :: GHC.Types.Double -> Util.m13) -}
+instance Data.AEq.AEq [Data.Array.Repa.Base.Array]
+  = Util.$fAEqArray
+instance GHC.Num.Num [Data.Array.Repa.Base.Array] = Util.$fNumArray
+"SPEC/Util $fEq:. @ (Z :. Int) @ Int" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                                (Data.Array.Repa.Index.Z
+                                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                      $dEq1 :: GHC.Classes.Eq GHC.Types.Int
+  Data.Array.Repa.Index.$fEq:. @ (Data.Array.Repa.Index.Z
+                                  Data.Array.Repa.Index.:. GHC.Types.Int)
+                               @ GHC.Types.Int
+                               $dEq
+                               $dEq1
+  = Util.$fAEqArray_$s$fEq:.
+"SPEC/Util $fEq:. @ Z @ Int" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                       Data.Array.Repa.Index.Z
+                                             $dEq1 :: GHC.Classes.Eq GHC.Types.Int
+  Data.Array.Repa.Index.$fEq:. @ Data.Array.Repa.Index.Z
+                               @ GHC.Types.Int
+                               $dEq
+                               $dEq1
+  = Util.$fAEqArray_$s$fEq:.1
+"SPEC/Util $fEqArray @ U @ (DIM1 :. Int) @ Double" [ALWAYS] forall $dShape :: Data.Array.Repa.Shape.Shape
+                                                                                (Data.Array.Repa.Index.DIM1
+                                                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                   $dEq :: GHC.Classes.Eq
+                                                                             (Data.Array.Repa.Index.DIM1
+                                                                              Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                   $dSource :: Data.Array.Repa.Base.Source
+                                                                                 Data.Array.Repa.Repr.Unboxed.U
+                                                                                 GHC.Types.Double
+                                                                   $dEq1 :: GHC.Classes.Eq
+                                                                              GHC.Types.Double
+  Data.Array.Repa.Operators.Reduction.$fEqArray @ Data.Array.Repa.Repr.Unboxed.U
+                                                @ (Data.Array.Repa.Index.DIM1
+                                                   Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                @ GHC.Types.Double
+                                                $dShape
+                                                $dEq
+                                                $dSource
+                                                $dEq1
+  = Util.$fAEqArray_$s$fEqArray
+"SPEC/Util $fEqArray_$c/= @ U @ (DIM1 :. Int) @ Double" [ALWAYS] forall $dShape :: Data.Array.Repa.Shape.Shape
+                                                                                     (Data.Array.Repa.Index.DIM1
+                                                                                      Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                        $dEq :: GHC.Classes.Eq
+                                                                                  (Data.Array.Repa.Index.DIM1
+                                                                                   Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                        $dSource :: Data.Array.Repa.Base.Source
+                                                                                      Data.Array.Repa.Repr.Unboxed.U
+                                                                                      GHC.Types.Double
+                                                                        $dEq1 :: GHC.Classes.Eq
+                                                                                   GHC.Types.Double
+  Data.Array.Repa.Operators.Reduction.$fEqArray_$c/= @ Data.Array.Repa.Repr.Unboxed.U
+                                                     @ (Data.Array.Repa.Index.DIM1
+                                                        Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                     @ GHC.Types.Double
+                                                     $dShape
+                                                     $dEq
+                                                     $dSource
+                                                     $dEq1
+  = Util.$fAEqArray_$s$fEqArray_$c/=
+"SPEC/Util $fShape:. @ (Z :. Int)" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                             ((Data.Array.Repa.Index.Z
+                                                               Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                              Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                   $dShape :: Data.Array.Repa.Shape.Shape
+                                                                (Data.Array.Repa.Index.Z
+                                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:. @ (Data.Array.Repa.Index.Z
+                                     Data.Array.Repa.Index.:. GHC.Types.Int)
+                                  $dEq
+                                  $dShape
+  = Util.$fAEqArray_$s$fShape:.
+"SPEC/Util $fShape:. @ Z" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                    (Data.Array.Repa.Index.Z
+                                                     Data.Array.Repa.Index.:. GHC.Types.Int)
+                                          $dShape :: Data.Array.Repa.Shape.Shape
+                                                       Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:. @ Data.Array.Repa.Index.Z
+                                  $dEq
+                                  $dShape
+  = Util.$fAEqArray_$s$fShape:.1
+"SPEC/Util $fShape:._$caddDim @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                                 ((Data.Array.Repa.Index.Z
+                                                                   Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                  Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                       $dShape :: Data.Array.Repa.Shape.Shape
+                                                                    (Data.Array.Repa.Index.Z
+                                                                     Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$caddDim @ (Data.Array.Repa.Index.Z
+                                              Data.Array.Repa.Index.:. GHC.Types.Int)
+                                           $dEq
+                                           $dShape
+  = Util.$s$fShape:._$caddDim1
+"SPEC/Util $fShape:._$caddDim @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                        (Data.Array.Repa.Index.Z
+                                                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                                              $dShape :: Data.Array.Repa.Shape.Shape
+                                                           Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$caddDim @ Data.Array.Repa.Index.Z
+                                           $dEq
+                                           $dShape
+  = Util.$s$fShape:._$caddDim
+"SPEC/Util $fShape:._$cdeepSeq @ (Z :. Int)" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                                       ((Data.Array.Repa.Index.Z
+                                                                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                        Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                             $dShape :: Data.Array.Repa.Shape.Shape
+                                                                          (Data.Array.Repa.Index.Z
+                                                                           Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$cdeepSeq @ (Data.Array.Repa.Index.Z
+                                               Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            $dEq
+                                            $dShape
+  = Util.$fAEqArray_$s$fShape:._$cdeepSeq
+"SPEC/Util $fShape:._$cdeepSeq @ Z" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                              (Data.Array.Repa.Index.Z
+                                                               Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                    $dShape :: Data.Array.Repa.Shape.Shape
+                                                                 Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$cdeepSeq @ Data.Array.Repa.Index.Z
+                                            $dEq
+                                            $dShape
+  = Util.$fAEqArray_$s$fShape:._$cdeepSeq1
+"SPEC/Util $fShape:._$cfromIndex @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                                    ((Data.Array.Repa.Index.Z
+                                                                      Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                     Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                          $dShape :: Data.Array.Repa.Shape.Shape
+                                                                       (Data.Array.Repa.Index.Z
+                                                                        Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$cfromIndex @ (Data.Array.Repa.Index.Z
+                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                              $dEq
+                                              $dShape
+  = Util.$s$fShape:._$cfromIndex1
+"SPEC/Util $fShape:._$cfromIndex @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                           (Data.Array.Repa.Index.Z
+                                                            Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                 $dShape :: Data.Array.Repa.Shape.Shape
+                                                              Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$cfromIndex @ Data.Array.Repa.Index.Z
+                                              $dEq
+                                              $dShape
+  = Util.$s$fShape:._$cfromIndex
+"SPEC/Util $fShape:._$cinShapeRange @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                                       ((Data.Array.Repa.Index.Z
+                                                                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                        Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                             $dShape :: Data.Array.Repa.Shape.Shape
+                                                                          (Data.Array.Repa.Index.Z
+                                                                           Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$cinShapeRange @ (Data.Array.Repa.Index.Z
+                                                    Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                 $dEq
+                                                 $dShape
+  = Util.$s$fShape:._$cinShapeRange1
+"SPEC/Util $fShape:._$cinShapeRange @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                              (Data.Array.Repa.Index.Z
+                                                               Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                    $dShape :: Data.Array.Repa.Shape.Shape
+                                                                 Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$cinShapeRange @ Data.Array.Repa.Index.Z
+                                                 $dEq
+                                                 $dShape
+  = Util.$s$fShape:._$cinShapeRange
+"SPEC/Util $fShape:._$cintersectDim @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                                       ((Data.Array.Repa.Index.Z
+                                                                         Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                        Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                             $dShape :: Data.Array.Repa.Shape.Shape
+                                                                          (Data.Array.Repa.Index.Z
+                                                                           Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$cintersectDim @ (Data.Array.Repa.Index.Z
+                                                    Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                 $dEq
+                                                 $dShape
+  = Util.$s$fShape:._$cintersectDim1
+"SPEC/Util $fShape:._$cintersectDim @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                              (Data.Array.Repa.Index.Z
+                                                               Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                    $dShape :: Data.Array.Repa.Shape.Shape
+                                                                 Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$cintersectDim @ Data.Array.Repa.Index.Z
+                                                 $dEq
+                                                 $dShape
+  = Util.$s$fShape:._$cintersectDim
+"SPEC/Util $fShape:._$crank @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                               ((Data.Array.Repa.Index.Z
+                                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                     $dShape :: Data.Array.Repa.Shape.Shape
+                                                                  (Data.Array.Repa.Index.Z
+                                                                   Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$crank @ (Data.Array.Repa.Index.Z
+                                            Data.Array.Repa.Index.:. GHC.Types.Int)
+                                         $dEq
+                                         $dShape
+  = Util.$s$fShape:._$crank1
+"SPEC/Util $fShape:._$crank @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                      (Data.Array.Repa.Index.Z
+                                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            $dShape :: Data.Array.Repa.Shape.Shape
+                                                         Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$crank @ Data.Array.Repa.Index.Z
+                                         $dEq
+                                         $dShape
+  = Util.$s$fShape:._$crank
+"SPEC/Util $fShape:._$csize @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                               ((Data.Array.Repa.Index.Z
+                                                                 Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                     $dShape :: Data.Array.Repa.Shape.Shape
+                                                                  (Data.Array.Repa.Index.Z
+                                                                   Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$csize @ (Data.Array.Repa.Index.Z
+                                            Data.Array.Repa.Index.:. GHC.Types.Int)
+                                         $dEq
+                                         $dShape
+  = Util.$s$fShape:._$csize1
+"SPEC/Util $fShape:._$csize @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                      (Data.Array.Repa.Index.Z
+                                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            $dShape :: Data.Array.Repa.Shape.Shape
+                                                         Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$csize @ Data.Array.Repa.Index.Z
+                                         $dEq
+                                         $dShape
+  = Util.$s$fShape:._$csize
+"SPEC/Util $fShape:._$csizeIsValid @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                                      ((Data.Array.Repa.Index.Z
+                                                                        Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                       Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                            $dShape :: Data.Array.Repa.Shape.Shape
+                                                                         (Data.Array.Repa.Index.Z
+                                                                          Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$csizeIsValid @ (Data.Array.Repa.Index.Z
+                                                   Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                $dEq
+                                                $dShape
+  = Util.$s$fShape:._$csizeIsValid1
+"SPEC/Util $fShape:._$csizeIsValid @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                             (Data.Array.Repa.Index.Z
+                                                              Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                   $dShape :: Data.Array.Repa.Shape.Shape
+                                                                Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$csizeIsValid @ Data.Array.Repa.Index.Z
+                                                $dEq
+                                                $dShape
+  = Util.$s$fShape:._$csizeIsValid
+"SPEC/Util $fShape:._$ctoIndex @ (Z :. Int)" [1] forall $dEq :: GHC.Classes.Eq
+                                                                  ((Data.Array.Repa.Index.Z
+                                                                    Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                                   Data.Array.Repa.Index.:. GHC.Types.Int)
+                                                        $dShape :: Data.Array.Repa.Shape.Shape
+                                                                     (Data.Array.Repa.Index.Z
+                                                                      Data.Array.Repa.Index.:. GHC.Types.Int)
+  Data.Array.Repa.Index.$fShape:._$ctoIndex @ (Data.Array.Repa.Index.Z
+                                               Data.Array.Repa.Index.:. GHC.Types.Int)
+                                            $dEq
+                                            $dShape
+  = Util.$s$fShape:._$ctoIndex1
+"SPEC/Util $fShape:._$ctoIndex @ Z" [1] forall $dEq :: GHC.Classes.Eq
+                                                         (Data.Array.Repa.Index.Z
+                                                          Data.Array.Repa.Index.:. GHC.Types.Int)
+                                               $dShape :: Data.Array.Repa.Shape.Shape
+                                                            Data.Array.Repa.Index.Z
+  Data.Array.Repa.Index.$fShape:._$ctoIndex @ Data.Array.Repa.Index.Z
+                                            $dEq
+                                            $dShape
+  = Util.$s$fShape:._$ctoIndex
+"SPEC/Util $fSourceUa @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                             GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fSourceUa @ GHC.Types.Double $dUnbox
+  = Util.$fAEqArray_$s$fSourceUa
+"SPEC/Util $fSourceUa_$cdeepSeqArray @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                            GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fSourceUa_$cdeepSeqArray @ GHC.Types.Double
+                                                         $dUnbox
+  = Util.$fAEqArray_$s$fSourceUa_$cdeepSeqArray
+"SPEC/Util $fSourceUa_$cextent @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                      GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fSourceUa_$cextent @ GHC.Types.Double
+                                                   $dUnbox
+  = Util.$fAEqArray_$s$fSourceUa_$cextent
+"SPEC/Util $fSourceUa_$cindex @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                     GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fSourceUa_$cindex @ GHC.Types.Double
+                                                  $dUnbox
+  = Util.$fAEqArray_$s$fSourceUa_$cindex
+"SPEC/Util $fSourceUa_$clinearIndex @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                           GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fSourceUa_$clinearIndex @ GHC.Types.Double
+                                                        $dUnbox
+  = Util.$fAEqArray_$s$fSourceUa_$clinearIndex
+"SPEC/Util $fSourceUa_$cunsafeIndex @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                           GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fSourceUa_$cunsafeIndex @ GHC.Types.Double
+                                                        $dUnbox
+  = Util.$fAEqArray_$s$fSourceUa_$cunsafeIndex
+"SPEC/Util $fSourceUa_$cunsafeLinearIndex @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                                 GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fSourceUa_$cunsafeLinearIndex @ GHC.Types.Double
+                                                              $dUnbox
+  = Util.$fAEqArray_$s$fSourceUa_$cunsafeLinearIndex
+"SPEC/Util $fTargetUe @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                             GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fTargetUe @ GHC.Types.Double $dUnbox
+  = Util.$s$fTargetUe
+"SPEC/Util $fTargetUe_$cdeepSeqMVec @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                           GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fTargetUe_$cdeepSeqMVec @ GHC.Types.Double
+                                                        $dUnbox
+  = Util.$s$fTargetUe_$s$fTargetUe_$cdeepSeqMVec
+"SPEC/Util $fTargetUe_$cunsafeFreezeMVec @ Double" [ALWAYS] forall $dUnbox :: Data.Vector.Unboxed.Base.Unbox
+                                                                                GHC.Types.Double
+  Data.Array.Repa.Repr.Unboxed.$fTargetUe_$cunsafeFreezeMVec @ GHC.Types.Double
+                                                             $dUnbox
+  = Util.$s$fTargetUe_$s$fTargetUe_$cunsafeFreezeMVec
+"SPEC/Util length @ Vector @ Double" [ALWAYS] forall $dVector :: Data.Vector.Generic.Base.Vector
+                                                                   Data.Vector.Unboxed.Base.Vector
+                                                                   GHC.Types.Double
+  Data.Vector.Generic.length @ Data.Vector.Unboxed.Base.Vector
+                             @ GHC.Types.Double
+                             $dVector
+  = Util.$s!_$slength
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,49 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-12 23:27:25.235707 UTC
+
+interface deepn_1dktY55YjgMAa28dvjZDvR:Data.Strip 7103
+  interface hash: c3c8816ad03e720d69016dedbcf49b5d
+  ABI hash: e6d95df1e584e2df5be505b808999399
+  export-list hash: b1530def3cd6481724be11e080478b0c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 18431fa22569a6146ee5b9f2660a772f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Strip.strip
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Char c8f827952d4111ae2e47c0b105217cdb
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Unicode cdf84fc3abbaf34ba6b6645291cef991
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+2a79ac06f397f5dfad2f334559143725
+  strip :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ x :: GHC.Base.String ->
+                 GHC.List.dropWhile
+                   @ GHC.Types.Char
+                   GHC.Unicode.isSpace
+                   (GHC.List.reverse1
+                      @ GHC.Types.Char
+                      (GHC.List.dropWhile
+                         @ GHC.Types.Char
+                         GHC.Unicode.isSpace
+                         (GHC.List.reverse @ GHC.Types.Char x))
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
