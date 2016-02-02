@@ -1,6 +1,5 @@
 {-# LANGUAGE NamedFieldPuns #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-{-# OPTIONS -fglasgow-exts #-}
 {-
 - TODO:
 - test single layer with sigmoid
@@ -42,9 +41,9 @@ type Input   = Matrix
 type Output  = Matrix
 type Targets = Matrix
 type Error   = Matrix
-data Network = forall l. Layer l => Network (Input ->
+data Network = Network (Input ->
              (Output, Error -> Double ->
-             (Error, l)))
+             (Error, Network)))
 
 instance Monoid Network where
     mempty = Network (\ input -> (input, (\ error _ -> (error, mempty))))
@@ -52,8 +51,8 @@ instance Monoid Network where
       let (output1, backprop1) = net1 input
           (output2, backprop2) = net2 output1
       in  (output2, \ error learningRate ->
-          let (error2, layer1) = backprop2 error learningRate
-              (error1, layer2) = backprop1 error1 learningRate
+          let (error2, net2') = backprop2 error learningRate
+              (error1, net1') = backprop1 error1 learningRate
           in  (error1, net1' <> net2')))
 
 class Layer l where
