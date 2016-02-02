@@ -126,26 +126,22 @@ instance Layer Sigmoid where
       where derivative = zipWith (\ e i -> e * i * (1 - i)) error input
 
 {--- CODE FOR TESTS ---}
-getOutput :: Layer a => (params -> a) -> params -> Input -> Output
-getOutput getLayer params input = fst $ process input
-  where Network process = add $ getLayer params
 
-getErrorBackUpdate :: Layer a =>
-  (params -> a) -> params -> Input -> Error -> Double -> (Error, Network)
-getErrorBackUpdate getLayer params input = snd $ process input
-  where Network process = add $ getLayer params
 
-getOutError :: Layer a => (params -> a) -> params -> Input -> Error -> Error
-getOutError getLayer params input error = fst $ back error 0
+getOutput :: params -> Input -> Network -> Output
+getOutput params input (Network process) = fst $ process input
+
+getErrorBackUpdate :: Input -> Network -> Error -> Double -> (Error, Network)
+getErrorBackUpdate input (Network process) = snd $ process input
+
+getOutError :: Network -> Input -> Error -> Error
+getOutError (Network process) input error = fst $ back error 0
     where (_, back)       = process input
-          Network process = add $ getLayer params
 
-getNewNetwork :: Layer a =>
-  (params -> a) -> params -> Input -> Error -> Double -> Network
-getNewNetwork getLayer params input error learnRate =
+updateNetwork :: Input -> Error -> Double -> Network -> Network
+updateNetwork input error learnRate (Network process) =
     snd $ back error learnRate
     where (_, back)       = process input
-          Network process = add $ getLayer params
 
 getNewLayer :: Learner a =>
   (params -> a) -> params -> Input -> Error -> Double -> a

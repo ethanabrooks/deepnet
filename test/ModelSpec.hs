@@ -29,8 +29,8 @@ spec = do
       it "processes errors" $ do
         let outError = getOutError linearLayer m m1 m1
         outError `shouldBe` m1 * transpose m
-      {-context "when learning rate is 0" $ do-}
-        {-it "updates weights" $ do-}
+      context "when learning rate is 0" $ do
+        it "updates weights" $ do
           {-let newNetwork = update (linearLayer m) m1 m-}
               {-output'    =-}
           {-weights `shouldBe` m-}
