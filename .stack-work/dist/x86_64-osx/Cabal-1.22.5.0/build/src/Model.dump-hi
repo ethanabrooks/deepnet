@@ -1,0 +1,558 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-02 23:53:47.70503 UTC
+
+interface deepn_98vzwQjA0spLmxroj6F8bT:Model 7103
+  interface hash: cc685c2fe05f1cc1e8729d7b1d8c042a
+  ABI hash: fc49cb0495fc5b6ff6453559dfe3beb7
+  export-list hash: a55f0c9ae03061a5331f61ef13af8522
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 7f8b121bdf08b69322cd9a2df89ca810
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Monoid.<>
+  Model.from
+  Model.getOutError
+  Model.getOutput
+  Model.linearLayer
+  Model.sigmoid
+  Model.updateNetwork
+  Model.Layer{Model.feedThru Model.update}
+  Model.Learner|{Model.getWeights}
+  Model.Network
+module dependencies: Util
+package dependencies: HUnit-1.3.0.0@HUnit_BG7FInvjg0k8rLNKmL1VFA
+                      QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      ansi-terminal-0.6.2.3@ansit_BDlVdfJGo3VHCIHxPTNjH1
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      async-2.0.2@async_1QvsFXyq0AKLt4KdNR0ChF base-4.8.2.0
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      hspec-expectations-0.7.2@hspec_19YQSHkZ0r2ED4k4Dnbroh
+                      hspec-2.2.1@hspec_4R8oqeKmp2qHiEwtLGb3ih
+                      hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi
+                      ieee754-0.7.6@ieee7_E4oWks01x7uFbXdcWiQ2b6 integer-gmp-1.0.0.0
+                      pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL
+                      repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz
+                      repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic
+                      setenv-0.1.1.3@seten_6IUqFDI6NejGrNz9ulqEjc
+                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         deepn_98vzwQjA0spLmxroj6F8bT:Util
+         quickcheck-io-0.1.2@quick_84PO7q7D3omKi8iPu2FhUx:Test.QuickCheck.IO
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Arbitrary
+         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Reduction
+         stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD:Control.Monad.STM
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         hspec-core-2.2.1@hspec_6FsJHgZEWSa1Ixa6PnC7Vi:Test.Hspec.Core.Example
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ByteString
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Cursored
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Delayed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.ForeignPtr
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintInterleave
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.HintSmall
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Partitioned
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Unboxed
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Undefined
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Repr.Vector
+                         repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Slice
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+import  -/  base-4.8.2.0:Control.Applicative a8ebf5ad4932b411ad7725da68be9801
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:Data.Monoid 85b292b52bfd80ed619cddb767d638d3
+import  -/  base-4.8.2.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.2.0:Debug.Trace 6660afb6094d69397ea084364da8f950
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Float e532d434ec2447d809887c0fca1d78a5
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Util e20be9023bbe33e71978114af85881fb
+  exports: 13ac1d18b66d1fe307849ec9bd9ee08f
+  Matrix 96f30c3561b511e72a722f4ba1ad9263
+  addOnes c5458a683844d4ae8cdf3e210009cb7c
+  rmap df76f897c5dc75fffdc1c504ebe7ab72
+  transpose f0a7678c70d80534f9b8572f42829a9e
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa e211591ce9704be9903af9111b06e0a5
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Eval 93b2e956df96cc91e2a04417db3da6b8
+import  -/  repa-3.4.0.2@repa_HcTnFDBCpx6422ziQ2Sejz:Data.Array.Repa.Operators.Mapping 7bc3f85c3bdf02ce37fb7c58c1e9af40
+import  -/  repa-algorithms-3.4.0.2@repaa_3hv7HcVBeZR6U4p9fNx1ic:Data.Array.Repa.Algorithms.Matrix be4e74a2ef97fec43da89fcb08de3b5f
+9d86d95b65d2b4eefc702488eb50e5ec
+  $dmupdate ::
+    Model.Layer l =>
+    GHC.Types.Double -> Model.Input -> Model.Error -> l -> l
+  {- Arity: 5, HasNoCafRefs, Strictness: <L,A><L,A><L,A><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                (\ @ l
+                   $dLayer :: Model.Layer l
+                   ds :: GHC.Types.Double
+                   ds1 :: Model.Input
+                   ds2 :: Model.Error
+                   eta :: l ->
+                 GHC.Base.id @ l eta) -}
+b01f78db432da1ea49cdceeeeaa85e04
+  $fLayerLinearLayer :: Model.Layer Model.LinearLayer
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Model.LinearLayer
+                  Model.$fLayerLinearLayer_$cfeedThru
+                  Model.$fLayerLinearLayer_$cbackprop
+                  Model.$fLayerLinearLayer_$cupdate -}
+072f3ee266dc5c16250a230a9726e52c
+  $fLayerLinearLayer_$cbackprop ::
+    Model.LinearLayer -> Model.Input -> Model.Error -> Model.Error
+  {- Arity: 3,
+     Strictness: <S(LS(S(S(SS)S)S)),1*U(A,1*U(U(U(1*H,U(U)),U(U)),U(U,A,U)))><L,A><S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))>,
+     Unfolding: InlineRule (3, True, False)
+                (\ layer :: Model.LinearLayer
+                   ds :: Model.Input
+                   error :: Model.Error ->
+                 case layer of wild { Model.LinearLayer ds1 ds2 ->
+                 Data.Array.Repa.Algorithms.Matrix.mmultS
+                   error
+                   (Data.Array.Repa.Algorithms.Matrix.transpose2S ds2) }) -}
+f043ba9796d4b6d0f6342f84948919a8
+  $fLayerLinearLayer_$cfeedThru ::
+    Model.LinearLayer -> Model.Input -> Model.Output
+  {- Arity: 2,
+     Strictness: <S(LS),1*U(A,1*U)><S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ layer :: Model.LinearLayer input :: Model.Input ->
+                 case layer of wild { Model.LinearLayer ds ds1 ->
+                 Data.Array.Repa.Algorithms.Matrix.mmultS
+                   (Util.addOnes input)
+                   ds1 }) -}
+37fab731dd0e62964dcdfff81f9f9bc3
+  $fLayerLinearLayer_$cupdate ::
+    GHC.Types.Double
+    -> Model.Input
+    -> Model.Error
+    -> Model.LinearLayer
+    -> Model.LinearLayer
+  {- Arity: 4,
+     Strictness: <L,U(U)><L,1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))><L,1*U><S,1*U(U,1*U(U(U(H,U(U)),U(U)),U(U,A,U)))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ w :: GHC.Types.Double
+                   w1 :: Model.Input
+                   w2 :: Model.Error
+                   w3 :: Model.LinearLayer ->
+                 case w3 of ww { Model.LinearLayer ww1 ww2 ->
+                 case Model.$w$cupdate w w1 w2 ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
+                 Model.LinearLayer ww4 ww5 } }) -}
+b01f78db432da1ea49cdceeeeaa85e04
+  $fLayerSigmoid :: Model.Layer Model.Sigmoid
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Model.Sigmoid
+                  Model.$fLayerSigmoid_$cfeedThru
+                  Model.$fLayerSigmoid_$cbackprop
+                  Model.$fLayerSigmoid_$cupdate -}
+552f253ae25d5a60445af129efb19218
+  $fLayerSigmoid1 :: GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: GHC.Types.Double ->
+                 case x of wild { GHC.Types.D# x1 ->
+                 case GHC.Prim./##
+                        1.0
+                        (GHC.Prim.+##
+                           1.0
+                           (GHC.Prim.expDouble#
+                              (GHC.Prim.negateDouble# x1))) of wild2 { DEFAULT ->
+                 GHC.Types.D# wild2 } }) -}
+482956968419aa6b6c2185600885fcc5
+  $fLayerSigmoid_$cbackprop ::
+    Model.Sigmoid -> Model.Input -> Model.Error -> Model.Error
+  {- Arity: 3,
+     Strictness: <L,A><S,1*U><S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: Model.Sigmoid w1 :: Model.Input w2 :: Model.Error ->
+                 case w2
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww4 of ww6 { Data.Array.Repa.Index.:. ww7 ww8 ->
+                 case ww8 of ww9 { GHC.Types.I# ww10 ->
+                 case ww5 of ww11 { GHC.Types.I# ww12 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww13 { Data.Vector.Primitive.Vector ww14 ww15 ww16 ->
+                 Model.$w$cbackprop w1 ww7 ww10 ww12 ww14 ww16 } } } } } }) -}
+bf706314b327063363b1b6f9e79798ee
+  $fLayerSigmoid_$cfeedThru ::
+    Model.Sigmoid -> Model.Input -> Model.Output
+  {- Arity: 2,
+     Strictness: <L,A><S(S(SS)S),1*U(U(U(U,U(U)),U(U)),U(U,A,U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ sigmoid1 :: Model.Sigmoid input :: Model.Input ->
+                 case input
+                        `cast`
+                      (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                <GHC.Types.Double>_N
+                                <Data.Array.Repa.Index.DIM1
+                                 Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww { Data.Array.Repa.Repr.Unboxed.AUnboxed ww1 ww2 ->
+                 case ww1 of ww3 { Data.Array.Repa.Index.:. ww4 ww5 ->
+                 case ww2
+                        `cast`
+                      (Trans
+                           (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                           (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww6 { Data.Vector.Primitive.Vector ww7 ww8 ww9 ->
+                 Util.$wrmap Model.$fLayerSigmoid1 ww4 ww5 ww7 ww9 } } }) -}
+5af4dd028d0421525606771330a4c18c
+  $fLayerSigmoid_$cupdate ::
+    GHC.Types.Double
+    -> Model.Input -> Model.Error -> Model.Sigmoid -> Model.Sigmoid
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,A><L,A><L,A><S,1*U()>m,
+     Unfolding: InlineRule (4, True, True)
+                (\ ds :: GHC.Types.Double
+                   ds1 :: Model.Input
+                   ds2 :: Model.Error
+                   eta :: Model.Sigmoid ->
+                 eta) -}
+2f50dd862e6ac6eab8ad16616c30bdca
+  $fLearnerLinearLayer :: Model.Learner Model.LinearLayer
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Model.LinearLayer
+                  Model.$fLayerLinearLayer
+                  Model.weights
+                  Model.$fLearnerLinearLayer_$csetWeights
+                  Model.$fLearnerLinearLayer_$cgradient -}
+023954f4aad0abac3e5cbc10c4774252
+  $fLearnerLinearLayer_$cgradient ::
+    Model.LinearLayer -> Model.Input -> Model.Error -> Util.Matrix
+  {- Arity: 3,
+     Strictness: <L,A><S(S(S(SS)S)S),1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ layer :: Model.LinearLayer
+                   input :: Model.Input
+                   error :: Model.Error ->
+                 Data.Array.Repa.Algorithms.Matrix.mmultS
+                   (Data.Array.Repa.Algorithms.Matrix.transpose2S input)
+                   error) -}
+1a40b2b630c10e91f06dbf3119dfb6d8
+  $fLearnerLinearLayer_$csetWeights ::
+    Model.LinearLayer -> Util.Matrix -> Model.LinearLayer
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U,A)><L,U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ layer :: Model.LinearLayer weights' :: Util.Matrix ->
+                 case layer of wild { Model.LinearLayer ds ds1 ->
+                 Model.LinearLayer ds weights' }) -}
+b016b499d2112a33c078992e10922fa4
+  $fMonoidNetwork :: GHC.Base.Monoid Model.Network
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Model.Network
+                  Model.$fMonoidNetwork_$cmempty
+                  Model.$fMonoidNetwork_$cmappend
+                  Model.$fMonoidNetwork_$cmconcat -}
+b016b499d2112a33c078992e10922fa4
+  $fMonoidNetwork_$cmappend ::
+    Model.Network -> Model.Network -> Model.Network
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(C(U(U,U)))><S,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Model.Network w1 :: Model.Network ->
+                 case w of ww { Model.Network ww1 ->
+                 case Model.$w$cmappend ww1 w1 of ww2 { (##) ww3 ->
+                 Model.Network ww3 } }) -}
+b016b499d2112a33c078992e10922fa4
+  $fMonoidNetwork_$cmconcat :: [Model.Network] -> Model.Network
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: [Model.Network] ->
+                 case Model.$wgo w of ww { (##) ww1 -> Model.Network ww1 }) -}
+b016b499d2112a33c078992e10922fa4
+  $fMonoidNetwork_$cmempty :: Model.Network
+  {- HasNoCafRefs, Strictness: m -}
+49772bff1c36f566c78a353bf583efae
+  $w$cbackprop ::
+    Model.Input
+    -> Data.Array.Repa.Index.DIM0
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> Data.Array.Repa.Base.Array
+         Data.Array.Repa.Repr.Unboxed.U
+         Data.Array.Repa.Index.DIM2
+         GHC.Types.Double
+  {- Arity: 6, Strictness: <S,1*U><S,1*H><L,U><L,U><L,U><L,U>,
+     Inline: [0] -}
+b016b499d2112a33c078992e10922fa4
+  $w$cmappend ::
+    (Model.Input
+     -> (Model.Output,
+         Model.Error -> GHC.Types.Double -> (Model.Error, Model.Network)))
+    -> Model.Network
+    -> (# Model.Input
+          -> (Model.Output,
+              Model.Error -> GHC.Types.Double -> (Model.Error, Model.Network)) #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U(U,U))><S,1*U>,
+     Inline: [0] -}
+6a3e2aae7903c77fb867508ed8d26931
+  $w$cupdate ::
+    GHC.Types.Double
+    -> Model.Input
+    -> Model.Error
+    -> GHC.Types.Int
+    -> Util.Matrix
+    -> (# GHC.Types.Int, Util.Matrix #)
+  {- Arity: 5,
+     Strictness: <L,U(U)><L,1*U(U(U(1*H,U(U)),U(U)),U(U,A,U))><L,1*U><L,U><L,1*U(U(U(H,U(U)),U(U)),U(U,A,U))>,
+     Inline: [0],
+     Unfolding: (\ w :: GHC.Types.Double
+                   w1 :: Model.Input
+                   w2 :: Model.Error
+                   ww :: GHC.Types.Int
+                   ww1 :: Util.Matrix ->
+                 (# ww,
+                    case ww1
+                           `cast`
+                         (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                   <GHC.Types.Double>_N
+                                   <Data.Array.Repa.Index.DIM1
+                                    Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww2 { Data.Array.Repa.Repr.Unboxed.AUnboxed ww3 ww4 ->
+                    case ww3 of ww5 { Data.Array.Repa.Index.:. ww6 ww7 ->
+                    case ww6 of ww8 { Data.Array.Repa.Index.:. ww9 ww10 ->
+                    case ww10 of ww11 { GHC.Types.I# ww12 ->
+                    case ww7 of ww13 { GHC.Types.I# ww14 ->
+                    case ww4
+                           `cast`
+                         (Trans
+                              (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                              (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww15 { Data.Vector.Primitive.Vector ww16 ww17 ww18 ->
+                    case (Data.Array.Repa.Algorithms.Matrix.mmultS
+                            (Data.Array.Repa.Algorithms.Matrix.transpose2S w1)
+                            w2)
+                           `cast`
+                         (Sub (Data.Array.Repa.Repr.Unboxed.TFCo:R:ArrayUsha[0]
+                                   <GHC.Types.Double>_N
+                                   <Data.Array.Repa.Index.DIM1
+                                    Data.Array.Repa.Index.:. GHC.Types.Int>_N)) of ww19 { Data.Array.Repa.Repr.Unboxed.AUnboxed ww20 ww21 ->
+                    case ww20 of ww22 { Data.Array.Repa.Index.:. ww23 ww24 ->
+                    case ww21
+                           `cast`
+                         (Trans
+                              (Sub (Data.Vector.Unboxed.Base.TFCo:R:VectorDouble[0]))
+                              (Data.Vector.Unboxed.Base.NTCo:R:VectorDouble[0])) of ww25 { Data.Vector.Primitive.Vector ww26 ww27 ww28 ->
+                    Util.$w$c+
+                      ww9
+                      ww12
+                      ww14
+                      ww16
+                      ww18
+                      (Util.$wrmap
+                         (\ ds :: GHC.Types.Double -> GHC.Float.timesDouble ds w)
+                         ww23
+                         ww24
+                         ww26
+                         ww28) } } } } } } } } } #)) -}
+5ead0a2f8d21a133b30b50faf3093738
+  $wfrom ::
+    Model.Layer a =>
+    a
+    -> (# Model.Input
+          -> (Model.Output,
+              Model.Error -> GHC.Types.Double -> (Model.Error, Model.Network)) #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),C(C1(C1(U))),C(C1(C1(C1(U)))))><L,U>,
+     Inline: [0] -}
+b016b499d2112a33c078992e10922fa4
+  $wgo ::
+    [Model.Network]
+    -> (# Model.Input
+          -> (Model.Output,
+              Model.Error -> GHC.Types.Double -> (Model.Error, Model.Network)) #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+5a2e2a46c79b7a1158c4b37f945b6cf5
+  type Error = Util.Matrix
+bf8f01b70c88da35b7a79d6e0f2c875e
+  type Input = Util.Matrix
+b01f78db432da1ea49cdceeeeaa85e04
+  class Layer l where
+    feedThru :: l -> Model.Input -> Model.Output
+    backprop :: l -> Model.Input -> Model.Error -> Model.Error
+    update {- Has default method -} ::
+      GHC.Types.Double -> Model.Input -> Model.Error -> l -> l
+2f50dd862e6ac6eab8ad16616c30bdca
+  class Model.Layer l => Learner l where
+    getWeights :: l -> Util.Matrix
+    setWeights :: l -> Util.Matrix -> l
+    gradient :: l -> Model.Input -> Model.Error -> Util.Matrix
+281a7039b8a12a3129a6ac6fd14f20cc
+  data LinearLayer
+    = LinearLayer {sizeLinearLayer :: GHC.Types.Int,
+                   weights :: Util.Matrix}
+5f59a8b539059124e214d077425287f9
+  data Model
+    = Model {network :: Model.Network,
+             costFunction :: Model.Output -> Model.Targets -> Model.Error,
+             learningRate :: GHC.Types.Double}
+b016b499d2112a33c078992e10922fa4
+  data Network
+    = Network (Model.Input
+               -> (Model.Output,
+                   Model.Error -> GHC.Types.Double -> (Model.Error, Model.Network)))
+    RecFlag: Recursive
+09898793178cd6a9cc50bd154071c10d
+  type Output = Util.Matrix
+d4c7bfb7cf43c1e984d017eb39ff9bd7
+  data Sigmoid = Sigmoid
+    Promotable
+b8c4728910ae18dcfe89099b52ca56cb
+  type Targets = Util.Matrix
+b701519cbdcd453d1a541e31757bf2fb
+  costFunction ::
+    Model.Model -> Model.Output -> Model.Targets -> Model.Error
+  RecSel Model.Model
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.Model ->
+                 case ds of wild { Model.Model ds1 ds2 ds3 -> ds2 }) -}
+e809e48b5d970e6574993feb8b6d690c
+  from :: Model.Layer a => a -> Model.Network
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),C(C1(C1(U))),C(C1(C1(C1(U)))))><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a1 w :: Model.Layer a1 w1 :: a1 ->
+                 case Model.$wfrom @ a1 w w1 of ww { (##) ww1 ->
+                 Model.Network ww1 }) -}
+b5003dc260c444c9926f03a733e64bd5
+  getOutError ::
+    Model.Input -> Model.Error -> Model.Network -> Model.Error
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U><L,U><S(C(S(LC(C(S(SL)))))),1*U(1*C1(U(A,1*C1(C1(U(1*U(U,U),A))))))>,
+     Unfolding: InlineRule (3, True, False)
+                (\ input :: Model.Input error :: Model.Error ds :: Model.Network ->
+                 case ds of wild { Model.Network process ->
+                 case process input of wild1 { (,) ds1 back ->
+                 case back error Model.getOutError1 of wild2 { (,) x ds2 ->
+                 x } } }) -}
+f4e1b8dadb0b837118ca037b35a3180b
+  getOutError1 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.0) -}
+f96a701c131004f3cabdec5945c9c050
+  getOutput :: Model.Input -> Model.Network -> Model.Output
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U><S(C(S(SL))),1*U(1*C1(U(1*U(U,U),A)))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ input :: Model.Input ds :: Model.Network ->
+                 case ds of wild { Model.Network process ->
+                 case process input of wild1 { (,) x ds1 -> x } }) -}
+0338151bfdd1404a179519e2d6350673
+  learningRate :: Model.Model -> GHC.Types.Double
+  RecSel Model.Model
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.Model ->
+                 case ds of wild { Model.Model ds1 ds2 ds3 -> ds3 }) -}
+69423a7bf87d4745e798e078d72951ff
+  linearLayer :: Util.Matrix -> Model.LinearLayer
+  {- Arity: 1, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ weights1 :: Util.Matrix ->
+                 Model.LinearLayer Model.linearLayer1 weights1) -}
+75edffdfe563c15e73260850d9080dd3
+  linearLayer1 :: GHC.Types.Int
+  {- Strictness: b -}
+37d7838b303e82fba70368f61ff3e68c
+  network :: Model.Model -> Model.Network
+  RecSel Model.Model
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.Model ->
+                 case ds of wild { Model.Model ds1 ds2 ds3 -> ds1 }) -}
+5a872b18f8b05bc193845a7a52ae8c3e
+  sigmoid :: () -> Model.Sigmoid
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: () -> case ds of wild { () -> Model.Sigmoid }) -}
+c88a24cdb0d7ef2722da9c4e3747ceb9
+  sizeLinearLayer :: Model.LinearLayer -> GHC.Types.Int
+  RecSel Model.LinearLayer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.LinearLayer ->
+                 case ds of wild { Model.LinearLayer ds1 ds2 -> ds1 }) -}
+bd75c6e1c174f47b78225655bddaca03
+  updateNetwork ::
+    Model.Input
+    -> Model.Error
+    -> GHC.Types.Double
+    -> Model.Network
+    -> Model.Network
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><S(C(S(LC(C(S(LS)))))),1*U(1*C1(U(A,1*C1(C1(U(A,1*U(U)))))))>,
+     Unfolding: InlineRule (4, True, False)
+                (\ input :: Model.Input
+                   error :: Model.Error
+                   learnRate :: GHC.Types.Double
+                   ds :: Model.Network ->
+                 case ds of wild { Model.Network process ->
+                 case process input of wild1 { (,) ds1 back ->
+                 case back error learnRate of wild2 { (,) ds2 y -> y } } }) -}
+9bb501d57833763bebf183ae65b8da24
+  weights :: Model.LinearLayer -> Util.Matrix
+  RecSel Model.LinearLayer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Model.LinearLayer ->
+                 case ds of wild { Model.LinearLayer ds1 ds2 -> ds2 }) -}
+instance Model.Layer [Model.LinearLayer] = Model.$fLayerLinearLayer
+instance Model.Layer [Model.Sigmoid] = Model.$fLayerSigmoid
+instance Model.Learner [Model.LinearLayer]
+  = Model.$fLearnerLinearLayer
+instance GHC.Base.Monoid [Model.Network] = Model.$fMonoidNetwork
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

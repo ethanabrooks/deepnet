@@ -18,7 +18,7 @@ spec :: Spec
 spec = do
   describe "Linear Layer" $ do
     it "feeds forward" $ do
-      let output = getOutput linearLayer m m1
+      let output = getOutput m1 . from $ linearLayer m
       output `shouldBe` (addOnes m1) * m
 
     context "during backpropogation" $ do
@@ -27,15 +27,19 @@ spec = do
       {-let (output, backprop) = add (layer m1) 0 m1-}
           {-(layer', outError) = backprop m1-}
       it "processes errors" $ do
-        let outError = getOutError linearLayer m m1 m1
+        let outError = getOutError m1 m1 . from $ linearLayer m
         outError `shouldBe` m1 * transpose m
       context "when learning rate is 0" $ do
         it "updates weights" $ do
-          {-let newNetwork = update (linearLayer m) m1 m-}
-              {-output'    =-}
-          {-weights `shouldBe` m-}
-          {-getWeights layer' `shouldBe` m-}
-      {-context "when learning rate is 1" $ do-}
+          let newNetwork = updateNetwork m1 m 0 . from $ linearLayer m
+              output     = getOutput m1 newNetwork
+          output `shouldBe` (addOnes m) * m1
+      context "when learning rate is 1" $ do
+        it "updates weights" $ do
+          let newNetwork = updateNetwork m1 m 1 . from $ linearLayer m
+              output     = getOutput m1 newNetwork
+              weights    = transpose (addOnes m1) * m1 + m
+          output `shouldBe` (addOnes m) * m1
         {-it "updates weights" $ do-}
           {-let (output, backprop) = add layer 1 m1-}
               {-(layer', outError) = backprop m1-}
@@ -47,11 +51,11 @@ spec = do
     {-it "has no initial input" $ do-}
       {-sigmoidInput layer `shouldBe` Nothing-}
     it "feeds forward" $ do
-      let output = getOutput sigmoid () zeros
+      let output = getOutput zeros . from $ sigmoid ()
       {-sigmoidInput layer' `shouldBe` Just zeros-}
       output `shouldBe` rmap (const 0.5) zeros
     it "backpropogates" $ do
-      let outError = getOutError sigmoid () m1 m2
+      let outError = getOutError m1 m2 . from $ sigmoid ()
       {-let (layer', _) = feedThru layer m1-}
           {-(_, inputError) = backprop layer' 0 m2-}
       outError `shouldAlmostEqual` m3

@@ -14,11 +14,11 @@ module Model ( linearLayer
              , getWeights
              , Network
              , Layer
-             , add
+             , from
              , update
              , getOutError
              , getOutput
-             , getNewNetwork
+             , updateNetwork
              , (<>)
              , feedThru ) where
 import           Util
@@ -71,10 +71,10 @@ data Model = Model { network      :: Network
                    , costFunction :: Output -> Targets -> Error
                    , learningRate :: Double }
 
-add :: Layer a => a -> Network
-add layer = Network process
+from :: Layer a => a -> Network
+from layer = Network process
   where process input = (feedThru layer input, backUpdate)
-          where backUpdate error learnRate = (backprop', add layer')
+          where backUpdate error learnRate = (backprop', from layer')
                   where layer'    = update learnRate input error layer
                         backprop' = backprop layer input error
 
@@ -128,25 +128,17 @@ instance Layer Sigmoid where
 {--- CODE FOR TESTS ---}
 
 
-getOutput :: params -> Input -> Network -> Output
-getOutput params input (Network process) = fst $ process input
+getOutput :: Input -> Network -> Output
+getOutput input (Network process) = fst $ process input
 
-getErrorBackUpdate :: Input -> Network -> Error -> Double -> (Error, Network)
-getErrorBackUpdate input (Network process) = snd $ process input
-
-getOutError :: Network -> Input -> Error -> Error
-getOutError (Network process) input error = fst $ back error 0
-    where (_, back)       = process input
+getOutError :: Input -> Error -> Network -> Error
+getOutError input error (Network process) = fst $ back error 0
+    where (_, back) = process input
 
 updateNetwork :: Input -> Error -> Double -> Network -> Network
 updateNetwork input error learnRate (Network process) =
     snd $ back error learnRate
-    where (_, back)       = process input
-
-getNewLayer :: Learner a =>
-  (params -> a) -> params -> Input -> Error -> Double -> a
-getNewLayer getLayer params input error learnRate =
-    update learnRate input error $ getLayer params
+    where (_, back) = process input
 
 
 {-test :: Model -> Input -> Targets -> (Targets -> Output -> Double)-}
