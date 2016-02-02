@@ -17,7 +17,7 @@ main = hspec spec
 spec :: Spec
 spec = do
   describe "Linear Layer" $ do
-    it "computes output" $ do
+    it "feeds forward" $ do
       let output = getOutput linearLayer m m1
       output `shouldBe` (addOnes m1) * m
 
@@ -29,10 +29,11 @@ spec = do
       it "processes errors" $ do
         let outError = getOutError linearLayer m m1 m1
         outError `shouldBe` m1 * transpose m
-      context "when learning rate is 0" $ do
-        it "updates weights" $ do
-          let weights = update (linearLayer m) m1 m
-          weights `shouldBe` m
+      {-context "when learning rate is 0" $ do-}
+        {-it "updates weights" $ do-}
+          {-let newNetwork = update (linearLayer m) m1 m-}
+              {-output'    =-}
+          {-weights `shouldBe` m-}
           {-getWeights layer' `shouldBe` m-}
       {-context "when learning rate is 1" $ do-}
         {-it "updates weights" $ do-}
@@ -45,7 +46,7 @@ spec = do
     let layer = sigmoid ()
     {-it "has no initial input" $ do-}
       {-sigmoidInput layer `shouldBe` Nothing-}
-    it "feeds forwards" $ do
+    it "feeds forward" $ do
       let output = getOutput sigmoid () zeros
       {-sigmoidInput layer' `shouldBe` Just zeros-}
       output `shouldBe` rmap (const 0.5) zeros

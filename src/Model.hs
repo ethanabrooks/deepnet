@@ -1,4 +1,6 @@
 {-# LANGUAGE NamedFieldPuns #-}
+{-# LANGUAGE ScopedTypeVariables #-}
+{-# OPTIONS -fglasgow-exts #-}
 {-
 - TODO:
 - test single layer with sigmoid
@@ -17,6 +19,7 @@ module Model ( linearLayer
              , update
              , getOutError
              , getOutput
+             , getNewNetwork
              , (<>)
              , feedThru ) where
 import           Util
@@ -39,8 +42,9 @@ type Input   = Matrix
 type Output  = Matrix
 type Targets = Matrix
 type Error   = Matrix
-data Network = Network
-             (Input -> (Output, Error -> Double -> (Error, Network)))
+data Network = forall l. Layer l => Network (Input ->
+             (Output, Error -> Double ->
+             (Error, l)))
 
 instance Monoid Network where
     mempty = Network (\ input -> (input, (\ error _ -> (error, mempty))))
@@ -48,33 +52,31 @@ instance Monoid Network where
       let (output1, backprop1) = net1 input
           (output2, backprop2) = net2 output1
       in  (output2, \ error learningRate ->
-          let (error2, net2') = backprop2 error learningRate
-              (error1, net1') = backprop1 error1 learningRate
+          let (error2, layer1) = backprop2 error learningRate
+              (error1, layer2) = backprop1 error1 learningRate
           in  (error1, net1' <> net2')))
 
 class Layer l where
     feedThru :: l -> Input -> Output
     backprop :: l -> Input -> Error -> Error
-    update   :: l -> Error -> params -> params
-    update layer _ = id
+    update   :: Double -> Input -> Error -> l -> l
+    update _ _ _ = id
 
 class (Layer l) => Learner l where
     getWeights :: l -> Matrix
-    setWeights :: l -> Matrix -> a
+    setWeights :: l -> Matrix -> l
     gradient   :: l -> Input -> Error -> Matrix
 
 data Model = Model { network      :: Network
                    , costFunction :: Output -> Targets -> Error
                    , learningRate :: Double }
 
-add :: Layer a => (params -> a) -> params -> Network
-add getLayer params = Network process
-  where layer         = getLayer params
-        process input = (feedThru layer input, backUpdate input)
-        backUpdate input error learnRate = (backprop', network')
-          where network'  = add getLayer params'
-                params'   = update layer error params
-                backprop' = backprop layer input error
+add :: Layer a => a -> Network
+add layer = Network process
+  where process input = (feedThru layer input, backUpdate)
+          where backUpdate error learnRate = (backprop', add layer')
+                  where layer'    = update learnRate input error layer
+                        backprop' = backprop layer input error
 
 train :: Input -> Targets -> Model -> Int -> Model
 train input targets model numEpochs =
@@ -91,12 +93,11 @@ addGradients :: Double -> Matrix -> Matrix -> Matrix
 addGradients learningRate gradient weights =
     weights + rmap (*learningRate) gradient
 
-update' :: Learner a => a -> Double -> Input -> Error -> (a, Error)
-update' layer learningRate input error =
-  (layer', backprop layer input error)
-    where layer'   = setWeights layer weights'
-          weights' = addGradients learningRate grad (getWeights layer)
-          grad     = gradient layer input error
+updateLearner :: Learner a =>
+              Double -> Input -> Error -> a -> a
+updateLearner learningRate input error layer = setWeights layer weights
+      where weights = addGradients learningRate grad (getWeights layer)
+            grad    = gradient layer input error
 
 {-test :: Model -> Input -> Targets -> (Targets -> Output -> Double)-}
 {-test model input targets scoreFunc numFolds = mean $ map score folds-}
@@ -114,23 +115,21 @@ update' layer learningRate input error =
 {-neuralNetLayer :: Layer a => Int -> Int -> SequentialNet a-}
 {-neuralNetLayer = sequentialNet linearLayer [sigmoid]-}
 
-
-
 data LinearLayer = LinearLayer { sizeLinearLayer :: Int
-                               , input           :: Maybe Input
                                , weights         :: Matrix }
 
 linearLayer :: Matrix -> LinearLayer
 linearLayer weights = LinearLayer { weights = weights }
 
 instance Layer LinearLayer where
-  feedThru layer input = addOnes input * (weights layer)
+  feedThru layer input   = addOnes input * (weights layer)
   backprop layer _ error = error * (transpose $ weights layer)
+  update = updateLearner
 
-{-instance Learner LinearLayer where-}
-    {-getWeights                 = weights-}
-    {-setWeights layer weights'  = layer { weights = weights' }-}
-    {-gradient layer input error = (transpose input) * error-}
+instance Learner LinearLayer where
+    getWeights                 = weights
+    setWeights layer weights'  = layer { weights = weights' }
+    gradient layer input error = (transpose input) * error
 
 
 data Sigmoid = Sigmoid
@@ -139,9 +138,36 @@ sigmoid :: () -> Sigmoid
 sigmoid () = Sigmoid
 
 instance Layer Sigmoid where
-  feedThru sigmoid input = rmap (\ x -> 1 / (1 + exp (-x))) input
+  feedThru sigmoid input       = rmap (\ x -> 1 / (1 + exp (-x))) input
   backprop sigmoid input error = computeS derivative
       where derivative = zipWith (\ e i -> e * i * (1 - i)) error input
+
+{--- CODE FOR TESTS ---}
+getOutput :: Layer a => (params -> a) -> params -> Input -> Output
+getOutput getLayer params input = fst $ process input
+  where Network process = add $ getLayer params
+
+getErrorBackUpdate :: Layer a =>
+  (params -> a) -> params -> Input -> Error -> Double -> (Error, Network)
+getErrorBackUpdate getLayer params input = snd $ process input
+  where Network process = add $ getLayer params
+
+getOutError :: Layer a => (params -> a) -> params -> Input -> Error -> Error
+getOutError getLayer params input error = fst $ back error 0
+    where (_, back)       = process input
+          Network process = add $ getLayer params
+
+getNewNetwork :: Layer a =>
+  (params -> a) -> params -> Input -> Error -> Double -> Network
+getNewNetwork getLayer params input error learnRate =
+    snd $ back error learnRate
+    where (_, back)       = process input
+          Network process = add $ getLayer params
+
+getNewLayer :: Learner a =>
+  (params -> a) -> params -> Input -> Error -> Double -> a
+getNewLayer getLayer params input error learnRate =
+    update learnRate input error $ getLayer params
 
 {--- sequentialNet linearyLayer [linearLayer 3, linearLayer2]-}
 
@@ -191,7 +217,6 @@ instance Layer Sigmoid where
     {-where input = computeS $ input ++ output-}
   {-backprop network = backprop core-}
 
-{--- CODE FOR TESTS ---}
 
 {-sequentialNetFromMatrices :: [Matrix] -> SequentialNet LinearLayer-}
 {-sequentialNetFromMatrices matrices =-}
@@ -209,19 +234,6 @@ instance Layer Sigmoid where
     {-(linearLayer sizeIn sizeOut) { weights = matrix }-}
     {-where Z :. sizeIn :. sizeOut = extent matrix-}
 
-getOutput :: Layer a => (params -> a) -> params -> Input -> Output
-getOutput layer params input = fst $ process input
-  where Network process = add layer params
-
-getErrorBackUpdate :: Layer a =>
-  (params -> a) -> params -> Input -> Error -> Double -> (Error, Network)
-getErrorBackUpdate layer params input = snd $ process input
-  where Network process = add layer params
-
-getOutError :: Layer a => (params -> a) -> params -> Input -> Error -> Error
-getOutError layer params input error = fst $ back error 0
-    where (_, back)       = process input
-          Network process = add layer params
 
 {-getOutError :: Layer a => a -> params -> Double -> Input -> Error -> Error-}
 {-getOutError layer params learningRate input error = error'-}
