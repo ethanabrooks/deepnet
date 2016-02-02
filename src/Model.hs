@@ -41,6 +41,7 @@ type Input   = Matrix
 type Output  = Matrix
 type Targets = Matrix
 type Error   = Matrix
+
 data Network = Network (Input ->
              (Output, Error -> Double ->
              (Error, Network)))
@@ -98,22 +99,6 @@ updateLearner learningRate input error layer = setWeights layer weights
       where weights = addGradients learningRate grad (getWeights layer)
             grad    = gradient layer input error
 
-{-test :: Model -> Input -> Targets -> (Targets -> Output -> Double)-}
-{-test model input targets scoreFunc numFolds = mean $ map score folds-}
-  {-where score    = scoreFunc (targets, output)-}
-        {-output   = model `predict` input-}
-        {-folds    = map getFold foldSize input targets [1..numFolds]-}
-        {-foldSize = numInstances / numFolds-}
-        {-Z :. numInstances :. _ = extent input-}
-
-{-accuracy :: Targets -> Output -> Double-}
-{-accuracy targets output = mean $ zipWith equals targets ouput-}
-  {-where x `equals` x = 1-}
-        {-_ `equals` _ = 0-}
-
-{-neuralNetLayer :: Layer a => Int -> Int -> SequentialNet a-}
-{-neuralNetLayer = sequentialNet linearLayer [sigmoid]-}
-
 data LinearLayer = LinearLayer { sizeLinearLayer :: Int
                                , weights         :: Matrix }
 
@@ -129,7 +114,6 @@ instance Learner LinearLayer where
     getWeights                 = weights
     setWeights layer weights'  = layer { weights = weights' }
     gradient layer input error = (transpose input) * error
-
 
 data Sigmoid = Sigmoid
 
@@ -168,6 +152,22 @@ getNewLayer :: Learner a =>
 getNewLayer getLayer params input error learnRate =
     update learnRate input error $ getLayer params
 
+
+{-test :: Model -> Input -> Targets -> (Targets -> Output -> Double)-}
+{-test model input targets scoreFunc numFolds = mean $ map score folds-}
+  {-where score    = scoreFunc (targets, output)-}
+        {-output   = model `predict` input-}
+        {-folds    = map getFold foldSize input targets [1..numFolds]-}
+        {-foldSize = numInstances / numFolds-}
+        {-Z :. numInstances :. _ = extent input-}
+
+{-accuracy :: Targets -> Output -> Double-}
+{-accuracy targets output = mean $ zipWith equals targets ouput-}
+  {-where x `equals` x = 1-}
+        {-_ `equals` _ = 0-}
+
+{-neuralNetLayer :: Layer a => Int -> Int -> SequentialNet a-}
+{-neuralNetLayer = sequentialNet linearLayer [sigmoid]-}
 {--- sequentialNet linearyLayer [linearLayer 3, linearLayer2]-}
 
 
